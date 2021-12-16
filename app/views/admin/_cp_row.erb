@@ -1,0 +1,8 @@
+<% status = creator_program.active %>
+
+<tr>
+  <td><%= number_field_tag(:threshold, creator_program.threshold) %></td>
+  <td><%= creator_program.participants.size %></td>
+  <td><%= status ? 'Yes' : 'No' %></td>
+  <td><%= submit_tag(status ? 'Deactivate' : 'Activate') %></td>
+</tr>

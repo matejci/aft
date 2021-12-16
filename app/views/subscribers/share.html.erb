@@ -1,0 +1,10 @@
+
+<%= javascript_tag do %>
+  var link = <%= raw(params[:link].to_json) %>;
+<% end %>
+
+<div class="content" id="content">
+
+	<%= javascript_pack_tag 'splash' %>
+
+</div> <!-- content -->

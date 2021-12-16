@@ -1,0 +1,55 @@
+
+
+<div class="container" style="background:#999;">
+	<div class="row">
+		<div class="col-md-12">
+
+			embed example:
+
+			<hr />
+
+			<!-- <iframe width="600" height="300" src="https://www.nike.com/w/mens-100-and-under-shoes-3s37kznik1zy7ok" title="takko video player" frameborder="0"></iframe> -->
+
+			<!-- <iframe width="300" height="500" src="http://localhost:3000/embed/23b7a832?controls=0" title="takko video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> -->
+
+			<div style="width:505px;margin: 0 auto;">
+			<!-- <div> -->
+
+				<blockquote class="takko-embed" data-video="21506fb4">
+					<section>
+						<a target="_blank" title="@username" href="http://localhost:3000/embed/21506fb4">@username</a> 
+						<p>Post Title</p>
+					</section>
+				</blockquote>
+				<script async src="<%= root_url %><%= Rails.env.production? ? 'widget.js' : 'widget-dev.js' %>"></script>
+
+			</div>
+
+			<div>
+
+
+			<!-- <div style="width:505px;margin: 0 auto;">
+				<blockquote class="takko-embed" data-video="a375863b">
+					<section>
+						<a target="_blank" title="@username" href="https://takko-staging-env.herokuapp.com/p/a375863b">@davidchoi</a> 
+						<p>
+							Give me Watch Time and Views plz!!!
+						</p>
+					</section>
+				</blockquote>
+				<script async src="https://takko-staging-env.herokuapp.com/widget.js"></script>
+			</div> -->
+
+				<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@willsmith/video/6965259567282310406" data-video-id="6965259567282310406" style="max-width: 505px;min-width: 325px;">
+					<section>
+						<a target="_blank" title="@willsmith" href="https://www.tiktok.com/@willsmith">@willsmith</a> 
+						<p>What should I play next? Call me for your next bday party</p> <a target="_blank" title="♬ original sound - Will Smith" href="https://www.tiktok.com/music/original-sound-6965259432414464773">♬ original sound - Will Smith</a> 
+					</section>
+				</blockquote>
+				<script async src="https://www.tiktok.com/embed.js"></script>
+
+			</div>
+
+		</div> <!-- col -->
+	</div> <!-- row -->
+</div> <!-- container -->

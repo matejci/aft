@@ -1,0 +1,13 @@
+= content_for :content do
+  %tr
+    %td
+      %p.bigger
+        Looks like we need you to
+        verify a few things before
+        you can get paid.
+  %tr
+    %td
+      = link_to 'Additional Verification Required',
+                '#', method: :get, class: 'btn yellow_btn', disabled: true
+
+= render 'mailers/takko_card', dark_theme: true

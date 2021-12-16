@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Usernames</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identity</th>
+      <th>Type</th>
+      <th>Status</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usernames.each do |username| %>
+      <tr>
+        <td><%= username.name %></td>
+        <td><%= username.type %></td>
+        <td><%= username.status %></td>
+        <td><%= username.user_id %></td>
+        <td><%= link_to 'Show', username %></td>
+        <td><%= link_to 'Edit', edit_username_path(username) %></td>
+        <td><%= link_to 'Destroy', username, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Username', new_username_path %>

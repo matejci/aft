@@ -1,0 +1,124 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Last activity:</strong>
+  <%= @app.last_activity %>
+</p>
+
+<p>
+  <strong>App:</strong>
+  <%= @app.app_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @app.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @app.description %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @app.version %>
+</p>
+
+<p>
+  <strong>Public key:</strong>
+  <%= @app.public_key %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @app.key %>
+</p>
+
+<p>
+  <strong>Secret:</strong>
+  <%= @app.secret %>
+</p>
+
+<p>
+  <strong>Permissions:</strong>
+  <%= @app.permissions %>
+</p>
+
+<p>
+  <strong>Access:</strong>
+  <%= @app.access %>
+</p>
+
+<p>
+  <strong>Requests:</strong>
+  <%= @app.requests %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @app.status %>
+</p>
+
+<p>
+  <strong>Publish:</strong>
+  <%= @app.publish %>
+</p>
+
+<p>
+  <strong>Csrf:</strong>
+  <%= @app.csrf %>
+</p>
+
+<p>
+  <strong>Domains:</strong>
+  <%= @app.domains %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @app.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @app.phone %>
+</p>
+
+<p>
+  <strong>User agent whitelist:</strong>
+  <%= @app.user_agent_whitelist %>
+</p>
+
+<p>
+  <strong>User agent blacklist:</strong>
+  <%= @app.user_agent_blacklist %>
+</p>
+
+<p>
+  <strong>Ip whitelist:</strong>
+  <%= @app.ip_whitelist %>
+</p>
+
+<p>
+  <strong>Ip blacklist:</strong>
+  <%= @app.ip_blacklist %>
+</p>
+
+<p>
+  <strong>Privacy policy url:</strong>
+  <%= @app.privacy_policy_url %>
+</p>
+
+<p>
+  <strong>Terms of service url:</strong>
+  <%= @app.terms_of_service_url %>
+</p>
+
+<p>
+  <strong>Namespace:</strong>
+  <%= @app.namespace %>
+</p>
+
+<%= link_to 'Edit', edit_app_path(@app) %> |
+<%= link_to 'Back', apps_path %>

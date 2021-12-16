@@ -1,0 +1,50 @@
+<% comments = @collection[:comments] %>
+
+<div style="overflow:scroll;padding:25px;">
+  <p id="notice"><%= notice %></p>
+  <h1><%= pluralize(comments.size, 'Comments') %></h1>
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>created_at</th>
+        <th>Text</th>
+        <th>Rich text</th>
+        <th>Rich text</th>
+        <th>Status</th>
+        <th>Phantom</th>
+        <th>Phantom by</th>
+        <th>Link</th>
+        <th>User</th>
+        <th>Post</th>
+        <th>Mentions</th>
+        <th>Hashtags</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% comments.each do |comment| %>
+        <tr>
+          <td><%= comment._id %></td>
+          <td><%= comment.created_at %></td>
+          <td><%= comment.text %></td>
+          <td><%= comment.rich_text %></td>
+          <td><%= comment.rich_text.html_safe %></td>
+          <td><%= comment.status %></td>
+          <td><%= comment.phantom %></td>
+          <td><%= comment.phantom_by %></td>
+          <td><%= comment.link %></td>
+          <td><%= comment.user_id %></td>
+          <td><%= comment.post_id %></td>
+          <td><%= comment.mentions.size %></td>
+          <td><%= comment.hashtags.size %></td>
+          <td><%= link_to 'Show', post_comment_path(comment.post, comment) %></td>
+          <td><%= link_to 'Edit', edit_post_comment_path(comment.post, comment) %></td>
+          <td><%= link_to 'Destroy', post_comment_path(comment.post, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Comment', new_post_comment_path(@post) %>
+</div>

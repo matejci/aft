@@ -1,0 +1,52 @@
+  
+<div style="overflow:scroll;padding:25px;">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1><%= pluralize(@mentions.size, 'Mentions') %></h1>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>created_at</th>
+        <th>Mentioned by</th>
+        <th>User</th>
+        <th>Template</th>
+        <th>Read</th>
+        <th>Seen</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Post</th>
+        <th>Comment</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @mentions.each do |mention| %>
+        <tr>
+          <td><%= mention._id %></td>
+          <td><%= mention.created_at %></td>
+          <td><%= mention.mentioned_by.username %></td>
+          <td><%= mention.user.username %></td>
+          <td><%= mention.template %></td>
+          <td><%= mention.read %></td>
+          <td><%= mention.seen %></td>
+          <td><%= mention.type %></td>
+          <td><%= mention.status %></td>
+          <td><%= mention.post_id %></td>
+          <td><%= mention.comment_id %></td>
+          <td><%= link_to 'Show', mention %></td>
+          <td><%= link_to 'Edit', edit_mention_path(mention) %></td>
+          <td><%= link_to 'Destroy', mention, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Mention', new_mention_path %>
+
+</div>

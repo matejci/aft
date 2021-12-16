@@ -1,0 +1,85 @@
+<%= javascript_pack_tag 'utils' %>
+<%= javascript_pack_tag 'admin/reports_manager' %>
+
+<div class="reports_manager">
+  <div class="row">
+    <div class="rectangle">
+      <span class="curation_manager_text">Reports Manager</span>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-4">
+      <%= text_field_tag('search_txt', nil, placeholder: 'Search', autocomplete: 'off', :autofocus => true) %>
+    </div>
+    <div class="col-2">
+      <%= select_tag('options', options_for_select([['All', 'All'], ['Posts/Takkos', 'Post'], ['Comments', 'Comment'], ['Users', 'User']])) %>
+    </div>
+    <div class="col-3">
+      <div class="row">
+        <div class="pagination_info">
+          <%= page_entries_info @collection %>
+        </div>
+      </div>
+      <div id="pagination_navigation" class="row">
+        <%= link_to_prev_page @collection, 'Prev' %>&nbsp;&nbsp;&nbsp;
+        <%= link_to_next_page @collection, 'Next' %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 offset-1">
+      <input id="archived_chk" type="checkbox" class="form-check-input" value=""><span class="details_label">Archived</span>
+      <br/>
+      <input id="allowed_chk" type="checkbox" class="form-check-input" value=""><span class="details_label">Allowed</span>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="fit">Report ID</th>
+            <th class="fit">Type</th>
+            <th class="fit">Date</th>
+            <th class="fit">Username</th>
+            <th class="fit">Reporters</th>
+            <th class="fit">Notes</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <% @collection.each do |item| %>
+            <tr>
+              <td class="fit">
+                <%= item.id.to_s %>
+              </td>
+              <td class="fit">
+                <span class="<%= report_type(item).downcase %>"><%= report_type(item) %></span>
+              </td>
+              <td class="fit">
+                <%= item.created_at.strftime('%Y-%m-%d') %>
+              </td>
+              <td class="fit title_text">
+                <!-- WARNING: This generates N+1 queries. Check if this data is needed here. show it on details page instead? -->
+                <%= username(item) %>
+              </td>
+              <td class="fit">
+                <%= sanitize reporters_count(item) %>
+              </td>
+              <td class="fit">
+                <span class="report_details_btn" data-url="<%= admin_report_path(item.id) %>">Details</span>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= render partial: 'admin/shared_partials/loader' %>
+<%= render partial: 'admin/shared_partials/messages' %>
+
+<%= hidden_field_tag(:index_url, admin_reports_path) %>
+
+<div id="modal_placeholder"></div>

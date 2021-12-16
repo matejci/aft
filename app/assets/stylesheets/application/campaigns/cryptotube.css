@@ -1,0 +1,621 @@
+@media (max-width: 767.98px) {
+
+  .crypto-page-title {
+    position: absolute;
+    width: 180px;
+    height: 32px;
+    top: 56px;
+    left: -33px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+  }
+
+  .takko-crypto {
+    position: relative;
+    width: 768px;
+    height: 100%;
+    background: #181818;
+  }
+
+  .crypto-text-1 {
+    position: static;
+    width: 300px;
+    height: 50px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 32px 0px;
+  }
+
+  .crypto-text-2 {
+    position: static;
+    height: 140px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .crypto-text-3 {
+    position: static;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #FFDD67;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .campaign-email-txtbox {
+    position: static;
+    width: 320px;
+    height: 56px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 20px 0px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    background: #181818;
+    color: #FFFFFF;
+    opacity: 0.5;
+  }
+
+  .submit-arrow {
+    position: absolute;
+    top: 330px;
+    left: 298px;
+    cursor: pointer;
+  }
+
+  .cryptotube-footer {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    left: 0px;
+    top: 721px;
+    border-radius: 65px 65px 0px 0px;
+    background: linear-gradient(92.15deg, #FFDD67 6.71%, #F0E6C4 58.48%, #DBB42B 101.37%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+  }
+
+  .cryptotube-footer-text {
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 90px;
+  }
+
+  #takko-links {
+    text-align: center;
+  }
+
+  .social-links {
+    position: relative;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    display: inline;
+    align-items: center;
+    color: #24212F;
+    margin: 0px 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .crypto-page-title {
+    position: absolute;
+    width: 180px;
+    height: 32px;
+    top: 56px;
+    left: 0;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+  }
+
+  .takko-crypto {
+    position: relative;
+    height: 100%;
+    background: #181818;
+  }
+
+  .crypto-text-1 {
+    position: static;
+    width: 125px;
+    height: 0px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 32px 0px;
+  }
+
+  .crypto-text-2 {
+    position: static;
+    height: 132px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .crypto-text-3 {
+    position: static;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #FFDD67;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .campaign-email-txtbox {
+    top: 230px;
+    left: -153px;
+    position: absolute;
+    width: 320px;
+    height: 56px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background: #181818;
+    opacity: 0.5;
+  }
+
+  .submit-arrow {
+    position: absolute;
+    top: 266px;
+    left: 130px;
+    cursor: pointer;
+  }
+
+  .cryptotube-footer {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    left: 0px;
+    top: 721px;
+    background: #E66D52;
+    border-radius: 65px 65px 0px 0px;
+    background: linear-gradient(92.15deg, #FFDD67 6.71%, #F0E6C4 58.48%, #DBB42B 101.37%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+  }
+
+  .cryptotube-footer-text {
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+  }
+
+  #takko-links {
+    text-align: center;
+  }
+
+  .cryptotube-messages {
+    position: absolute;
+    top: 85px;
+    left: -155px;
+  }
+
+  .social-links {
+    position: relative;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    display: inline;
+    align-items: center;
+    color: #24212F;
+    margin: 0px 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .crypto-page-title {
+    position: absolute;
+    width: 180px;
+    height: 32px;
+    top: 56px;
+    left: -33px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+  }
+
+  .takko-crypto {
+    position: relative;
+    height: 100%;
+    background: #181818;
+  }
+
+  .crypto-text-1 {
+    position: static;
+    width: 300px;
+    height: 65px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 32px 0px;
+  }
+
+  .crypto-text-2 {
+    position: static;
+    height: 120px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .crypto-text-3 {
+    position: static;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #FFDD67;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    height: 70px;
+  }
+
+  .campaign-email-txtbox {
+    position: absolute;
+    width: 320px;
+    height: 56px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 20px 0px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background: #181818;
+    opacity: 0.5;
+    top: 294px;
+  }
+
+  .submit-arrow {
+    position: absolute;
+    top: 330px;
+    left: 298px;
+    cursor: pointer;
+  }
+
+  .cryptotube-footer {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    left: 0px;
+    top: 742px;
+    background: #E66D52;
+    background: linear-gradient(92.15deg, #FFDD67 6.71%, #F0E6C4 58.48%, #DBB42B 101.37%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+    border-radius: 65px 65px 0px 0px;
+  }
+
+  .cryptotube-footer-text {
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 90px;
+  }
+
+  #takko-links {
+    text-align: center;
+  }
+
+  .social-links {
+    position: static;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    display: inline;
+    align-items: center;
+    color: #24212F;
+    margin: 0px 24px;
+  }
+
+  .cryptotube-messages {
+    position: absolute;
+    top: 58px;
+    left: 13px;
+  }
+}
+
+@media (min-width: 992px) {
+  .crypto-page-title {
+    position: absolute;
+    left: 0px;
+    top: 56px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+  }
+
+  .takko-crypto {
+    position: relative;
+    height: 100%;
+    background: #181818;
+  }
+
+  .crypto-text-1 {
+    position: static;
+    height: 100px;
+    width: 350px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 49px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .crypto-text-2 {
+    position: static;
+    width: 433px;
+    height: 117px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .crypto-text-3 {
+    position: static;
+    width: 433px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFDD67;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 16px 0px;
+  }
+
+  .campaign-email-txtbox {
+    position: relative;
+    top: 0px;
+    width: 320px;
+    height: 56px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background: #181818;
+    opacity: 0.5;
+  }
+
+  .submit-arrow {
+    position: absolute;
+    top: 382px;
+    left: 298px;
+    cursor: pointer;
+  }
+
+  .cryptotube-footer {
+    position: static;
+    width: 100%;
+    left: 0px;
+    top: 976px;
+    background: #E66D52;
+    background: linear-gradient(92.15deg, #FFDD67 6.71%, #F0E6C4 58.48%, #DBB42B 101.37%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+    border-radius: 65px 65px 0px 0px;
+  }
+
+  .cryptotube-footer-text {
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 90px;
+  }
+
+  .cryptotube-messages {
+    position: relative;
+    top: -10px;
+    left: 0px;
+  }
+
+  #takko-links {
+    text-align: center;
+  }
+
+  .social-links {
+    position: static;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    display: inline;
+    align-items: center;
+    color: #24212F;
+    margin: 0px 24px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .cryptotube-footer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 976px;
+    background: #E66D52;
+    background: linear-gradient(92.15deg, #FFDD67 6.71%, #F0E6C4 58.48%, #DBB42B 101.37%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+    border-radius: 65px 65px 0px 0px;
+  }
+}

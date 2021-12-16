@@ -1,0 +1,64 @@
+<%= javascript_pack_tag 'campaigns' %>
+
+<div class="content" id="content">
+  <div class='container-fluid takko-crypto campaign-container'>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <div class='crypto-page-title campaign-title'>CryptoTube</div>
+      </div>
+    </div>
+    <div class='row campaign-main'>
+      <div class='col align-self-center'>
+        <div class='row'>
+          <div class='offset-1 col-5 campaign-img-col'>
+            <%= image_tag('takko_carousel.png', alt: 'takko-carousel', class: 'carousel-img') %>
+          </div>
+          <div class="col-6">
+            <div class="crypto-text-1">
+              create content and get paid in crypto
+            </div>
+            <div class="crypto-text-2">
+              Join the next generation video sharing app where you can create, collaborate, and get paid out in crypto! We believe all creators deserve the right to get paid for their content! Join the community!
+            </div>
+            <div class="crypto-text-3">
+              Coming soon. Join the wait list now and be one of our first users!
+            </div>
+          </div>
+          <div class='col-sm-6 offset-sm-6 col-xs-12'>
+            <div class="campaign-submit-form">
+              <% campaign_name = params[:action] %>
+
+              <%= form_tag(campaigns_subscribe_path, remote: true, id: campaign_name) do %>
+                <%= text_field_tag(:email, '', placeholder: 'Your email here', class: 'campaign-email-txtbox', autocomplete: 'off', type: :email) %>
+                <%= image_tag('campaigns/submit_arrow.png', alt: 'submit-arrow', id: 'submit-arrow', class: 'submit-arrow') %>
+                <%= hidden_field_tag(:campaign_name, campaign_name) %>
+                <%= render partial: 'messages' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class='cryptotube-footer campaign-footer'>
+        <div class="row justify-content-center">
+          <div class='col'>
+            <div class="cryptotube-footer-text">
+              CryptoTube
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class="row justify-content-center">
+          <div id="takko-links" class="col-12">
+            <a href='/terms' class="social-links">Terms of Use</a>
+            <a href='/privacy' class="social-links">Privacy Policy</a>
+            <p class="social-links">Copyright © <%= Time.current.year %> Content Creators, inc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+= javascript_pack_tag 'utils'
+= javascript_pack_tag 'admin/banners_manager'
+
+.banners_manager
+  %nav.sidebar
+    %a{ href: '/' }
+      = image_tag 'takko-emblem.png'
+
+    %ul.nav.flex-column= admin_nav_links
+
+    %a.logout-link{ href: '/signout' } Log out
+
+  %div
+    %nav.navbar What's New Banner Upload
+
+    .banners-content
+      %p= "#{@collection.length} / 6 banners added"
+      .d-flex.flex-wrap
+        - @collection.each do |banner|
+          = render banner
+
+        - (@collection.length + 1 .. 6).each do |index|
+          - banner = Banner.new(order: index)
+          = render banner
+
+    #banners-modal.modal.fade{'aria-hidden' => 'true', :role => 'dialog', :tabindex => '-1'}
+      .modal-dialog.modal-dialog-centered{:role => 'document'}
+        .modal-content
+          .modal-header
+            %h5#exampleModalLabel.modal-title Error occurred while saving
+            %button.close{'aria-label' => 'Close', 'data-dismiss' => 'modal', :type => 'button'}
+              %span{'aria-hidden' => 'true'} ×
+          .modal-body
+          .modal-footer
+            %button.btn.btn-secondary{'data-dismiss' => 'modal', :type => 'button'} Dismiss

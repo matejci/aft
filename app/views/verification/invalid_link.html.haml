@@ -1,0 +1,7 @@
+= content_for :content do
+  %h2 Link invalid
+
+  - if local_assigns[:message]
+    %p= local_assigns[:message]
+
+= render 'shared/takko_card', dark_theme: true

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @comment.text %>
+</p>
+
+<p>
+  <strong>Rich text:</strong>
+  <%= @comment.rich_text %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @comment.status %>
+</p>
+
+<p>
+  <strong>Phantom:</strong>
+  <%= @comment.phantom %>
+</p>
+
+<p>
+  <strong>Phantom by:</strong>
+  <%= @comment.phantom_by %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @comment.link %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @comment.user_id %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @comment.post_id %>
+</p>
+
+<%= link_to 'Edit', edit_post_comment_path(@comment.post, @comment) %> |
+<%= link_to 'Back', post_comments_path(@comment.post) %>

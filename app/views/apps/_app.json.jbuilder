@@ -1,0 +1,2 @@
+json.extract! app, :id, :last_activity, :app_id, :name, :description, :version, :public_key, :key, :secret, :permissions, :access, :requests, :status, :publish, :csrf, :domains, :email, :phone, :user_agent_whitelist, :user_agent_blacklist, :ip_whitelist, :ip_blacklist, :privacy_policy_url, :terms_of_service_url, :namespace, :created_at, :updated_at, :supported_versions
+json.url app_url(app, format: :json)

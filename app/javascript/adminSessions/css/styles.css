@@ -1,0 +1,266 @@
+
+/* fix ConfettiLaunch body padding-right issue */
+body {
+	padding: 0 !important;
+}
+
+@media (max-width: 767px) {
+	.splash {
+		font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/*background: #3023AE;*/
+		/*background: linear-gradient(to bottom right, #3023AE, #6C59CC);*/
+		color: rgba(0,0,0,0.8);
+		height: 100%;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		/* fix margin issues */
+		width: auto !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.splash {
+		font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/*background: #3023AE;*/
+		/*background: linear-gradient(to bottom right, #3023AE, #6C59CC);*/
+		color: rgba(0,0,0,0.8);
+		height: 100%;
+		/* fix margin issues */
+		width: auto !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.splash .column.columnLeft .takkoIcon {
+		width: 100%;
+		max-width: 500px;
+		margin-top: 50px;
+		margin-left: -15%;
+		padding-bottom: 50px;
+	}
+
+	.splash .column.columnRight {
+		text-align: center;
+		padding-top: 100px;
+	}
+}
+
+@media (min-width: 768px) {
+	.splash .column.columnLeft .takkoIcon {
+		width: 100%;
+		max-width: 500px;
+		margin-left: -15%;
+	}
+
+	.splash .column.columnRight {
+		text-align: right;
+		padding-right: 100px;
+	}
+}
+
+.splash .column.columnRight h1 {
+	font-size: 70px;
+	font-weight: 800;
+	letter-spacing: -1px;
+}
+
+.splash .column.columnRight h2 {
+	font-size: 30px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+
+.splash .formBox {
+
+}
+
+.splash .formBox p.callToAction {
+	margin-bottom: 7px;
+}
+
+.splash .subscribersForm {
+
+}
+
+.splash .subscribersForm :global(.row) {
+	width: auto !important;
+}
+
+.splash .subscribersForm .subscribersBoxWrap {
+	
+}
+
+.splash .subscribersForm .subscribersBoxWrap .subscribersFormBox {
+	text-align: left;
+}
+
+
+
+
+.subscribersForm .formPhoneGroup .formWrapperInput {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 100%;
+  color: #fff;
+}
+.subscribersForm .formPhoneGroup .formWrapperInput label {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(255,255,255,0.3);
+  padding-left: 8px;
+}
+
+
+.subscribersForm .formGroup {
+  width: 100%;
+}
+
+.subscribersForm .formGroup .formControl {
+  width: 100%;
+}
+
+.subscribersForm .formGroup .formWrapperInput {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.subscribersForm .formGroup .formWrapperSelect {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  border-radius: 7px;
+  color: #fff;
+  background: transparent;
+  padding-left: 18px;
+}
+
+.subscribersForm .formGroup .formWrapperInput input {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 18px;
+  line-height: 40px;*/
+  color: #fff;
+  background: transparent;
+  padding-left: 18px;
+  /*padding: 0;*/
+}
+.subscribersForm .formGroup .formWrapperInput input[type="password"] {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 25px;
+  line-height: 40px;*/
+  color: #fff;
+  background: transparent;
+  border-radius: 18px;
+  /*padding: 0;*/
+}
+.subscribersForm .formGroup .formWrapperTextArea textarea {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 18px;
+  line-height: 40px;*/
+  color: #fff;
+  background: transparent;
+  border-radius: 18px;
+  /*padding: 0;*/
+  box-sizing: inherit;
+}
+
+/* Change Autocomplete styles in Chrome */
+.subscribersForm input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus
+  input:-webkit-autofill, 
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+/*    background-color: transparent !important;
+    border: transparent !important;*/
+    font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;
+    border: none;
+    outline: none;
+}
+
+.subscribersForm .formGroup .formInputLabel {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(255,255,255,0.3);
+  padding-left: 8px;
+/*  font-size: 18px;
+  line-height: 25px;
+  left: 0;*/
+}
+.subscribersForm .formGroup .formInputLabelSub {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(255,255,255,0.3);
+/*  font-size: 18px;
+  line-height: 35px;
+  left: 0;*/
+}
+.subscribersForm .formGroup .formInputLabelFocused {
+/*  color: rgba(0,0,0,0.9);
+  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+.subscribersForm .formGroup .formInputLabelFilled {
+/*  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+
+.subscribersForm .formGroup .errorMessage {
+  color: red;
+  font-size: 13px;
+}
+
+.subscribersForm .nextButton {
+font-size: 16px;
+  margin-top: 10px;
+  border-radius: 50px;
+  padding: 0 20px;
+  line-height: 42px;
+}
+
+
+
+.item {
+	height: auto;
+}
+
+.navbar {
+
+}
+
+.navbar .navLogo {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: 0;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+:global(.navbar-dark).navbar .navLink {
+	color: rgba(0,0,0,0.7);
+}
+
+
+.post {
+
+}
+
+.header {
+	font-size: 20px;
+	margin: 20px 0 12px 0;
+	height: auto;
+}
+
+
+
+
+
+
+
+

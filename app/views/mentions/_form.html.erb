@@ -1,0 +1,62 @@
+<%= form_with(model: mention, local: true) do |form| %>
+  <% if mention.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mention.errors.count, "error") %> prohibited this mention from being saved:</h2>
+
+      <ul>
+        <% mention.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :mentioned_by_id %>
+    <%= form.text_field :mentioned_by_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :template %>
+    <%= form.text_field :template %>
+  </div>
+
+  <div class="field">
+    <%= form.label :read %>
+    <%= form.check_box :read %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seen %>
+    <%= form.check_box :seen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :post_id %>
+    <%= form.text_field :post_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment_id %>
+    <%= form.text_field :comment_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

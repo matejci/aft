@@ -1,0 +1,67 @@
+
+.mainWrap {
+  background-color: #f4f4f4;
+  padding: 0;
+}
+
+:global(body.light-mode) .mainWrap {
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+:global(body.dark-mode) .mainWrap {
+  background-color: #111111;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.darkModeOptions {
+
+}
+
+.darkModeOptions .darkModeOptionsItem {
+  font-size: 13px;
+}
+
+.mainWrap .header {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.height100WithNav {
+  /* Firefox */
+  height: -moz-calc(100% - 90px);
+  /* WebKit */
+  height: -webkit-calc(100% - 90px);
+  /* Opera */
+  height: -o-calc(100% - 90px);
+  /* Standard */
+  height: calc(100% - 90px);
+}
+
+.scrollbars {
+  padding: 35px 35px 35px 50px;
+  /*overflow-x: hidden !important;*/
+}
+
+.scrollbarsTrackVertical {
+
+}
+
+.scrollbarsTrackHorizontal {
+
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  color: rgba(0,0,0,0.15);
+}

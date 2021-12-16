@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="col-6 large-content">
+    <span class="details_label">Comment</span>&nbsp;<span class="details_text"><%= report.reportable.text %></span>
+  </div>
+  <div class="col-6">
+    <span class="details_label">Report ID</span>&nbsp;<span class="details_text"><%= report.id.to_s %></span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+  </div>
+  <div class="col-6">
+    <span class="details_label">Username</span>&nbsp;<span class="details_text"><%= report.reportable.user.username %></span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6 large-content">
+    <div>
+      <span class="details_label">Report reason</span>
+    </div>
+    <div>
+      <span class="details_text"><%= report.reason || 'N/A' %></span>
+    </div>
+  </div>
+  <div class="col-6">
+    <span class="details_label">Reporter(s)</span>&nbsp;<span class="details_text"><%= report.reported_by.username %></span>
+    <% if report.reporters.any? %>
+      <br />
+      <%= sanitize reporters(report) %>
+    <% end %>
+  </div>
+</div>
+
+<br/>
+
+<div class="row">
+  <div class="col-3">
+    <span id="notes-tab" class="active-tab">Notes</span>
+  </div>
+  <div class="col-3">
+    <span id="history-tab" class="inactive-tab">History</span>
+  </div>
+  <div class="col-6">
+    <span class="details_label">Created</span>&nbsp;<span class="details_text"><%= report.created_at.strftime('%m/%d/%y %H:%M') %></span>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-6">
+    <div id="notes-content" style="display: block;">
+      <span class="details_text"><%= text_area_tag(:notes, report.notes, placeholder: 'Add notes here', size: '45x4', class: 'details_textarea') %></span>
+    </div>
+    <div id="history-content" class="large-content" style="display: none;">
+      <span class="details_text"><%= sanitize history_content(report) %></span>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="row">
+      <div class="col-6">
+        <span class="details_label">Updated</span>&nbsp;<span class="details_text"><%= report.updated_at.strftime('%m/%d/%y %H:%M') %></span>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-2">
+        <span class="details_label">Action</span>
+      </div>
+      <div class="col-3">
+        <span class="details_allow_btn">Allow</span>
+      </div>
+      <div class="col-3">
+        <span class="details_archive_btn">Archive</span>
+      </div>
+    </div>
+  </div>
+</div>

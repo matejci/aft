@@ -1,0 +1,349 @@
+.navbar {
+  background-image: linear-gradient(to top right, #AD46FE 0%, #5546FE 25%, #AD46FE 65%, #5546FE 99%);
+  background-size: 400% 400%;
+  color: white;
+  padding: 20px 25px;
+
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar nav {
+  height: 65px;
+}
+
+.navbar nav > a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar label {
+  margin-bottom: 0.2em;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  padding: 20px 25px;
+}
+
+.table tr {
+  background: white;
+}
+
+.main_body {
+  padding: 50px;
+}
+
+.pools_table table tbody th, .pools_table table tbody td {
+  cursor: pointer;
+}
+
+.pools_table table tbody td[data-role='action'] {
+  cursor: unset;
+}
+
+.pool_detail .amount_details {
+  padding: 0;
+}
+
+.pool_detail .amount_details li {
+  box-shadow: inset 2px 0px #dcdcdc;
+  font-size: 14px;
+  padding-left: 12px;
+}
+
+.pool_detail .amount_details li > span {
+  font-weight: 600;
+}
+
+.pool_detail .modified .amount_details li {
+  box-shadow: inset 2px 0px #ffff20c7;
+}
+
+.pool_detail table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  table-layout: fixed;
+}
+
+.pool_detail table thead th {
+  border: none;
+  border-bottom: 3px solid #868282;
+  color: #635b5b;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.pool_detail table thead th:last-child {
+  padding-left: 35px;
+}
+
+.pool_detail table thead tr th:first-child, .pool_detail table tbody tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.pool_detail table thead tr th:last-child, .pool_detail table tbody tr td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.pool_detail table tr {
+  background-color: white;
+  box-shadow: 2px 2px #dcdcdc;
+  border-radius: 10px;
+  height: 10px !important;
+}
+
+.pool_detail table tr td {
+  vertical-align: middle;
+  border: transparent;
+  padding: 0 30px;
+}
+
+.main_body > div {
+  margin: 0 auto;
+  max-width: 850px;
+  width: 80%;
+}
+
+.main_body > div:last-child {
+  height: 575px;
+  overflow: scroll;
+  position: relative;
+  width: calc(80% + 10px);
+}
+
+.main_body > div:first-child table {
+  margin: 0 auto;
+  width: calc(100% - 20px);
+}
+
+.main_body > div:last-child table {
+  margin: -10px 0 0 15px;
+  width: calc(100% - 20px);
+}
+
+
+.main_body > div:last-child::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main_body > div:last-child::-webkit-scrollbar-thumb {
+  background: #ffffffc9;
+  border-radius: 100px;
+  box-shadow: inset 0px 0px 3px 0px #888888;
+}
+
+.pool_detail table tr th, .pool_detail table tr td  {
+  width: 33%;
+}
+
+.pool_detail table tbody tr:hover, .pool_detail table tbody tr:focus-within {
+  background-color: #fffdf2;
+}
+
+.pool_detail table tbody tr:nth-of-type(odd) {
+  background-color: #f1edf7b3;
+}
+
+.pool_detail table tbody tr:nth-of-type(odd):hover,
+.pool_detail table tbody tr:nth-of-type(odd):focus-within {
+  background-color: #fdfcea;
+}
+
+.pool_detail table tr td:last-child > div {
+  margin: 0.3em 0;
+}
+
+.pool_detail table tr.modified {
+  box-shadow: inset 20px 0px #ffdc079c, 2px 2px #dcdcdc;
+}
+
+.pool_detail table div.formWrapperInput input {
+  padding: 5px 15px;
+}
+
+.pool_detail nav + div {
+  padding: 0 16px;
+}
+
+div.formControl {
+  width: 100%;
+}
+
+div.formWrapperInput {
+  background-color: #c1c1c117;
+  border-radius: 25px;
+}
+
+div.formWrapperInput:hover, div.formWrapperInput:focus-within {
+  background-color: #dcdcdc61;
+}
+
+div.formWrapperInput input {
+  font-family: 'BR Candor';
+  padding: 15px 20px
+}
+
+.navbar div.formWrapperInput {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.navbar div.formControl + span {
+  background: #ff00003b;
+  color: white;
+  font-size: 14px;
+}
+
+input[inputmode='numeric'] {
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.yellow_text {
+  color: #ffe207;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+
+  background-color: #ff5b9f57;
+  border-radius: 6px;
+  color: #fff;
+  margin-left: -75px;
+  margin-top: -30px;
+  padding: 1px 0;
+  position: absolute;
+  text-align: center;
+  width: 120px;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.interval_detail .navbar label {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.interval_detail .navbar nav + div > div {
+  align-self: flex-end;
+}
+
+.interval_detail > div:last-child {
+  background-color: #fff;
+}
+
+.interval_detail label[for='pool_amount'] {
+  float: left;
+}
+
+.interval_detail label[for='pool_amount'] + span {
+  float: left;
+  font-size: 14px;
+  margin-left: 2px;
+  margin-top: 20px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 104px);
+}
+
+.interval_detail label[for='pool_amount'] + span:hover {
+  overflow-x: scroll;
+  text-overflow: unset;
+}
+
+.interval_detail table{
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+.interval_detail table td input {
+  width: 100%;
+  overflow-x: scroll;
+  text-overflow: ellipsis;
+}
+
+.interval_detail table td input:hover {
+  text-overflow: unset;
+}
+
+.interval_detail table thead th:nth-last-child(1), th:nth-last-child(3), th:nth-last-child(4) {
+  width: 160px;
+}
+
+.interval_detail table tbody td:nth-last-child(1), td:nth-last-child(3), td:nth-last-child(4) {
+  overflow-x: scroll;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+}
+
+.interval_detail table td:hover, th:hover {
+  overflow-x: scroll;
+  text-overflow: unset;
+}
+
+.interval_detail table thead tr {
+  background: #feec0d59;
+}
+.interval_detail table th, .interval_detail table td {
+  vertical-align: middle;
+}
+
+.interval_detail table tbody tr th, .interval_detail table tbody tr td {
+  font-weight: 400;
+}
+
+.interval_detail table tbody th {
+  font-size: 0.9em;
+}
+
+.interval_detail table tfoot tr td {
+  border-top: 2px solid #7e7e7e96;
+  font-weight: 600;
+  padding: 0.2em 0.75em;
+}
+
+.interval_detail tfoot td > input {
+  font-weight: 600;
+}
+
+.pool_detail table .error > div > div {
+  box-shadow: 0px 0px 4px #ff0000db;
+  background-color: #ff000014;
+}
+
+.pool_detail table .error > span {
+  visibility: hidden;
+
+  background-color: #ffffff57;
+  border-radius: 6px;
+  color: #646464;
+  margin-left: -168px;
+  margin-top: 25px;
+  font-size: 11px;
+  padding: 1px 0;
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  z-index: 1;
+}
+
+.pool_detail table .error:hover > span {
+  visibility: visible;
+}

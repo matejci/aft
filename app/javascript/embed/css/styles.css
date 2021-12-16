@@ -1,0 +1,159 @@
+
+/* fix ConfettiLaunch body padding-right issue */
+body {
+	padding: 0 !important;
+	overflow: hidden !important;
+	/*background: rgba(7, 7, 7, 1.0) !important;*/
+	background: rgba(255,255,255,1.0);
+}
+
+.content {
+	height: 100%;
+}
+
+.mainWrap {
+  /*background-color: #f4f4f4;*/
+  padding: 0;
+}
+
+.embed {
+	height: 100%;
+	width: 100%;
+	/*background: rgba(255,255,255,1.0);*/
+	/*background: linear-gradient(to top right, #AD46FE, #5546FE);*/
+	/*padding-top: 15px;*/
+}
+
+.embed .embedRow {
+	position: relative;
+	margin: 0 auto;
+}
+
+.embed .embedCol {
+	margin: 0 auto;
+}
+
+.embed .embedWrap {
+	/*top: 15%;*/
+	margin: 0 auto;
+	margin-top: 18px;
+}
+
+.embed .background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(to top right, #AD46FE, #5546FE);
+
+	/* blur effect */
+	-webkit-filter: blur(20px);
+	 -o-transition: blur(20px);
+	 	 -moz-filter: blur(20px);
+			-ms-filter: blur(20px);
+		 			filter: blur(20px);
+
+	/* transition properties */
+  -webkit-transition: background-image 1s ease;
+     -moz-transition: background-image 1s ease;
+    	 -o-transition: background-image 1s ease;
+    			transition: background-image 1s ease;
+
+  /* background properties */
+	background-repeat: no-repeat;
+	background-position: center center;
+			-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+}
+
+.embed .darkBackground {
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+}
+
+.embed .embedTortilla {
+	position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.embed .embedTortilla .main {
+	display: flex;
+	position: relative;
+	width: 100%;
+  height: auto;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.embed .embedTortilla .main .post {
+	margin: 0 auto !important;
+}
+
+.embed .embedTortilla .bottom {
+	position: relative;
+	background: #fff;
+	padding: 0;
+	/*padding: 15px 20px 25px 20px;*/
+}
+
+.embed .embedTortilla .bottom p {
+	margin: 0;
+}
+
+.embed .embedTortilla .bottom .bottomContent {
+
+}
+
+.embed .embedTortilla .bottom .bottomContent .bottomContainer {
+
+}
+
+.embed .embedTortilla .bottom .bottomContent .bottomContainer .bottomRow {
+
+}
+
+.embed .embedTortilla .bottom .bottomContent .embedBottomCol {
+
+}
+
+.embed .embedTortilla .bottom .bottomContent .embedBottomCol .postInfoSection {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.embed .embedTortilla .bottom .bottomContent .embedBottomCol .postInfoSection h5 {
+	display: block;
+	text-align: center;
+	font-weight: 600;
+}
+.embed .embedTortilla .bottom .bottomContent .embedBottomCol .postInfoSection span {
+	display: inline-block;
+	text-align: center;
+}
+
+.embed .embedTortilla .bottom .bottomContent .embedBottomCol .profileSection {
+	display: flex;
+	align-items: center;
+}
+
+.embed .embedTortilla .bottom .bottomContent .embedBottomCol .profileSection .profileImage {
+	display: inline-block;
+}
+
+.embed .embedTortilla .bottom .bottomContent .embedBottomCol .profileSection .profileInfo {
+	display: inline-block;
+}
+
+
+
+
+
+
+

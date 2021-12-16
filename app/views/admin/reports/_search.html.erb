@@ -1,0 +1,23 @@
+ <% reports.each do |item| %>
+  <tr>
+    <td class="fit">
+      <%= item.id.to_s %>
+    </td>
+    <td class="fit">
+      <span class="<%= report_type(item).downcase %>"><%= report_type(item) %></span>
+    </td>
+    <td class="fit">
+      <%= item.created_at.strftime('%Y-%m-%d') %>
+    </td>
+    <td class="fit title_text">
+      <!-- WARNING: This generates N+1 queries. Check if this data is needed here. show it on details page instead? -->
+      <%= username(item) %>
+    </td>
+    <td class="fit">
+      <%= sanitize reporters_count(item) %>
+    </td>
+    <td class="fit">
+      <span class="report_details_btn" data-url="<%= admin_report_path(item.id) %>">Details</span>
+    </td>
+  </tr>
+<% end %>

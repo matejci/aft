@@ -1,0 +1,11 @@
+---
+:timeout: 25
+:concurrency: <%= ENV.fetch('SIDEKIQ_CONCURRENCY', 5) %>
+:queues:
+  - post_reindex
+  - paypal_events
+  - push_notifications
+  - view_logger_jobs
+  - default
+  - cron_jobs
+  - mailers

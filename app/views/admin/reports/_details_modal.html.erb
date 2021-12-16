@@ -1,0 +1,39 @@
+<div class="modal fade" id="report_details_modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal_content">
+      <div id="details_title" class="row">
+        <div class="col-3">
+          Report Details
+        </div>
+        <div class="col-2">
+          <span class="<%= report_type(report).downcase %>">
+            <%= report_type(report) %></span>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-1">
+          <span class="close_btn">x</span>
+        </div>
+      </div>
+      <br />
+      <% case report.reportable_type %>
+      <% when 'User' %>
+      <%= render partial: 'user', locals: { report: report } %>
+      <% when 'Post' %>
+      <%= render partial: 'post', locals: { report: report } %>
+      <% when 'Comment' %>
+      <%= render partial: 'comment', locals: { report: report } %>
+      <% end %>
+
+      <div class="row">
+        <div class="col-2">
+          <span class="save_btn">Save</span>
+        </div>
+        <div class="col-2">
+          <span class="cancel_btn">Cancel</span>
+        </div>
+      </div>
+
+      <%= hidden_field_tag(:admin_update_url, admin_report_path(report.id)) %>
+    </div>
+  </div>
+</div>

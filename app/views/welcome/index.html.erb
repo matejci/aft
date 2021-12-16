@@ -1,0 +1,14 @@
+
+<%= javascript_tag do %>
+  var link = "";
+<% end %>
+
+<div class="content" id="content">
+
+	<% if @current_user %>
+		<%= javascript_pack_tag 'home' %>
+	<% else %>
+		<%= javascript_pack_tag 'splash' %>
+	<% end %>
+
+</div>

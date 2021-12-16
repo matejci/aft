@@ -1,0 +1,48 @@
+{"id": "WH-72W06322BN405684U-72173902KY821234N",
+ "event_version": "1.0",
+ "create_time": "2021-11-25T01:29:18.184Z",
+ "resource_type": "payouts_item",
+ "event_type": "PAYMENT.PAYOUTS-ITEM.UNCLAIMED",
+ "summary": "A payout item is unclaimed",
+ "resource":
+  {"transaction_id": "6CC504684J6129716",
+   "payout_item_fee": {"currency": "USD", "value": "0.25"},
+   "transaction_status": "UNCLAIMED",
+   "sender_batch_id": "619ee6de5adab63a13f4c581",
+   "time_processed": "2021-11-25T01:29:07Z",
+   "activity_id": "3WW357324J671042C",
+   "payout_item":
+    {"recipient_type": "EMAIL",
+     "amount": {"currency": "USD", "value": "101.05"},
+     "note": "TAKKO PAYOUTS (11/23/2021)",
+     "receiver": "walton@considine-langworth.io",
+     "sender_item_id": "619ee6de5adab63a13f4c581_619ee6df5adab63a13f4c597",
+     "recipient_wallet": "PAYPAL"},
+   "links":
+    [{"href":
+       "https://api.sandbox.paypal.com/v1/payments/payouts-item/E9BGH8AG6J5F6",
+      "rel": "self",
+      "method": "GET",
+      "encType": "application/json"},
+     {"href":
+       "https://api.sandbox.paypal.com/v1/payments/payouts/U6AZNJTAYE7WW",
+      "rel": "batch",
+      "method": "GET",
+      "encType": "application/json"}],
+   "payout_item_id": "E9BGH8AG6J5F6",
+   "payout_batch_id": "U6AZNJTAYE7WW",
+   "errors":
+    {"name": "RECEIVER_UNREGISTERED",
+     "message":
+      "The recipient for this payout does not have an account. A link to sign up for an account was sent to the recipient. However, if the recipient does not claim this payout within 30 days, the funds will be returned to your account.",
+     "information_link":
+      "https://developer.paypal.com/docs/api/payments.payouts-batch/#errors"}},
+ "links":
+  [{"href":
+     "https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-72W06322BN405684U-72173902KY821234N",
+    "rel": "self",
+    "method": "GET"},
+   {"href":
+     "https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-72W06322BN405684U-72173902KY821234N/resend",
+    "rel": "resend",
+    "method": "POST"}]}

@@ -1,0 +1,10 @@
+<% if @creator_program[:error].present? %>
+  alert("<%= @creator_program[:error] %>");
+<% else %>
+  var table_body = document.querySelector("#cp-table-body");
+  table_body.innerHTML = "<%= j render partial: 'cp_row', locals: { creator_program: @creator_program } %>";
+
+  var active_el = document.querySelector("#active");
+  active_el.value = "<%= !@creator_program.active %>";
+<% end %>
+

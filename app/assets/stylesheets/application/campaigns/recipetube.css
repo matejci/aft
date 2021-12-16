@@ -1,0 +1,540 @@
+@media (max-width: 767.98px) {
+
+  .recipe-page-title {
+    position: absolute;
+    width: 180px;
+    height: 32px;
+    top: 56px;
+    left: -33px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #3F3535;
+  }
+
+  .takko-recipe {
+    position: relative;
+    height: 100%;
+    background: #FFFFFF;
+  }
+
+  .recipe-text-1 {
+    position: static;
+    width: 300px;
+    height: 50px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: #3C3535;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 32px 0px;
+  }
+
+  .recipe-text-2 {
+    position: static;
+    height: 120px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #3C3535;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .recipe-text-3 {
+    position: static;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #E56D52;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .campaign-recipe-email-txtbox {
+    position: static;
+    width: 320px;
+    height: 56px;
+    border: 2px solid #3C3535;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 20px 0px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #181818;
+    background: #FFFFFF;
+    opacity: 0.5;
+  }
+
+  .red-arrow {
+    position: absolute;
+    top: 310px;
+    left: 298px;
+    cursor: pointer;
+  }
+
+  .recipetube-footer {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    left: 0px;
+    top: 721px;
+    background: #E66D52;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 65px 65px 0px 0px;
+  }
+
+  .recipetube-footer-text {
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 90px;
+  }
+
+  #takko-links {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .recipe-page-title {
+    position: absolute;
+    width: 180px;
+    height: 32px;
+    top: 56px;
+    left: 0;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #3F3535;
+  }
+
+  .takko-recipe {
+    position: relative;
+    height: 100%;
+    background: #FFFFFF;
+  }
+
+  .recipe-text-1 {
+    position: static;
+    width: 121px;
+    height: 0px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: #3C3535;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 32px 0px;
+  }
+
+  .recipe-text-2 {
+    position: static;
+    height: 95px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #3C3535;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .recipe-text-3 {
+    position: static;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #E56D52;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .campaign-recipe-email-txtbox {
+    top: 240px;
+    left: -145px;
+    position: absolute;
+    width: 320px;
+    height: 56px;
+    border: 2px solid #3C3535;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #181818;
+    background: #FFFFFF;
+    opacity: 0.5;
+  }
+
+  .red-arrow {
+    position: absolute;
+    top: 276px;
+    left: 135px;
+    cursor: pointer;
+  }
+
+  .recipetube-footer {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    left: 0px;
+    top: 721px;
+    background: #E66D52;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 65px 65px 0px 0px;
+  }
+
+  .recipetube-footer-text {
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  #takko-links {
+    text-align: center;
+  }
+
+  .recipetube-messages {
+    position: absolute;
+    top: 135px;
+    left: -147px;
+  }
+}
+
+@media (min-width: 768px) {
+  .recipe-page-title {
+    position: absolute;
+    width: 180px;
+    height: 32px;
+    top: 56px;
+    left: -33px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #3F3535;
+  }
+
+  .takko-recipe {
+    position: relative;
+    height: 100%;
+    background: #FFFFFF;
+  }
+
+  .recipe-text-1 {
+    position: static;
+    width: 300px;
+    height: 50px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: #3C3535;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 32px 0px;
+  }
+
+  .recipe-text-2 {
+    position: static;
+    height: 120px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #3C3535;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .recipe-text-3 {
+    position: static;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #E56D52;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .campaign-recipe-email-txtbox {
+    position: static;
+    width: 320px;
+    height: 56px;
+    border: 2px solid #3C3535;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 20px 0px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #181818;
+    background: #FFFFFF;
+    opacity: 0.5;
+  }
+
+  .red-arrow {
+    position: absolute;
+    top: 310px;
+    left: 298px;
+    cursor: pointer;
+  }
+
+  .recipetube-footer {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    left: 0px;
+    top: 721px;
+    background: #E66D52;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 65px 65px 0px 0px;
+  }
+
+  .recipetube-footer-text {
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 90px;
+  }
+
+  #takko-links {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .recipe-page-title {
+    position: absolute;
+    left: 0px;
+    top: 56px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #3F3535;
+  }
+
+  .takko-recipe {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #FFFFFF;
+  }
+
+  .recipe-text-1 {
+    position: static;
+    height: 100px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 49px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #3C3535;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .recipe-text-2 {
+    position: static;
+    width: 433px;
+    height: 117px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #3C3535;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .recipe-text-3 {
+    position: static;
+    width: 433px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #E56D52;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 16px 0px;
+  }
+
+  .campaign-recipe-email-txtbox {
+    position: relative;
+    width: 320px;
+    height: 56px;
+    border: 2px solid #3C3535;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #181818;
+    background: #FFFFFF;
+    opacity: 0.5;
+  }
+
+  .red-arrow {
+    position: absolute;
+    top: 382px;
+    left: 298px;
+    cursor: pointer;
+  }
+
+  .recipetube-footer {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    left: 0px;
+    top: 976px;
+    background: #E66D52;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 65px 65px 0px 0px;
+  }
+
+  .recipetube-footer-text {
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 90px;
+  }
+
+  .recipetube-messages {
+    position: relative;
+  }
+
+  #takko-links {
+    text-align: center;
+  }
+}

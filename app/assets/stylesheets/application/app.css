@@ -1,0 +1,530 @@
+ /* explicitly require directory if created a new folder inside stylesheets */
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	background-color: transparent;
+	border: 1px solid transparent;
+	-webkit-text-fill-color: inherit;
+	/*border: 1px solid green;
+	-webkit-text-fill-color: green;*/
+	-webkit-box-shadow: 0 0 0 1000px transparent inset;
+	transition: background-color 5000s ease-in-out 0s;
+}
+/*input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: transparent !important;
+    background-image: none;
+    color: rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+}
+*/
+
+/* remove blue outline on focus */
+input:focus, textarea:focus, button:focus {
+	outline: 0;
+}
+
+
+
+html, body { height: 100%; margin:0; padding:0; background: #fff; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+
+/*div { width: inherit; height: inherit; }*/
+/*div { width: inherit; height: inherit; }*/
+
+body {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* home css/styles.css */
+/* .spinner loading css3 from http://tobiasahlin.com/spinkit/ */
+
+/*.spinner {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}*/
+
+/* .spinner loading css3 from http://tobiasahlin.com/spinkit/ end */
+
+.react-confirm-alert-overlay {
+  z-index: 9999999999999999999999999999999999999 !important;
+}
+
+.content {
+	height: 100%;
+  width: 100%;
+}
+
+.search-width { width: 35%; }
+
+#nprogress .bar {
+  background: linear-gradient(to bottom right, #3023AE, #6C59CC) !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px linear-gradient(to bottom right, #3023AE, #6C59CC), 0 0 5px linear-gradient(to bottom right, #3023AE, #6C59CC) !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: linear-gradient(to bottom right, #3023AE, #6C59CC) !important;
+  border-left-color: linear-gradient(to bottom right, #3023AE, #6C59CC) !important;
+}
+
+
+
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+
+
+.takko-pages {
+  background: #111;
+}
+
+.takko-pages p span.uppercase {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .takko-pages .nested {
+    margin-left: 20px;
+  }
+
+  .takko-pages .nested h3.section-header {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .takko-pages .nested p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .takko-pages .nested .nested-left-column {
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .takko-pages .nested {
+    margin-left: 35px;
+  }
+
+  .takko-pages .nested h3.section-header {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .takko-pages .nested p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .takko-pages .nested .nested-left-column {
+    text-align: right;
+  }
+}
+
+@media (max-width: 767px) {
+  .takko-pages .fluid-header-cover {
+    font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: linear-gradient(to top right, #AD46FE, #5546FE);
+    color: #fff;
+    height: 300px;
+    /* overflow-y: scroll;
+    overflow-x: hidden;*/
+    /* fix margin issues */
+    width: auto !important;
+    padding: 0 25px;
+  }
+
+  .takko-pages .fluid-header-cover .takko-emblem {
+    display: block;
+    max-height: 40px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .takko-pages .fluid-header-cover h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .takko-pages .fluid-header-cover h1 .version {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  .takko-pages .last-updated {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .takko-pages .fluid-header-cover {
+    font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    height: 400px;
+    background-image: linear-gradient(to top right, #AD46FE 0%, #5546FE 25%, #AD46FE 65%, #5546FE 99%);
+    background-size: 400% 400%;
+
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+
+    /* fix margin issues */
+    width: auto !important;
+  }
+
+  .takko-pages .fluid-header-cover .takko-emblem {
+    display: block;
+    max-height: 40px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .takko-pages .fluid-header-cover h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .takko-pages .fluid-header-cover h1 .version {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  .takko-pages .last-updated {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 991px) {
+  .takko-pages .fluid-header-cover .takko-emblem {
+    display: inline-block;
+    max-height: 40px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .takko-pages .fluid-header-cover h1 .version {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.takko-pages .fluid-header-cover .subtitle {
+  margin-top: 25px;
+}
+
+
+@media (max-width: 767px) {
+  .takko-pages .main-wrap {
+    padding-top: 25px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .takko-pages .main-wrap {
+    padding: 40px 40px 30px 40px;
+  }
+
+  .takko-pages .footer {
+    margin-bottom: 50px;
+  }
+
+  .takko-pages .main-content .tagline {
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 30px;
+  }
+
+  .takko-pages .main-content .section-header {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+
+    background: -webkit-linear-gradient(135deg, #AD46FE, #5546FE);
+    background: linear-gradient(135deg, #AD46FE, #5546FE);
+    background-size: 45%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .takko-pages .main-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .takko-pages.policy .main-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .takko-pages.policy .main-content p.legal-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .takko-pages .main-wrap {
+    padding-top: 55px;
+    padding-bottom: 50px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .takko-pages .footer {
+    margin-bottom: 150px;
+  }
+
+  .takko-pages .main-content .tagline {
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 30px;
+  }
+
+  .takko-pages .main-content .section-header {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+
+    background: -webkit-linear-gradient(135deg, #AD46FE, #5546FE);
+    background: linear-gradient(135deg, #AD46FE, #5546FE);
+    background-size: 25%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .takko-pages .main-content p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .takko-pages.policy .main-content p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .takko-pages.policy .main-content p.legal-text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 991px) {
+  .takko-pages .main-content .section-header {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+
+    background: -webkit-linear-gradient(135deg, #AD46FE, #5546FE);
+    background: linear-gradient(135deg, #AD46FE, #5546FE);
+    background-size: 30%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.takko-pages .main-content p b {
+  font-weight: 700;
+}
+
+.takko-pages .main-content a {
+  color: #5546FE;
+}
+
+.takko-pages .main-content a:hover {
+  color: #AD46FE;
+}
+
+
+
+
+
+.takko-pages .nested-bullet-list {
+
+}
+
+.takko-pages .nested-bullet-list p {
+  margin: 0 0 5px 0;
+}
+
+.takko-pages .nested-bullet-list .list-wrap {
+  margin-left: 0;
+}
+
+.takko-pages .nested-bullet-list .list-wrap .bullet-item {
+  list-style: "🌮 ";
+  list-style-position: outside;
+  margin-bottom: 15px;
+}
+
+.takko-pages .nested-bullet-list .list-wrap .bullet-item:first-child {
+  margin-top: 15px;
+}
+
+
+
+.takko-pages .nested-numbered-list {
+
+}
+
+.takko-pages .nested-numbered-list p {
+  margin: 0 0 5px 0;
+}
+
+.takko-pages .nested-numbered-list .list-wrap {
+  margin-left: 0;
+}
+
+.takko-pages .nested-numbered-list .list-wrap .numbered-item {
+  list-style-position: outside;
+  margin-bottom: 15px;
+}
+
+
+
+[style*="--aspect-ratio"] > :first-child {
+  width: 100%;
+}
+
+[style*="--aspect-ratio"] > img {
+  height: auto;
+}
+
+[style*="--aspect-ratio"] {
+  position: relative;
+}
+
+[style*="--aspect-ratio"] > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+[style*="--aspect-ratio"]::before {
+  content: "";
+  display: block;
+}
+
+@supports not (aspect-ratio: 1/1) {
+  [style*="--aspect-ratio"]::before {
+    height: 0;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+}
+@supports (aspect-ratio: 1/1) {
+  [style*="--aspect-ratio"]::before {
+    aspect-ratio: calc(var(--aspect-ratio));
+  }
+}
+

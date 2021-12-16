@@ -1,0 +1,58 @@
+= content_for :title do
+  %h4 users
+
+%h2 Users
+
+.row
+  = form_tag admin_users_path, method: :get, class: "form float-right w-100 mr-4", role: "search" do
+    %p.float-right.search-width
+      = text_field_tag :query, params[:query], class: "form-control mr-3 w-100", placeholder: 'Search by username, email, name or phone #'
+      = submit_tag "Search", name: nil, class: "btn btn-primary mt-3 mr-3 w-100"
+.row
+  .col
+    .table-responsive
+      %table.table.table-striped
+        %thead.thead-dark
+          %tr
+            %th
+            %th
+            %th id
+            %th username
+            %th display name
+            %th email
+            %th phone
+            %th dob
+            %th created at
+            %th takko managed
+            %th valid account
+            %th account errors
+
+        %tbody
+          - @users.each do |user|
+            %tr{ data: { 'user-id' => user.id } }
+              %th
+                - confirm_msg = "are you sure to delete user: \n |
+                                 id: #{user.id} \n |
+                                 username: #{user.username}" |
+
+                = button_to 'Delete', user, method: :delete, remote: true,
+                    data: { confirm: confirm_msg }, disable_with: 'deleting...'
+              %th
+                = button_to "#{user.verified ? 'Un-Verify' : 'Verify'}", [:verify, :admin, user], method: :post,
+                    disable_with: 'submitting...'
+              %th= user.id
+              %td= user.username
+              %td= user.display_name
+              %td= user.email
+              %td= user.phone
+              %td= user.dob
+              %td= user.created_at
+              %td= user.takko_managed?
+              %td= user.valid_account?
+              %td
+                .scrollable
+                  %ul
+                    - user.account_errors.messages.each do |name, messages|
+                      %li= "#{name}: #{messages.join(', ')}"
+
+    = paginate @users

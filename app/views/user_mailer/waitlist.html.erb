@@ -1,0 +1,72 @@
+<table class="email-wrap waitlist-container">
+	<tbody>
+		<tr class="logo-row">
+			<td>
+				<table class="email-table" align="center">
+				  <tbody>
+				  	<tr class="logo-row">
+				      <td>
+				        <img src="https://takko.app/email/images/takko-logo.png" alt="Takko" class="takko_logo">
+				      </td>
+				    </tr>
+				    <tr class="header-row">
+				      <td>
+				        <h1>Hello future takko user!</h1>
+				      </td>
+				    </tr>
+				    <tr class="body-row">
+				      <td>
+				        <p>We’re excited to have you join the takko community that empowers you to create, share, collaborate, and make money at the same time!</p>
+				      </td>
+				    </tr>
+				    <tr class="call-to-action">
+				      <td>
+				        <a href="https://takko.app/s/<%= @subscriber.link %>" class="btn">Share your link to get early access!</a>
+				      </td>
+				    </tr>
+				    <tr class="body-row">
+				      <td>
+				        <p>Please share this link with your friends and family and get early access to <b>claim your username</b>!</p>
+				      </td>
+				    </tr>
+				    <tr class="body-row">
+				      <td>
+				        <p>See you soon ☺️</p>
+				      </td>
+				    </tr>
+				    <tr class="logo-row">
+				      <td>
+				        <img src="https://takko.app/email/images/takko-emblem.png" alt="Takko Emblem" class="takko_emblem">
+				      </td>
+				    </tr>
+				    <tr class="signature-row">
+				      <td>
+				        <div class="signature">- the takko team</div>
+				      </td>
+				    </tr>
+				    <tr class="footer-row">
+				      <td>
+				      	<p>
+				      		<ul>
+				      			<li>
+				      				<a href="https://www.instagram.com/takkoapp/">Instagram</a>
+				      			</li>
+				      			<li class="divider">|</li>
+				      			<li>
+				      				<a href="https://www.facebook.com/takkoapp/">Facebook</a>
+				      			</li>
+				      			<li class="divider">|</li>
+				      			<li>
+				      				<a href="http://www.takkoapp.com/email/unsubscribe/<%= @subscriber.unsubscribe_hash %>">Unsubscribe</a>
+				      			</li>
+				      		</ul>
+				      	</p>
+				      	<p class="copyright">Copyright &copy; <%= Time.now.year %> Takko, Inc.</p>
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>

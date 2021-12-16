@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mentioned by:</strong>
+  <%= @mention.mentioned_by_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @mention.user_id %>
+</p>
+
+<p>
+  <strong>Template:</strong>
+  <%= @mention.template %>
+</p>
+
+<p>
+  <strong>Read:</strong>
+  <%= @mention.read %>
+</p>
+
+<p>
+  <strong>Seen:</strong>
+  <%= @mention.seen %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @mention.type %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @mention.status %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @mention.post_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @mention.comment_id %>
+</p>
+
+<%= link_to 'Edit', edit_mention_path(@mention) %> |
+<%= link_to 'Back', mentions_path %>

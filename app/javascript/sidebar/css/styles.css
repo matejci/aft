@@ -1,0 +1,199 @@
+
+
+.spinnerLoading {
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+}
+
+.spinnerLoading p {
+  margin-top: 17px;
+  font-size: 14px;
+  color: rgba(0,0,0,0.5);
+}
+
+/* .spinner loading css3 from http://tobiasahlin.com/spinkit/ */
+
+.spinner {
+  width: 65px;
+  height: 65px;
+
+  position: relative;
+  margin: 0 auto;
+}
+
+.doubleBounce1, .doubleBounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.doubleBounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/* .spinner loading css3 from http://tobiasahlin.com/spinkit/ end */
+
+
+
+.sidebar {
+  font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden; /* prevent sidebar buttonDropdown height jump issue on page */
+}
+
+.sidebar .logo {
+  max-width: 100px;
+  margin-left: 25px;
+  margin-top: 35px;
+}
+
+.sidebar .listGroup {
+  margin-top: 35px;
+}
+
+.sidebar .listGroup .listGroupItem {
+  padding: 15px 25px;
+  border: 0;
+  font-size: 17px;
+  font-weight: 400;
+}
+.sidebar .listGroup .listGroupItem:global(.active) {
+  border: 0;
+
+  background: linear-gradient(to right, #614385, #516395);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sidebar .listGroup .listGroupItem:global(.active) .icon {
+  background: linear-gradient(to right, #614385, #516395);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sidebar .listGroup .listGroupItem .icon {
+  position: relative;
+  top: 4px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+
+.sidebar .darkMode {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.sidebar .buttonDropdown {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+
+.sidebar .buttonDropdown :global(.dropdown-toggle) {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  line-height: 40px;
+  /*background: rgba(0,0,0,0.08);*/
+  border-top: 1px solid rgba(0,0,0,0.08);
+  color: rgba(0,0,0,0.7);
+  font-weight: 500;
+}
+.sidebar .buttonDropdown :global(.dropdown-toggle:focus), .sidebar .buttonDropdown :global(.dropdown-toggle:active:focus) {
+  box-shadow: none;
+  /*background: rgba(0,0,0,0.08);*/
+  color: rgba(0,0,0,0.7);
+}
+
+.sidebar .buttonDropdown .dropdownMenu {
+  display: inline-block;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  border-radius: 5px;
+  max-width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 30px;
+
+  -webkit-transform: scale(.85) translateY(-10%);
+  -moz-transform: scale(.85) translateY(-10%);
+  -ms-transform: scale(.85) translateY(-10%);
+  -o-transform: scale(.85) translateY(-10%);
+  transform: scale(.85) translateY(-10%);
+
+  -webkit-transition: all .25s cubic-bezier(.24,.22,.015,1.56), opacity .1s ease-in-out;
+  -moz-transition: all .25s cubic-bezier(.24,.22,.015,1.56), opacity .1s ease-in-out;
+  -o-transition: all .25s cubic-bezier(.24,.22,.015,1.56), opacity .1s ease-in-out;
+  transition: all .25s cubic-bezier(.24,.22,.015,1.56), opacity .1s ease-in-out;
+}
+
+.sidebar .buttonDropdown .dropdownMenu:global(.show) {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+
+  -webkit-transform: scale(1) translate(0, -35px);
+  -moz-transform: scale(1) translate(0, -35px);
+  -ms-transform: scale(1) translate(0, -35px);
+  -o-transform: scale(1) translate(0, -35px);
+  transform: scale(1) translate(0, -35px);
+}
+
+.sidebar .buttonDropdown .dropdownMenu .dropdownItem {
+  padding: 0.65rem 1.5rem;
+}
+.sidebar .buttonDropdown .dropdownMenu .dropdownItemLast {
+  /*padding: 10px 0;*/
+}
+
+.sidebar :global(.dropdown-header) {
+  color: rgba(0,0,0,0.25);
+}
+
+
+
+
+
+
+
+
+
+

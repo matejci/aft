@@ -1,0 +1,41 @@
+en:
+  hello: "Hello world"
+  errors:
+    messages:
+      digits:
+        not_an_integer: must be digits only
+        too_short: must be at least %{count} digits
+        too_long: must be at most %{count} digits
+        wrong_length: must be %{count} digits
+      invalid_phone: 'invalid phone'
+      not_in: "%{value} is not in: %{values}"
+      not_unique: "%{attribute} is not available"
+      tos_required: Please accept the terms of service
+    not_found_in_database: Oops, looks like you don’t have an account yet! Sign up!
+    deactivated_acct: This account has been deactivated. Please contact support@takkoapp.com for support on this issue.
+  mongoid:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              confirmation: This password doesn't match
+              required: Current password is required
+              not_setup: Password has not been setup
+              wrong: Sorry, your password was incorrect. Please double-check your password.
+            username:
+              taken: "%{attribute} is not available"
+            new_password_confirm:
+              confirmation: passwords do not match
+        pool:
+          attributes:
+            amount:
+              blank: Pool amount required
+            interval_type:
+              blank: Pool interval type required
+            name:
+              blank: Pool name required
+            pool_type:
+              blank: Pool type required
+            start_at:
+              blank: Pool start date required

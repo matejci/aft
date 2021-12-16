@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @subscriber.firstName %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @subscriber.lastName %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @subscriber.email %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @subscriber.age %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @subscriber.link %>
+</p>
+
+<p>
+  <strong>Invite:</strong>
+  <%= @subscriber.invite %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @subscriber.status %>
+</p>
+
+<%= link_to 'Edit', edit_subscriber_path(@subscriber) %> |
+<%= link_to 'Back', subscribers_path %>

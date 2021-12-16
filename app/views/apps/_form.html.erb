@@ -1,0 +1,137 @@
+<%= form_with(model: app, local: true) do |form| %>
+  <% if app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(app.errors.count, "error") %> prohibited this app from being saved:</h2>
+
+      <ul>
+      <% app.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :last_activity %>
+    <%= form.text_field :last_activity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :app_id %>
+    <%= form.text_field :app_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.text_field :version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :public_key %>
+    <%= form.text_field :public_key %>
+  </div>
+
+  <div class="field">
+    <%= form.label :key %>
+    <%= form.text_field :key %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secret %>
+    <%= form.text_field :secret %>
+  </div>
+
+  <div class="field">
+    <%= form.label :permissions %>
+    <%= form.text_field :permissions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :access %>
+    <%= form.text_field :access %>
+  </div>
+
+  <div class="field">
+    <%= form.label :requests %>
+    <%= form.number_field :requests %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publish %>
+    <%= form.check_box :publish %>
+  </div>
+
+  <div class="field">
+    <%= form.label :csrf %>
+    <%= form.check_box :csrf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :domains %>
+    <%= form.text_field :domains %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_agent_whitelist %>
+    <%= form.text_field :user_agent_whitelist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_agent_blacklist %>
+    <%= form.text_field :user_agent_blacklist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ip_whitelist %>
+    <%= form.text_field :ip_whitelist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ip_blacklist %>
+    <%= form.text_field :ip_blacklist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :privacy_policy_url %>
+    <%= form.text_field :privacy_policy_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :terms_of_service_url %>
+    <%= form.text_field :terms_of_service_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namespace %>
+    <%= form.text_field :namespace %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

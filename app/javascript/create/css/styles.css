@@ -1,0 +1,232 @@
+
+
+html, body, div {
+	height: 100%;
+}
+
+
+
+.users {
+	
+}
+
+.usersFormWrap {
+	
+}
+
+.users .usersFormBox {
+	background: rgba(0,0,0,0.05);
+	padding: 37px 30px 40px 30px;
+	border-radius: 5px;
+  margin: 50px 0;
+}
+
+
+
+.users form.userForm {
+
+}
+
+.users form.userForm .formGroup input.error {
+	border-color: red;
+}
+
+.users form.userForm .formGroup .error_message {
+	display: inline-flex;
+	color: red;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.users .footer {
+	margin-top: 20px;
+	font-size: 12px;
+	text-align: center;
+}
+
+
+
+
+
+.signUpForm .formPhoneGroup .formWrapperInput {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 100%;
+  color: #000;
+  background: #fff;
+  border-radius: 7px;
+}
+.signUpForm .formPhoneGroup .formWrapperInput label {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.3);
+  padding-left: 8px;
+}
+
+
+
+
+.signUpForm .formGroup {
+  width: 100%;
+}
+
+.signUpForm .formGroup .formControl {
+  width: 100%;
+}
+
+.signUpForm .formGroup .formWrapperInput {
+  width: 100%;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.signUpForm .formGroup .formWrapperSelect {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  border-radius: 7px;
+  color: #000;
+  background: transparent;
+  padding-left: 18px;
+}
+
+.signUpForm .formGroup .formWrapperInput input {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 18px;
+  line-height: 40px;*/
+  color: #000;
+  background: transparent;
+  padding-left: 18px;
+  /*padding: 0;*/
+}
+.signUpForm .formGroup .formWrapperInput input[type="password"] {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 25px;
+  line-height: 40px;*/
+  color: #000;
+  background: transparent;
+  border-radius: 18px;
+  /*padding: 0;*/
+}
+.signUpForm .formGroup .formWrapperTextArea textarea {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 18px;
+  line-height: 40px;*/
+  color: #000;
+  background: transparent;
+  border-radius: 18px;
+  /*padding: 0;*/
+  box-sizing: inherit;
+}
+
+.signUpForm .formGroup .formCheckBoxLabel {
+	font-size: 13px;
+}
+
+/* Change Autocomplete styles in Chrome */
+.signUpForm input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus
+  input:-webkit-autofill, 
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+/*    background-color: transparent !important;
+    border: transparent !important;*/
+  font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  border: none;
+  outline: none;
+}
+
+.signUpForm .formGroup .formInputLabel {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.3);
+  padding-left: 8px;
+/*  font-size: 18px;
+  line-height: 25px;
+  left: 0;*/
+}
+.signUpForm .formGroup .formInputLabelSub {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.3);
+/*  font-size: 18px;
+  line-height: 35px;
+  left: 0;*/
+}
+.signUpForm .formGroup .formInputLabelFocused {
+/*  color: rgba(0,0,0,0.9);
+  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+.signUpForm .formGroup .formInputLabelFilled {
+/*  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+
+.signUpForm .errorMessage {
+	display: block;
+  color: red;
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.signUpForm .resendLinkWrap {
+	text-align: center;
+	margin-top: -10px;
+}
+
+.signUpForm .resendLinkWrap .resendLink {
+	font-size: 12px;
+}
+
+
+
+.signUpForm .nextButton {
+	font-size: 16px;
+  margin-top: 10px;
+  border-radius: 50px;
+  padding: 0 20px;
+  line-height: 50px;
+  background: #6C59CC;
+  border: 0;
+}
+
+
+.dropzone {
+  height: auto;
+  background: #fff;
+  color: rgba(0,0,0,0.5);
+  padding: 40px 20px;
+  border-radius: 5px;
+  border: 1px dashed rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.dropzone p {
+  margin: 0;
+}
+
+.preview {
+  width: 100%;
+}
+
+.previewImage {
+  width: 100%;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+<%= javascript_pack_tag 'utils' %>
+<%= javascript_pack_tag 'admin/contests' %>
+
+<div class="curation_manager">
+  <div class="row">
+    <div class="rectangle">
+      <span class="curation_manager_text">Contests</span>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="fit">Name</th>
+            <th class="fit">Active</th>
+            <th class="fit">Created at</th>
+            <th class="fit">Original Post title</th>
+            <th class="fit">Original Post ID</th>
+            <th class="fit">Winner username/email/phone</th>
+            <th class="fit"></th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <% @collection.each do |item| %>
+            <tr id="<%= item.id.to_s %>">
+              <td class="fit">
+                <%= item.name %>
+              </td>
+              <td class="fit">
+                <%= item.active ? 'Yes' : 'No' %>
+              </td>
+              <td class="fit">
+                <%= item.created_at %>
+              </td>
+              <td class="fit">
+                <%= item.post.title %>
+              </td>
+              <td class="fit">
+                <%= item.post.id.to_s %>
+              </td>
+              <td class="fit">
+                <%= item.winner.present? ? "#{item.winner.username} / #{item.winner.email} / #{item.winner.phone}" : '' %>
+              </td>
+              <td class="fit">
+                <% if item.active %>
+                  <%= button_tag('Cancel', type: 'button', class: 'remove_btn') %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= hidden_field_tag(:update_url, admin_contest_path(id: @collection.first.id.to_s)) if @collection.any? %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-11"></div>
+    <div class="col-1">
+      <%= button_tag('New contest', type: 'button', class: 'btn btn-primary btn-sm new_btn') if @collection.empty? || !@collection.first.active %>
+    </div>
+  </div>
+</div>
+
+<%= render partial: 'admin/shared_partials/loader' %>
+<%= render partial: 'admin/shared_partials/messages' %>
+<%= render partial: 'admin/contests/modal' %>
+
+<% if @collection.empty? || !@collection.first.active %>
+  <%= render partial: 'admin/contests/new_modal' %>
+<% end %>

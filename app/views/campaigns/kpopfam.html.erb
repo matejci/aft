@@ -1,0 +1,66 @@
+<%= javascript_pack_tag 'campaigns' %>
+
+<div class="content" id="content">
+  <div class='container-fluid takko-kpop campaign-container'>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <div class='kpop-page-title campaign-title'>KpopFam</div>
+      </div>
+    </div>
+    <div class='row campaign-main'>
+      <div class='col align-self-center'>
+        <div class='row'>
+          <div class='offset-1 col-5 campaign-img-col'>
+            <%= image_tag('campaigns/kpop_carousel.png', alt: 'kpop-carousel', class: 'carousel-img') %>
+          </div>
+          <div class="col-6">
+            <div class="kpop-text-1">
+              Kpop fam! Assemble.
+            </div>
+            <div class="kpop-text-2">
+           		Join the next generation video community  where you can share your passion for Kpop.
+           		<br/><br/>
+           		Create/edit videos, collaborate, have conversations, and represent your favorite kpop idol or group!
+            </div>
+            <div class="kpop-text-3">
+              Coming soon! Join the wait list now and be one of our first users!
+            </div>
+          </div>
+          <div class='col-sm-6 offset-sm-6 col-xs-12'>
+            <div class="campaign-submit-form">
+              <% campaign_name = params[:action] %>
+
+    					<%= form_tag(campaigns_subscribe_path, remote: true, id: campaign_name) do %>
+    					  <%= text_field_tag(:email, '', placeholder: 'Your email here', class: 'campaign-kpop-email-txtbox', autocomplete: 'off', type: :email) %>
+    					  <%= image_tag('campaigns/kpop_arrow.png', alt: 'kpop-arrow', id: 'submit-arrow', class: 'kpop-arrow') %>
+    					  <%= hidden_field_tag(:campaign_name, campaign_name) %>
+                <%= render partial: 'messages' %>
+    					<% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class='kpop-footer campaign-footer'>
+        <div class="row justify-content-center">
+          <div class='col'>
+            <div class="kpop-footer-text">
+              KpopFam
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class="row justify-content-center">
+          <div id="takko-links" class="col-12">
+            <a href='/terms' class="social-links-white">Terms of Use</a>
+            <a href='/privacy' class="social-links-white">Privacy Policy</a>
+            <p class="social-links-white">Copyright © <%= Time.current.year %> Content Creators, inc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

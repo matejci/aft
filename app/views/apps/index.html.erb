@@ -1,0 +1,87 @@
+
+<div style="overflow:scroll;margin: 0 10px;">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Apps</h1>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>created_at</th>
+        <th>updated_at</th>
+        <th>Last activity</th>
+        <th>App ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Version</th>
+        <th>Supported Versions</th>
+        <th>Public key</th>
+        <th>Key</th>
+        <th>Secret</th>
+        <th>Permissions</th>
+        <th>Access</th>
+        <th>Requests</th>
+        <th>Status</th>
+        <th>Publish</th>
+        <th>Csrf</th>
+        <th>Domains</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>User agent whitelist</th>
+        <th>User agent blacklist</th>
+        <th>Ip whitelist</th>
+        <th>Ip blacklist</th>
+        <th>Privacy policy url</th>
+        <th>Terms of service url</th>
+        <th>Namespace</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @apps.each do |app| %>
+        <tr>
+          <td><%= app._id %></td>
+          <td><%= app.created_at %></td>
+          <td><%= app.updated_at %></td>
+          <td><%= app.last_activity %></td>
+          <td><%= app.app_id %></td>
+          <td><%= app.name %></td>
+          <td><%= app.description %></td>
+          <td><%= app.version %></td>
+          <td><%= app.supported_versions %></td>
+          <td><%= app.public_key %></td>
+          <td><%= app.key %></td>
+          <td><%= app.secret %></td>
+          <td><%= app.permissions %></td>
+          <td><%= app.access %></td>
+          <td><%= app.requests %></td>
+          <td><%= app.status %></td>
+          <td><%= app.publish %></td>
+          <td><%= app.csrf %></td>
+          <td><%= app.domains %></td>
+          <td><%= app.email %></td>
+          <td><%= app.phone %></td>
+          <td><%= app.user_agent_whitelist %></td>
+          <td><%= app.user_agent_blacklist %></td>
+          <td><%= app.ip_whitelist %></td>
+          <td><%= app.ip_blacklist %></td>
+          <td><%= app.privacy_policy_url %></td>
+          <td><%= app.terms_of_service_url %></td>
+          <td><%= app.namespace %></td>
+          <td><%= link_to 'Show', app %></td>
+          <td><%= link_to 'Edit', edit_app_path(app) %></td>
+          <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New App', new_app_path %>
+
+
+</div>

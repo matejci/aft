@@ -1,0 +1,115 @@
+.banners_manager
+  align-items: stretch
+  display: flex
+  min-height: 100%
+  width: 100%
+
+  .sidebar
+    font-weight: 600
+    font-size: 14px
+    box-shadow: -10px 0px 15px 0px
+    padding: 30px
+    width: 160px
+
+    img
+      height: 38px
+      width: 48px
+
+    ul
+      padding-top: 35px
+
+    .nav-link
+      color: black
+      padding: 22px 0 0 0
+      letter-spacing: -0.05em
+
+      &.active
+        color: #7646FE
+
+    a.logout-link
+      color: black
+      position: absolute
+      bottom: 40px
+
+    + div
+      width: 100%
+
+  .navbar
+    background: linear-gradient(88.97deg, #B601FF -7.66%, #5801FF 111.21%)
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.07)
+    height: 175px
+    color: white
+    font-weight: 600
+    font-size: 24px
+    line-height: 20px
+    padding: 30px
+    align-items: flex-start
+
+  .banners-content
+    padding: 20px
+    max-width: 1300px
+
+    > p
+      color: #7646FE
+      font-weight: 600
+      font-size: 15px
+      line-height: 20px
+      padding: 15px
+      margin: 0
+
+  .dropzone
+    align-items: center
+    height: 152px
+    margin: 0 auto
+    width: 100%
+
+    img
+      height: 100%
+      width: auto
+      margin: 0
+
+  .dz-details, .dz-message
+    height: 100%
+    width: 100%
+    text-align: center
+
+  .upload-message
+    border: 3px dotted gray
+    height: 100%
+
+    img
+      height: 32px
+      width: 32px
+      margin: 40px 0 15px 0
+
+    span.purple
+      color: #7646FE
+
+  form
+    width: 320px
+
+    input[name='banner[order]']
+      width: 50px
+      text-align: center
+
+    input[type='submit']
+      color: white
+      background-color: #7646FE
+      border-color: #7646FE
+
+    [data-role-delete-banner]
+      color: white
+      background-color: #FF5D5D
+      border-color: #FF5D5D
+
+  .card
+    border: none
+
+  .card-body
+    padding: 25px 15px
+
+  .modal-dialog
+    justify-content: center
+
+  .modal-content
+    width: auto

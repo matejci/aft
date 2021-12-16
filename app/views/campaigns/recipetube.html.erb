@@ -1,0 +1,63 @@
+<%= javascript_pack_tag 'campaigns' %>
+
+<div class="content" id="content">
+  <div class='container-fluid takko-recipe campaign-container'>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <div class='recipe-page-title campaign-title'>RecipeTube</div>
+      </div>
+    </div>
+    <div class='row campaign-main'>
+      <div class='col align-self-center'>
+        <div class='row'>
+          <div class='offset-1 col-5 campaign-img-col'>
+            <%= image_tag('campaigns/recipetube_carousel.png', alt: 'recipetube-carousel', class: 'carousel-img') %>
+          </div>
+          <div class="col-6">
+            <div class="recipe-text-1">
+              step-by-step video recipe albums
+            </div>
+            <div class="recipe-text-2">
+            	A new app where you can create and edit your step-by-step recipe albums and share them with the world! The ultimate recipe community!
+            </div>
+            <div class="recipe-text-3">
+              Coming soon! Join the wait list now and be one of our first users!
+            </div>
+          </div>
+          <div class='col-sm-6 offset-sm-6 col-xs-12'>
+            <div class='campaign-submit-form'>
+              <% campaign_name = params[:action] %>
+
+    					<%= form_tag(campaigns_subscribe_path, remote: true, id: campaign_name) do %>
+    					  <%= text_field_tag(:email, '', placeholder: 'Your email here', class: 'campaign-recipe-email-txtbox', autocomplete: 'off', type: :email) %>
+    					  <%= image_tag('campaigns/red_arrow.png', alt: 'red-arrow', id: 'submit-arrow', class: 'red-arrow') %>
+    					  <%= hidden_field_tag(:campaign_name, campaign_name) %>
+                <%= render partial: 'messages' %>
+    					<% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class='recipetube-footer campaign-footer'>
+        <div class="row justify-content-center">
+          <div class='col'>
+            <div class="recipetube-footer-text">
+              RecipeTube
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class="row justify-content-center">
+          <div id="takko-links" class="col-12">
+            <a href='/terms' class="social-links-white">Terms of Use</a>
+            <a href='/privacy' class="social-links-white">Privacy Policy</a>
+            <p class="social-links-white">Copyright © <%= Time.current.year %> Content Creators, inc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

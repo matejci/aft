@@ -1,0 +1,18 @@
+%div{ class: local_assigns[:dark_theme] ? 'mailer-card-container' : 'mailer-light-card-container' }
+  %table
+    %tbody
+      %tr
+        %td
+          %table
+            %tbody
+              %tr
+                %td
+                  = link_to 'https://takko.app' do
+                    = image_tag(local_assigns[:dark_theme] ? 'white_takko.png' : 'black_takko.png')
+              = yield :content
+
+            %tfoot
+              - if content_for(:footer).blank?
+                = render 'mailers/takko_footer'
+              - else
+                = yield :footer

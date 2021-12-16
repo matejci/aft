@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Claimed date:</strong>
+  <%= @invitation.claimed_date %>
+</p>
+
+<p>
+  <strong>Ip address:</strong>
+  <%= @invitation.ip_address %>
+</p>
+
+<p>
+  <strong>User agent:</strong>
+  <%= @invitation.user_agent %>
+</p>
+
+<p>
+  <strong>Invite code:</strong>
+  <%= @invitation.invite_code %>
+</p>
+
+<p>
+  <strong>Claimed:</strong>
+  <%= @invitation.claimed %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @invitation.status %>
+</p>
+
+<p>
+  <strong>Attempts:</strong>
+  <%= @invitation.attempts %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @invitation.user %>
+</p>
+
+<p>
+  <strong>Subscriber:</strong>
+  <%= @invitation.subscriber %>
+</p>
+
+<%= link_to 'Edit', edit_invitation_path(@invitation) %> |
+<%= link_to 'Back', invitations_path %>

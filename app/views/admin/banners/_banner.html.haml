@@ -1,0 +1,41 @@
+.card.h-100
+  .card-body
+    = form_with model: [:admin, banner] do |form|
+      .form-group
+        .dropzone.dz-default
+          .fallback
+            = form.file_field :image
+          .dz-message
+            - if banner.image_url
+              %img{src: banner.image_url}
+            - else
+              .upload-message
+                = image_tag 'icons/cloud-upload.png'
+                %div
+                  %span.purple Choose a file
+                  %span or drag it here
+        .dz-preview{ style: 'height: 0' }
+          .dz-details
+            %img{ 'data-dz-thumbnail': '' }
+          .dz-progress
+            %span.dz-upload{ 'data-dz-uploadprogress': '' }
+          .dz-success-mark
+            %span
+          .dz-error-mark
+            %span
+          .dz-error-message
+            %span{ 'data-dz-errormessage': '' }
+      .form-group
+        = form.text_field :link, placeholder: 'Link Here', class: 'form-control'
+        .invalid-feedback
+
+      %div
+        .float-left
+          .input-group
+            .input-group-prepend
+              .input-group-text Order
+            = form.text_field :order, class: 'form-control'
+        .float-right
+          = form.submit 'Replace', class: 'btn'
+          - if banner.persisted?
+            %button.btn{ 'data-role-delete-banner': '' } Delete

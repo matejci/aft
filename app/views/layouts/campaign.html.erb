@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%# pixel_content_code = ENV["#{params[:action].upcase}_META_VERIFICATION"] %>
+    <!-- <meta name="facebook-domain-verification" content="<%#= pixel_content_code %>" /> -->
+
+    <%= stylesheet_pack_tag 'bootstrap' %>
+
+    <link href="/css/animate.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140734275-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-140734275-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <% pixel_ID = ENV['PIXEL_ID'] %>
+
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+       fbq('init', '<%= pixel_ID %>');
+      fbq('track', 'PageView');
+    </script>
+
+    <noscript>
+      <img height="1" width="1" src="https://www.facebook.com/tr?id=<%= pixel_ID %>&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+  </head>
+  <body>
+    <%= hidden_field_tag(:campaign_name, params[:action] ) %>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,428 @@
+
+/* fix ConfettiLaunch body padding-right issue */
+body {
+	padding: 0 !important;
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+.admin {
+	margin: 0;
+	padding: 0;
+}
+
+.adminRow {
+	
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+	.admin {
+		font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/*background: #3023AE;*/
+		/*background: linear-gradient(to bottom right, #3023AE, #6C59CC);*/
+		color: rgba(0,0,0,0.8);
+		height: 100%;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		/* fix margin issues */
+		width: auto !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.admin {
+		font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/*background: #3023AE;*/
+		/*background: linear-gradient(to bottom right, #3023AE, #6C59CC);*/
+		color: rgba(0,0,0,0.8);
+		height: 100%;
+		/* fix margin issues */
+		width: auto !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.admin .column.columnLeft .takkoIcon {
+		width: 100%;
+		max-width: 500px;
+		margin-top: 50px;
+		margin-left: -15%;
+		padding-bottom: 50px;
+	}
+
+	.admin .column.columnRight {
+		text-align: center;
+		padding-top: 100px;
+	}
+}
+
+@media (min-width: 768px) {
+	.admin .column.columnLeft .takkoIcon {
+		width: 100%;
+		max-width: 500px;
+		margin-left: -15%;
+	}
+
+	.admin .column.columnRight {
+		text-align: right;
+		padding-right: 100px;
+	}
+}
+
+.admin .column.columnRight h1 {
+	font-size: 70px;
+	font-weight: 800;
+	letter-spacing: -1px;
+}
+
+.admin .column.columnRight h2 {
+	font-size: 30px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+
+.admin .formBox {
+
+}
+
+.admin .formBox p.callToAction {
+	margin-bottom: 7px;
+}
+
+.admin .subscribersForm {
+
+}
+
+.admin .subscribersForm :global(.row) {
+	width: auto !important;
+}
+
+.admin .subscribersForm .subscribersBoxWrap {
+	
+}
+
+.admin .subscribersForm .subscribersBoxWrap .subscribersFormBox {
+	text-align: left;
+}
+
+
+
+
+
+
+
+.item {
+	height: auto;
+}
+
+.navbar {
+	background-color: yellow;
+}
+
+.navbar .navLogo span {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: -1.8px;
+	overflow: scroll;
+	font-size: 35px;
+	font-weight: 800;
+	padding-right: 5px;
+
+	background: -webkit-linear-gradient(#AD46FE, #5546FE);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+:global(.navbar-light).navbar {
+	/*background-color: rgba(0,0,0,0.7);*/
+}
+
+:global(.navbar-light).navbar .navLink {
+	color: rgba(0,0,0,0.7);
+}
+
+
+.subscriber {
+
+}
+
+.header {
+	font-size: 30px;
+	font-weight: 500;
+	margin: 20px 0 20px 0;
+	height: auto;
+
+	background: -webkit-linear-gradient(#AD46FE, #5546FE);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.subheader {
+	font-size: 18px;
+	font-weight: 500;
+	margin: 20px 0 20px 0;
+	height: auto;
+}
+
+.pageRow {
+	
+}
+
+
+.heroMetricColumn {
+
+}
+
+.heroMetricColumn .heroMetricBox {
+	background: #222;
+	color: #fff;
+	padding: 75px 50px;
+
+	text-align: center;
+}
+
+.heroMetricColumn .heroMetricBox span {
+	display: block;
+	font-size: 45px;
+	font-weight: 500;
+
+	background: -webkit-linear-gradient(#AD46FE, #5546FE);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.heroMetricColumn .heroMetricBox label {
+	display: block;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+
+
+
+
+
+
+
+.adminForm .formGroup {
+  width: 100%;
+	margin-bottom: 10px;
+}
+
+.adminForm .formGroup .formControl {
+  width: 100%;
+
+  border-radius: 50px;
+  overflow: hidden;
+}
+/* formPhoneGroup */
+.adminForm .formPhoneGroup .formControl {
+  width: 100%;
+}
+.adminForm .formPhoneGroup {
+  margin-bottom: 10px;
+}
+
+.adminForm .formGroup .formWrapperInput {
+  width: 100%;
+  border-radius: 50px;
+}
+
+.adminForm .formGroup .formWrapperSelect {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.7);
+  background: transparent;
+  padding-left: 25px;
+}
+
+.adminForm .formGroup .formWrapperInput input {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 18px;
+  line-height: 40px;*/
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.15);
+  padding-left: 25px;
+  /*padding: 0;*/
+}
+.adminForm .formGroup .formWrapperInput input[type="password"] {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 25px;
+  line-height: 40px;*/
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+  /*padding: 0;*/
+}
+.adminForm .formGroup .formWrapperTextArea textarea {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 18px;
+  line-height: 40px;*/
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+  /*padding: 0;*/
+  box-sizing: inherit;
+}
+
+/* Change Autocomplete styles in Chrome */
+.adminForm input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus
+  input:-webkit-autofill, 
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+/*    background-color: transparent !important;
+    border: transparent !important;*/
+    font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: transparent !important;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.7);
+    /*-webkit-box-shadow: 0 0 0 1000px transparent inset !important;*/
+    /* fix safari webkit shadow */
+    -webkit-box-shadow: inset 0 0 0px 9999px transparent;
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;
+    border: none;
+    border-radius: 0;
+    outline: none;
+}
+
+/* fix safari webkit yellow */
+.adminForm input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	/*-webkit-box-shadow: 0 0 0 30px rgba(0,0,0,0.9) inset !important;*/
+
+	background-color: rgba(0, 0, 0, 0.09) !important;
+	transition: background-color 5000s ease-in-out 0s;
+	-webkit-text-fill-color: rgba(0, 0, 0, 0.7) !important;
+	-webkit-transition-delay: 9999s;
+	transition-delay: 9999s;
+}
+
+
+.adminForm .formGroup .formInputLabel {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.5);
+  padding-left: 18px;
+/*  font-size: 18px;
+  line-height: 25px;
+  left: 0;*/
+}
+.adminForm .formGroup .formInputLabelSub {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.5);
+/*  font-size: 18px;
+  line-height: 35px;
+  left: 0;*/
+}
+.adminForm .formGroup .formInputLabelFocused {
+/*  color: rgba(0,0,0,0.9);
+  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+.adminForm .formGroup .formInputLabelFilled {
+/*  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+
+/* formPhoneGroup */
+.adminForm .formPhoneGroup .formInputLabel {
+  font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.5);
+  padding-left: 25px;
+}
+
+
+
+.adminForm .formGroup .errorMessage {
+	margin-top: 5px;
+	margin-left: 25px;
+	color: red;
+	font-size: 12px;
+}
+
+.adminForm .hiddenButton {
+	display: none;
+}
+
+.adminForm .nextButton {
+	font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 75px;
+  border-radius: 50px;
+  padding: 0 20px;
+  line-height: 50px;
+  background-color: #4C27B2;
+  border-color: #4C27B2;
+}
+
+
+.adminForm .dropzone {
+  margin-bottom: 20px;
+  text-align: center;
+  height: auto;
+  border-radius: 50px;
+
+  /*background: #222;*/
+  background: linear-gradient(to top right, #222, #222);
+
+  -webkit-transition: background 1000ms;
+  		-ms-transition: background 1000ms;
+  				transition: background 1000ms;
+}
+.adminForm .dropzone.active {
+	background: linear-gradient(to top right, #AD46FE, #5546FE);
+  background-position: center center;
+      -webkit-background-size: cover;
+         -moz-background-size: cover;
+}
+.adminForm .dropzone.aspectRatio {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative; /* If you want text inside of it */
+}
+
+.adminForm .dropzone.aspectRatio .emptyPreviewWrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.adminForm .dropzone .emptyPreviewWrap {
+  padding: 0;
+}
+.adminForm .dropzone .emptyPreviewWrap p {
+	color: #ffff00;
+
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.adminForm .dropzone.active .emptyPreviewWrap p {
+	color: #fff;
+
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+

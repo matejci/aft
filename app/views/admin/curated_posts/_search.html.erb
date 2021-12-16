@@ -1,0 +1,26 @@
+ <% posts.each do |item| %>
+  <tr id="<%= item.id.to_s %>">
+    <td class="fit">
+      <%= item.id.to_s %>
+    </td>
+    <td class="fit">
+      <% is_post = item.parent_id.nil? %>
+      <span class="<%= is_post ? 'post' : 'takko' %>"><%= is_post ? 'Post' : 'Takko' %></span>
+    </td>
+    <td class="fit">
+      <%= item.publish_date.strftime('%Y-%m-%d') %>
+    </td>
+    <td class="fit title_text">
+      <%= item.title %>
+    </td>
+    <td class="fit">
+      <%= item.user.username %>
+    </td>
+    <td class="fit">
+      <%= image_tag(item.media_thumbnail.url(:thumb), style: 'max-height: 200px') %>
+    </td>
+    <td class="fit">
+      <%= button_tag('Curate', type: 'button', class: 'add_btn', 'data-url': admin_curated_post_path(id: item.id.to_s)) %>
+    </td>
+  </tr>
+<% end %>

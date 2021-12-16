@@ -1,0 +1,42 @@
+= javascript_include_tag 'toggle_password'
+
+= content_for :content do
+  = form_with model: @user, url: reset_password_url, method: :post do |f|
+    %p
+      6-20 characters from at least 2 categories:
+      letters, numbers, special characters
+
+    = f.hidden_field :password_token, value: params[:user][:password_token]
+
+    = f.password_field :new_password, value: @user.new_password,
+                       required: true, minlength: 6, maxlength: 20,
+                       placeholder: 'New Password', autofocus: true,
+                       data: { role: 'toggle-password' }
+
+    = f.password_field :new_password_confirmation, value: @user.new_password_confirmation,
+                       required: true, minlength: 6, maxlength: 20,
+                       placeholder: 'Confirm Password',
+                       data: { role: 'toggle-password' }
+
+    %div
+      %input{ type: 'checkbox', data: { role: 'toggle-password'} }
+      %span show password
+
+    - if @user.errors[:base].any?
+      %span= @user.errors[:base].join('')
+
+    = f.submit 'Save'
+
+= content_for :footer do
+  %span
+    If you did not submit this request, please contact us at
+    = mail_to 'support@takoapp.com'
+    %br
+    Follow us on
+    %a{ href: 'https://www.facebook.com/takkoapp' } facebook
+    and
+    %a{ href: 'https://www.instagram.com/takkoapp' } instagram
+
+  %p Copyright © #{Time.current.year} Takko, Inc.
+
+= render 'shared/takko_card'

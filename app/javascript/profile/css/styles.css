@@ -1,0 +1,509 @@
+
+/* fix ConfettiLaunch body padding-right issue */
+body {
+	padding: 0 !important;
+	/*overflow-x: hidden !important;*/
+	/*overflow-x: scroll;*/
+	overflow: hidden !important;
+	background: rgba(255,255,255,1.0) !important;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+	overflow: hidden !important;
+}
+
+
+
+
+
+.spinnerLoading {
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+}
+
+.spinnerLoading p {
+  margin-top: 17px;
+  font-size: 14px;
+  color: rgba(0,0,0,0.5);
+}
+
+/* .spinner loading css3 from http://tobiasahlin.com/spinkit/ */
+
+.spinner {
+  width: 65px;
+  height: 65px;
+
+  position: relative;
+  margin: 0 auto;
+}
+
+.doubleBounce1, .doubleBounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.doubleBounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/* .spinner loading css3 from http://tobiasahlin.com/spinkit/ end */
+
+
+
+
+
+
+
+.mainWrap {
+  /*background-color: #f4f4f4;*/
+  padding: 0;
+}
+
+.profile {
+	
+}
+
+.profile .profileScroll {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll !important;
+	overflow-x: hidden !important;
+}
+
+.profile .header {
+	position: relative;
+	width: 100%;
+	height: 30%;
+	/*min-height: 25%;*/
+	overflow: hidden;
+
+	/*border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;*/
+
+	/*background-color: red;*/
+}
+
+.profile .header .headerBackground {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background-color: #111;
+	background: linear-gradient(to top right, #AD46FE, #5546FE);
+
+	-webkit-transition-property: none;
+	-moz-transition-property: none;
+	-o-transition-property: none;
+	transition-property: none;
+
+	/* background properties */
+	background-repeat: no-repeat;
+	background-position: center center;
+			-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+}
+
+.profile .header .headerBackground.blur {
+	position: absolute;
+	width: 130%;
+	height: 130%;
+	top: -15%;
+	left: -15%;
+	z-index: 999;
+	background-color: #111;
+	background: linear-gradient(to top right, #AD46FE, #5546FE);
+
+	/* blur effect */
+	-webkit-filter: blur(40px);
+	 -o-transition: blur(40px);
+	 	 -moz-filter: blur(40px);
+			-ms-filter: blur(40px);
+		 			filter: blur(40px);
+
+	-webkit-transition-property: none;
+	-moz-transition-property: none;
+	-o-transition-property: none;
+	transition-property: none;
+
+	-webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1);
+
+	/* background properties */
+	background-repeat: no-repeat;
+	background-position: center center;
+			-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+}
+
+.profile .profileContainer {
+
+}
+
+.profile .profileContainer .profileRow {
+
+}
+.profile .profileContainer .profileRow .profileCol {
+	margin: 0 auto;
+}
+
+.profile .takkoShell {
+	/*position: absolute;
+	overflow: auto;*/
+	z-index: 999999999999999999;
+}
+
+.profile .profileCard {
+	position: relative;
+	z-index: 9999999;
+}
+
+@media (max-width: 575px) {
+	.profile .profileCard .profileCardBox {
+		position: relative;
+		width: 100%;
+		height: 25%;
+		background-color: #fff;
+		padding: 0 25px 15px 25px;
+		margin: 0 0 0 0;
+		min-height: 200px;
+
+		border-radius: 25px;
+		-webkit-box-shadow: 0 0 75px rgba(0,0,0,0.1);
+		box-shadow: 0 0 75px rgba(0,0,0,0.1);
+	}
+}
+
+@media (min-width: 576px) {
+	.profile .profileCard .profileCardBox {
+		position: relative;
+		width: 100%;
+		height: 25%;
+		background-color: #fff;
+		padding: 0 25px 35px 25px;
+		min-height: 200px;
+
+		border-radius: 25px;
+		-webkit-box-shadow: 0 0 75px rgba(0,0,0,0.1);
+		box-shadow: 0 0 75px rgba(0,0,0,0.1);
+	}
+}
+
+
+
+.profile .profileCard .profileCardBox .profileImage {
+	border-radius: 50%;
+
+	/* background properties */
+	background-repeat: no-repeat;
+	background-position: center center;
+			-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+}
+.profile .profileCard .profileCardBox .profileImage.aspectRatio {
+	border: 7px solid rgba(255,255,255,1.0);
+	margin: 0 auto;
+	width: calc(100% - 14px); /* account for border thickness */
+	position: relative; /* If you want text inside of it */
+	padding-top: calc(100% - 14px); /* 1:1 Aspect Ratio */
+
+	margin-top: -50%;
+}
+
+.profile .profileCard .profileCardBox .profileCenterInfo {
+	text-align: center;
+	overflow: hidden;
+}
+
+.profile .profileCard .profileCardBox .profileCenterInfo .displayName {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	margin: 15px 0 0 0;
+}
+
+.profile .profileCard .profileCardBox .profileCenterInfo .displayName span.verifiedBadge {
+	display: inline-block;
+	position: relative;
+  margin: 0 0 0 5px;
+  height: 100%;
+}
+
+.profile .profileCard .profileCardBox .profileCenterInfo .displayName span.verifiedBadge img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.profile .profileCard .profileCardBox .profileCenterInfo .displayName h1 {
+	position: relative;
+	font-size: 25px;
+	margin: 0;
+}
+
+.profile .profileCard .profileCardBox .profileCenterInfo h2 {
+	font-size: 20px;
+	margin: 5px 5px 0 0;
+	color: rgba(0,0,0,0.4);
+}
+
+@media (max-width: 575px) {
+	.profile .profileCard .profileCardBox .profileCenterInfo p.bio {
+		margin: 12px 0 0 0;
+		font-size: 14px;
+		font-weight: 400;
+		color: rgba(0,0,0,0.8);
+
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		row-gap: 0;
+		column-gap: 0;
+	}
+
+	.profile .profileCard .profileCardBox .profileCenterInfo p.bio span.profileBioLines {
+		min-height: 15px;
+		width: 100%;
+	}
+}
+
+@media (min-width: 576px) {
+	.profile .profileCard .profileCardBox .profileCenterInfo p.bio {
+		margin: 12px 0 0 0;
+		font-size: 15px;
+		font-weight: 400;
+		color: rgba(0,0,0,0.8);
+
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		row-gap: 0;
+		column-gap: 0;
+	}
+
+	.profile .profileCard .profileCardBox .profileCenterInfo p.bio span.profileBioLines {
+		min-height: 10px;
+		width: 100%;
+	}
+}
+
+.profile .profileCard .profileCardBox .profileCenterInfo a.website {
+	display: inline-block;
+	margin: 10px 0 0 0;
+	font-size: 15px;
+	font-weight: 400;
+	color: rgba(111,72,245,1.0);
+}
+.profile .profileCard .profileCardBox .profileCenterInfo a.website:hover {
+	color: rgba(111,72,245,0.8);
+}
+
+
+.profile .profileCard .profileCardBox .profileMetricSection {
+	margin: 35px 0 0 0;
+}
+
+@media (max-width: 575px) {
+	.profile .profileCard .profileCardBox .profileMetricSection .profileMetrics {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 576px) {
+	.profile .profileCard .profileCardBox .profileMetricSection .profileMetrics {
+		text-align: center;
+		margin-bottom: 0;
+	}
+}
+
+.profile .profileCard .profileCardBox .profileMetricSection .profileMetrics .metric {
+	font-weight: 700;
+	font-size: 16px;
+  line-height: 14px;
+  color: rgba(0,0,0,0.7);
+}
+.profile .profileCard .profileCardBox .profileMetricSection .profileMetrics label.metricLabel {
+	font-weight: 400;
+	font-size: 12px;
+	margin: 0;
+	color: rgba(0,0,0,0.7);
+}
+
+
+
+.profile .profileContent {
+	margin-top: 35px;
+}
+
+.profile .profileContent .sectionNavigation {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 25px 0;
+
+	row-gap: 0;
+	column-gap: 25px;
+}
+
+.profile .profileContent .sectionNavigation .sectionNavigationLinks {
+	
+}
+@media (max-width: 767px) {
+	.profile .profileContent .sectionNavigation .sectionNavigationLinks a {
+		color: rgba(0,0,0,0.4);
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 768px) {
+	.profile .profileContent .sectionNavigation .sectionNavigationLinks a {
+		color: rgba(0,0,0,0.4);
+		font-size: 20px;
+	}
+}
+
+.profile .profileContent .sectionNavigation .sectionNavigationLinks a:hover {
+	color: rgba(0,0,0,0.7);
+}
+
+.profile .sections {
+
+}
+
+.profile .sections .profileSections {
+
+}
+
+.profile .sections .profileSections .sectionWrap {
+	display: none;
+}
+
+.profile .sections .profileSections .sectionWrap.active {
+	display: block;
+}
+
+.profile .sections .profileSections .innerSection {
+
+}
+
+.profile .sections .profileSections .innerSection .sectionRow {
+
+}
+
+.profile .sections .profileSections .sectionLoading {
+	
+}
+
+.profile .sections .profileSections .sectionLoading .endMessage {
+	text-align: center;
+	color: rgba(0,0,0,0.2);
+}
+
+.profile .sections .sectionCol {
+	position: relative;
+}
+@media (max-width: 575px) {
+	/* left column */
+	.profile .sections .sectionCol:nth-child(odd) {
+	  padding: 0 7px 0 25px;
+	  margin: 0 0 14px 0;
+	}
+	/* right column */
+	.profile .sections .sectionCol:nth-child(even) {
+	  padding: 0 25px 0 7px;
+	  margin: 0 0 14px 0;
+	}
+}
+
+.profile .sections .sectionCol a.profilePostLink {
+	color: rgba(0,0,0,0.7);
+}
+.profile .sections .sectionCol a.profilePostLink:hover {
+	
+}
+
+
+@media (max-width: 767px) {
+	.profile .sections .profileSections .posts {
+		position: relative;
+		width: 100%;
+		border-radius: 20px;
+		padding-top: 167.77%; /* 9:16 Aspect Ratio (divide 16 by 9 = 1.77) */
+		margin: 0 0 0 0;
+
+		/* background properties */
+		background-repeat: no-repeat;
+		background-position: center center;
+				-webkit-background-size: cover;
+				   -moz-background-size: cover;
+				     -o-background-size: cover;
+				        background-size: cover;
+	}
+}
+
+@media (min-width: 768px) {
+	.profile .sections .profileSections .posts {
+		position: relative;
+		width: 100%;
+		border-radius: 25px;
+		padding-top: 167.77%; /* 9:16 Aspect Ratio (divide 16 by 9 = 1.77) */
+		margin: 0 0 25px 0;
+
+		/* background properties */
+		background-repeat: no-repeat;
+		background-position: center center;
+				-webkit-background-size: cover;
+				   -moz-background-size: cover;
+				     -o-background-size: cover;
+				        background-size: cover;
+	}
+}
+
+
+
+
+
+

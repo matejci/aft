@@ -1,0 +1,15 @@
+= content_for :content do
+  %h2 Email Verified!
+
+  %p
+    The email address
+    %br
+    %span.yellow= @user.email
+    %br
+    is now verified.
+
+  %form
+    = link_to 'Done', "javascript:window.open('about:blank','_self').close()",
+              class: 'btn'
+
+= render 'shared/takko_card', dark_theme: true

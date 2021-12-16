@@ -1,0 +1,27 @@
+<% if @creator_program %>
+  <% status = @creator_program.active %>
+  <div class="row">
+    <div class="col">
+      <div class="table-responsive">
+        <%= form_tag(admin_creator_program_toggle_path, method: :post, remote: true, id: 'creator_program_form') do %>
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Max number of participants</th>
+                <th>Participants count</th>
+                <th>Active?</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cp-table-body">
+              <%= render partial: 'cp_row', locals: { creator_program: @creator_program } %>
+            </tbody>
+          </table>
+          <%= hidden_field_tag(:active, !@creator_program.active) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  N/A
+<% end %>

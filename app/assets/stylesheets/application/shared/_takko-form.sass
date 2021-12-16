@@ -1,0 +1,111 @@
+=takko-form($dark-theme: false)
+  @extend .f-center-col
+
+  width: 100%
+
+  .round-input-field
+    @if $dark-theme
+      font-weight: 500
+    @else
+      font-weight: 600
+
+    background-color: #f1eeff
+    border: 0
+    border-radius: 45px
+    font-size: 17px
+    height: 60px
+    letter-spacing: 1px
+    line-height: 60px
+    margin-top: 10px
+    padding: 0 28px
+    width: 100%
+
+  > p
+    @extend .flex-grow-1, .f-center
+
+    font-size: 16px
+    margin: 10px
+    max-width: 240px
+
+  button
+    @extend .round-input-field
+
+  input[type='text'], input[type='password']
+    @extend .round-input-field
+
+    +placeholder
+      color: $gray
+
+    &:placeholder-shown
+      font-size: 17px
+
+  input[type='password']
+    font-size: 41px
+
+  input[type='submit'], .btn
+    @extend .round-input-field
+
+    @if $dark-theme
+      background-color: $purple
+    @else
+      background-color: $dark-purple
+
+    color: $white
+    margin-top: 15px
+
+    &.yellow_btn
+      background-color: $yellow
+      color: $black
+      font-size: 13.5px
+      font-weight: 600
+      letter-spacing: 0px
+
+  input[data-role='toggle-password']
+    position: relative
+    vertical-align: middle
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 13px
+      height: 13px
+      top: 0px
+      left: 0px
+      border: 2px solid $gray
+      border-radius: 3px
+      background-color: $white
+
+    &:checked:after
+      content: ''
+      display: block
+      width: 5px
+      height: 10px
+      border: solid $purple
+      border-width: 0 2px 2px 0
+      -webkit-transform: rotate(45deg)
+      -ms-transform: rotate(45deg)
+      transform: rotate(45deg)
+      position: absolute
+      top: 0px
+      left: 5px
+
+    + span
+      font-size: 0.9em
+
+  .has-error
+    width: 100%
+
+    input
+      filter: brightness(0.9)
+
+    span.error
+      display: block
+      font-size: 13px
+      line-height: 13px
+
+.takko-form
+  +takko-form
+
+.takko-form-dark
+  +takko-form($dark-theme: true)

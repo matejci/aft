@@ -1,0 +1,33 @@
+ <% users.each do |item| %>
+  <% item_id = item.id.to_s %>
+  <tr id="<%= item_id %>">
+    <td class="fit">
+      <%= item_id %>
+    </td>
+    <td class="fit">
+      <%= item.username %>
+    </td>
+    <td class="fit">
+      <%= item.email %>
+    </td>
+    <td class="fit title_text">
+      <%= item.first_name %>
+    </td>
+    <td class="fit">
+      <%= item.last_name %>
+    </td>
+    <td class="fit">
+      <%= item.phone %>
+    </td>
+    <td class="fit">
+      <%= image_tag(item.profile_image.thumb.url, style: 'max-height: 200px') %>
+    </td>
+    <td class="fit">
+      <% if @collection[:boost_ids].include?(item_id) %>
+        <%= button_tag('Remove', type: 'button', class: 'remove_btn', 'data-url': admin_boost_list_remove_path(id: item_id)) %>
+      <% else %>
+        <%= button_tag('Add to boost list', type: 'button', class: 'add_btn', 'data-url': admin_boost_list_add_path(id: item_id)) %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

@@ -1,0 +1,13 @@
+%div{ class: local_assigns[:dark_theme] ? 'takko-card-dark' : 'takko-card' }
+  .takko-card-container
+    .takko-card-template
+      .takko-logo
+        = image_tag local_assigns[:dark_theme] ? 'white_takko.png' : 'black_takko.png'
+      .takko-card-content
+        = yield :content
+
+    .takko-card-footer
+      - if content_for(:footer).blank?
+        = render 'shared/takko_footer'
+      - else
+        = yield :footer

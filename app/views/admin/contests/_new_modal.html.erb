@@ -1,0 +1,31 @@
+<div class="modal fade" id="newcontest-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal_content">
+      <div id="details_title" class="row">
+        <div class="col-5">
+          Create new contest
+        </div>
+        <div class="col-6"></div>
+        <div class="col-1">
+          <span class="close_btn">x</span>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-12">
+          <%= form_tag(admin_contests_path, method: :post, id: 'contest-form') do %>
+            <div class="form-group">
+              <%= text_field_tag(:name, '', placeholder: 'Name', size: '35', class: 'form-control') %>
+              <%= text_field_tag(:post_id, '', placeholder: 'Post id or link', size: '35', class: 'form-control') %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span class="create_contest_btn">Create</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

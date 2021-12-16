@@ -1,0 +1,6 @@
+<% if @errors.present? %>
+  $(".<%= params[:campaign_name].downcase %>-messages").html('<%= @errors.join(' ') %>').removeClass('success').addClass('error');
+<% else %>
+  <% success_class = params[:campaign_name] == 'kpopfam' ? 'success-kpop' : 'success' %>
+  $(".<%= params[:campaign_name].downcase %>-messages").html('Thanks for your subscription!').removeClass('error').addClass('<%= success_class %>');
+<% end %>

@@ -1,0 +1,102 @@
+=takko-card($dark-theme: false)
+  @extend .f-center
+
+  @if $dark-theme
+    background: $white
+  @else
+    background: $purple
+
+  min-height: 100%
+  overflow: auto
+
+  .takko-card-container
+    @extend .flex-grow-1, .mx-auto, .f-center-col
+
+    max-width: 330px
+    min-width: 290px
+    text-align: center
+
+  .takko-card-template
+    @extend .f-center-col
+
+    @if $dark-theme
+      background: $dark-purple
+      color: $white
+    @else
+      background: $white
+      color: $black
+
+    border-radius: 24px
+    font-size: 16px
+    min-height: 520px
+    padding: 30px
+    width: 100%
+
+    .takko-logo
+      @extend .f-center
+
+      height: 100px
+
+      img
+        width: 140px
+
+    form
+      @if $dark-theme
+        @extend .takko-form-dark
+      @else
+        @extend .takko-form
+
+  .takko-card-footer
+    @if $dark-theme
+      color: $gray
+    @else
+      color: $white
+
+    font-size: 12.5px
+    max-width: 290px
+    padding: 25px 10px 0
+
+    a
+      @if $dark-theme
+        color: $purple
+      @else
+        color: $yellow
+
+      text-decoration: none
+
+    p
+      margin: 0
+      padding: 10px 0 0
+
+.takko-card
+  +takko-card
+
+.takko-card-dark
+  +takko-card($dark-theme: true)
+
+.takko-card-content
+  @extend .flex-grow-1, .f-center-col, .justify-content-center, .w-100
+
+  > *
+    margin: 0
+
+    &:not(form:last-child:not(:only-child))
+      @extend .flex-fill, .f-center
+
+    form:last-child:not(:only-child)
+      @extend .d-flex, .justify-content-end
+
+  h2
+    font-size: 30px
+
+  p
+    font-size: 20px
+
+    &:only-child
+      font-size: 22px
+
+    &:first-child
+      margin-top: -50px
+
+  h2 + p
+    font-size: 15px

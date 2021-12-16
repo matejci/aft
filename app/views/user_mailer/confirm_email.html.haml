@@ -1,0 +1,21 @@
+= content_for :content do
+  %tr
+    %td
+      %h2 You're almost there!
+  %tr
+    %td
+      %p.gray Please confirm your email by clicking on the button below.
+  %tr
+    %td
+      = link_to 'Verify Email',
+                email_verification_url(token: @user.email_verification_token),
+                class: 'btn'
+
+= content_for :footer do
+  %tr
+    %td
+      If you did not submit this request, please contact us at
+      = mail_to 'support@takoapp.com'
+      %p.copyright Copyright © #{Time.current.year} Takko, Inc.
+
+= render 'mailers/takko_card', dark_theme: true

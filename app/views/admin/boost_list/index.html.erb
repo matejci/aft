@@ -1,0 +1,99 @@
+<%= javascript_pack_tag 'utils' %>
+<%= javascript_pack_tag 'admin/boost_list_manager' %>
+
+<% users = @collection[:users] %>
+<% app_conf = @collection[:conf] %>
+
+<div class="curation_manager">
+  <div class="row">
+    <div class="rectangle">
+      <span class="curation_manager_text">Boost List</span>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-4">
+      <%= text_field_tag('search_txt', nil, placeholder: 'Search', autocomplete: 'off', autofocus: true, 'data-url': admin_boost_list_search_path) %>
+    </div>
+    <div class="col-3">
+      <div class="row">
+        <div class="pagination_info">
+          <%= page_entries_info users %>
+        </div>
+      </div>
+      <div id="pagination_navigation" class="row">
+        <%= link_to_prev_page users, 'Prev' %>&nbsp;&nbsp;&nbsp;
+        <%= link_to_next_page users, 'Next' %>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      Boost user list by:
+      <%= select_tag('boost_options', options_for_select((1..10).to_a.map { |item| "#{item}x"}, "#{app_conf.boost_value}x")) %>
+      <%= hidden_field_tag(:boost_value_url, admin_boost_list_boost_value_update_path) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-7"></div>
+    <div class="col-sm-2">
+      Boost new post/takko by:
+      <%= select_tag('post_boost_options', options_for_select((1..10).step(0.5).to_a.map { |item| "#{item}x"}, "#{app_conf.post_boost[:boost_value]}x")) %>
+      <%= hidden_field_tag(:post_boost_value_url, admin_boost_list_post_boost_value_update_path) %>
+    </div>
+    <div class="col-sm-3">
+      <div id="post_boost_validation_date">
+      <%= "Valid until: #{app_conf.post_boost[:expires_at].strftime('%Y-%m-%d %H:%M')}" if app_conf.post_boost[:boost_value] > 1.0 %>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="fit">ID</th>
+            <th class="fit">Username</th>
+            <th class="fit">Email</th>
+            <th class="fit">First Name</th>
+            <th class="fit">Last Name</th>
+            <th class="fit">Phone</th>
+            <th class="fit">Profile Image</th>
+            <th class="fit"></th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <% @collection[:users].each do |item| %>
+            <tr id="<%= item.id.to_s %>">
+              <td class="fit">
+                <%= item.id.to_s %>
+              </td>
+              <td class="fit">
+                <%= item.username %>
+              </td>
+              <td class="fit">
+                <%= item.email %>
+              </td>
+              <td class="fit">
+                <%= item.first_name %>
+              </td>
+              <td class="fit">
+                <%= item.last_name %>
+              </td>
+              <td class="fit">
+                <%= item.phone %>
+              </td>
+              <td class="fit">
+                <%= image_tag(item.profile_image.thumb.url, style: 'max-height: 200px') %>
+              </td>
+              <td class="fit">
+                <%= button_tag('Remove', type: 'button', class: 'remove_btn', 'data-url': admin_boost_list_remove_path(id: item.id.to_s)) %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= render partial: 'admin/shared_partials/loader' %>
+<%= render partial: 'admin/shared_partials/messages' %>

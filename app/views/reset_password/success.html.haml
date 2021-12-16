@@ -1,0 +1,8 @@
+= content_for :content do
+  %p Password has been updated successfully
+
+  %form
+    = link_to 'Done', "javascript:window.open('about:blank','_self').close()",
+              class: 'btn'
+
+= render 'shared/takko_card', dark_theme: true

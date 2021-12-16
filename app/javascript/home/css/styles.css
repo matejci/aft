@@ -1,0 +1,590 @@
+
+/* fix ConfettiLaunch body padding-right issue */
+body {
+	padding: 0 !important;
+}
+
+.content {
+	/*margin-bottom: 100px;*/
+	height: 100%;
+}
+
+.home {
+	margin: 0;
+	padding: 0;
+}
+
+/*:global(div) {
+	width: inherit;
+	height: inherit;
+}*/
+
+.homeRow {
+	/*overflow: hidden;*/
+}
+
+@media (max-width: 767px) {
+	.home {
+		font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/*background: #3023AE;*/
+		/*background: linear-gradient(to bottom right, #3023AE, #6C59CC);*/
+		color: rgba(0,0,0,0.8);
+		height: 100%;
+/*		overflow-y: scroll;
+		overflow-x: hidden;*/
+		/* fix margin issues */
+		width: auto !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.home {
+		font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/*background: #3023AE;*/
+		/*background: linear-gradient(to bottom right, #3023AE, #6C59CC);*/
+		color: rgba(0,0,0,0.8);
+		height: 100%;
+		/* fix margin issues */
+		width: auto !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.home .column.columnLeft .takkoIcon {
+		width: 100%;
+		max-width: 500px;
+		margin-top: 50px;
+		margin-left: -15%;
+		padding-bottom: 50px;
+	}
+
+	.home .column.columnRight {
+		text-align: center;
+		padding-top: 100px;
+	}
+}
+
+@media (min-width: 768px) {
+	.home .column.columnLeft .takkoIcon {
+		width: 100%;
+		max-width: 500px;
+		margin-left: -15%;
+	}
+
+	.home .column.columnRight {
+		text-align: right;
+		padding-right: 100px;
+	}
+}
+
+.home .column.columnRight h1 {
+	font-size: 70px;
+	font-weight: 800;
+	letter-spacing: -1px;
+}
+
+.home .column.columnRight h2 {
+	font-size: 30px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+
+.home .formBox {
+
+}
+
+.home .formBox p.callToAction {
+	margin-bottom: 7px;
+}
+
+.home .subscribersForm {
+
+}
+
+.home .subscribersForm :global(.row) {
+	width: auto !important;
+}
+
+.home .subscribersForm .subscribersBoxWrap {
+	
+}
+
+.home .subscribersForm .subscribersBoxWrap .subscribersFormBox {
+	text-align: left;
+}
+
+
+
+
+.subscribersForm .formPhoneGroup .formWrapperInput {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 100%;
+  color: #fff;
+}
+.subscribersForm .formPhoneGroup .formWrapperInput label {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(255,255,255,0.3);
+  padding-left: 8px;
+}
+
+
+.subscribersForm .formGroup {
+  width: 100%;
+}
+
+.subscribersForm .formGroup .formControl {
+  width: 100%;
+}
+
+.subscribersForm .formGroup .formWrapperInput {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.subscribersForm .formGroup .formWrapperSelect {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  border-radius: 7px;
+  color: #fff;
+  background: transparent;
+  padding-left: 18px;
+}
+
+.subscribersForm .formGroup .formWrapperInput input {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 18px;
+  line-height: 40px;*/
+  color: #fff;
+  background: transparent;
+  padding-left: 18px;
+  /*padding: 0;*/
+}
+.subscribersForm .formGroup .formWrapperInput input[type="password"] {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 25px;
+  line-height: 40px;*/
+  color: #fff;
+  background: transparent;
+  border-radius: 18px;
+  /*padding: 0;*/
+}
+.subscribersForm .formGroup .formWrapperTextArea textarea {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 18px;
+  line-height: 40px;*/
+  color: #fff;
+  background: transparent;
+  border-radius: 18px;
+  /*padding: 0;*/
+  box-sizing: inherit;
+}
+
+/* Change Autocomplete styles in Chrome */
+.subscribersForm input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus
+  input:-webkit-autofill, 
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+/*    background-color: transparent !important;
+    border: transparent !important;*/
+    font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;
+    border: none;
+    outline: none;
+}
+
+.subscribersForm .formGroup .formInputLabel {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(255,255,255,0.3);
+  padding-left: 8px;
+/*  font-size: 18px;
+  line-height: 25px;
+  left: 0;*/
+}
+.subscribersForm .formGroup .formInputLabelSub {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(255,255,255,0.3);
+/*  font-size: 18px;
+  line-height: 35px;
+  left: 0;*/
+}
+.subscribersForm .formGroup .formInputLabelFocused {
+/*  color: rgba(0,0,0,0.9);
+  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+.subscribersForm .formGroup .formInputLabelFilled {
+/*  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+
+.subscribersForm .formGroup .errorMessage {
+  color: red;
+  font-size: 13px;
+}
+
+.subscribersForm .nextButton {
+font-size: 16px;
+  margin-top: 10px;
+  border-radius: 50px;
+  padding: 0 20px;
+  line-height: 42px;
+}
+
+
+
+.item {
+	height: auto;
+}
+
+.navbar {
+
+}
+
+.navbar .navLogo {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: 0;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+:global(.navbar-dark).navbar .navLink {
+	color: rgba(0,0,0,0.7);
+}
+
+
+.header {
+	font-size: 20px;
+	margin: 20px 0 12px 0;
+	height: auto;
+}
+
+
+
+.postLink {
+	display: inline-block;
+	width: 100%;
+	height: inherit;
+}
+
+
+.postCol {
+	margin-bottom: 25px;
+}
+
+@media (max-width: 767px) {
+	.postCol {
+		height: 600px !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.postCol {
+		height: 400px;
+	}
+}
+
+.post {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+			-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+	.modal {
+		height: 85%; 
+		max-width: 800px;
+		border: none;
+	}
+
+	.modal .modalContent {
+		height: 90%;
+		border: none;
+		border-radius: 0;
+		/*overflow: hidden;*/
+	}
+}
+
+@media (min-width: 768px) {
+	.modal {
+		height: 70%; 
+		max-width: 800px;
+		border: none;
+	}
+
+	.modal .modalContent {
+		height: 75%;
+		border: none;
+		border-radius: 0;
+		/*overflow: hidden;*/
+	}
+}
+
+
+
+
+
+.modal .mediaContent {
+	height: 100%;
+	width: 100%;
+/*	width: '300px';
+  height: '300px';*/
+	overflow: hidden;
+}
+
+.modal .mediaContent .player {
+	height: 101% !important;
+	background: rgba(0,0,0,0.9);
+/*	left: -25%;
+  top: -25%;*/
+}
+
+
+.modal .mediaContent .videoCoverContextMenuWrapper {
+	height: 100%;
+}
+
+.modal .mediaContent .contextMenu {
+	background: #fff;
+	border-radius: 50px;
+}
+.modal .mediaContent .contextMenu .menuItem {
+	padding: 5px 12px;
+}
+
+
+.modal .mediaContent .carousel {
+  position: absolute;
+  left: 0;
+  bottom: 13px;
+  height: auto;
+  width: 100%;
+}
+
+.modal .mediaContent .carousel .carouselContainer {
+
+}
+
+.modal .mediaContent .carousel .carouselContainer .carouselItemWrap {
+	padding: 0 5px;
+	background: transparent;
+	height: 135px;
+	opacity: 0.8;
+}
+.modal .mediaContent .carousel .carouselContainer .carouselItemWrap:hover {
+	opacity: 1.0;
+}
+
+.modal .mediaContent .carousel .carouselContainer .carouselItemWrap .carouselItemContent {
+	height: 100%;
+	width: 100%;
+	border-radius: 7px;
+	background-repeat: no-repeat;
+	background-position: center center;
+			-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+}
+
+
+.modal .postContent {
+	padding: 25px;
+	font-size: 15px;
+}
+
+.modal .postContent .postHeader {
+	height: auto;
+	padding-bottom: 20px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.modal .postContent .postHeader .postUserProfileImage {
+	
+}
+.modal .postContent .postHeader .postUserProfileImage img {
+	width: 70px;
+	height: 70px;
+}
+
+.modal .postContent .postHeader .postUserDetails {
+	padding-left: 15px;
+}
+.modal .postContent .postHeader .postUserDetails .postName {
+	font-size: 18px;
+}
+.modal .postContent .postHeader .postUserDetails .postUsername {
+	font-size: 16px;
+  line-height: 17px;
+	color: rgba(0,0,0,0.5);
+}
+
+.modal .postContent .postTitle {
+	font-size: 15px;
+}
+
+
+
+.modal .commentWrap {
+	border: none;
+	position: absolute !important;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 9999999999;
+}
+
+.modal .commentWrap .formGroup {
+	margin: 0;
+}
+
+.modal .commentWrap .formGroup textarea {
+	font-size: 20px !important;
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 0;
+	background-color: transparent !important;
+}
+
+.modal .commentBox textarea {
+	font-size: 20px !important;
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 0;
+	background-color: transparent !important;
+}
+
+.modal .commentBox:global(__highlighter) strong {
+	/*font-size: 20px !important;
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	position: relative !important;*/
+	font-size: 20px;
+	color: purple !important;
+  z-index: 1 !important;
+}
+
+/*.modal .commentBox:global(__highlighter) {
+	font-size: 20px;
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: purple !important;
+	background-color: purple !important;
+}*/
+
+
+
+.menuItem {
+/*	display: inline-block !important;
+  width: 75px !important;
+  height: 120px !important;
+  border-radius: 7px !important;*/
+  /*margin: 5px 20px;*/
+  padding: 3px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+  width: auto;
+  height: auto;
+  outline: none;
+}
+.menuItem:global(.active) {
+	outline: none;
+}
+.menuItem .menuItemContent {
+	overflow: hidden;
+  border-radius: 7px;
+	width: 75px;
+	height: 120px;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+			-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+}
+.menuItemWrapper {
+
+}
+.menuItemWrapper.active {
+  /*border: 1px rgba(255,255,255,0.7) solid;*/
+  opacity: 1.0;
+}
+.menuItem.active {
+  border: 1px green solid;
+}
+
+.menuItemLink {
+	display: inline-block;
+	opacity: 0.5;
+}
+.menuItemLink:hover {
+	opacity: 1.0;
+}
+.menuItemLink.active {
+	opacity: 1.0;
+}
+ 
+:global(.scroll-menu-arrow) {
+  padding: 10px 5px;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  color: rgba(0,0,0,0.2);
+}
+
+.carouselArrows {
+	opacity: 0.5;
+}
+.carouselArrows:hover {
+	opacity: 1.0;
+}
+
+.arrowPrev {
+	width: 30px;
+	max-width: 30px;
+}
+
+.arrowNext {
+	width: 30px;
+	max-width: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+
+<%= javascript_tag do %>
+  var username = "<%= params[:username] %>";
+<% end %>
+
+<div class="content" id="content">
+
+  <%= javascript_pack_tag 'profileFeed' %>
+
+</div> <!-- content -->

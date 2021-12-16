@@ -1,0 +1,120 @@
+
+
+html, body, div {
+	height: 100%;
+}
+
+.sessions {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sessions .LoginBox {
+	background: rgba(0,0,0,0.05);
+	padding: 30px;
+	border-radius: 5px;
+}
+
+.sessions form.sessionForm {
+
+}
+
+.sessions form.sessionForm .formGroup {
+  width: 100%;
+	margin-bottom: 10px;
+}
+
+.sessions form.sessionForm .formControl {
+  width: 100%;
+
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+
+.sessions form.sessionForm .formGroup .formInputLabel {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.3);
+  padding-left: 18px;
+/*  font-size: 18px;
+  line-height: 25px;
+  left: 0;*/
+}
+.sessions form.sessionForm .formGroup .formInputLabelSub {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.3);
+/*  font-size: 18px;
+  line-height: 35px;
+  left: 0;*/
+}
+.sessions form.sessionForm .formGroup .formInputLabelFocused {
+/*  color: rgba(0,0,0,0.9);
+  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+.sessions form.sessionForm .formGroup .formInputLabelFilled {
+/*  transform: translate(0, 0) scale(0.75);
+  transform-origin: top left;*/
+}
+
+/* formPhoneGroup */
+.sessions form.sessionForm .formPhoneGroup .formInputLabel {
+  font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.3);
+  padding-left: 25px;
+}
+
+
+.sessions form.sessionForm .formGroup .formWrapperInput input {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 18px;
+  line-height: 40px;*/
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.09);
+  padding-left: 25px;
+  /*padding: 0;*/
+}
+.sessions form.sessionForm .formGroup .formWrapperInput input[type="password"] {
+	font-family: "BR Candor", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+/*  font-size: 25px;
+  line-height: 40px;*/
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.09);
+  border-radius: 18px;
+  /*padding: 0;*/
+}
+
+
+.sessions form.sessionForm .loginButton {
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 0;
+	border-radius: 50px;
+	padding: 0 20px;
+	line-height: 50px;
+	background-color: #4C27B2;
+	border-color: #4C27B2;
+}
+
+.sessions form.sessionForm .session_error {
+  text-align: center;
+	color: red;
+	font-size: 13px;
+	margin-top: 7px;
+}
+
+.sessions form.sessionForm .errorMessage {
+  text-align: center;
+  display: block;
+  color: red;
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.sessions .footer {
+	margin-top: 20px;
+	font-size: 12px;
+	text-align: center;
+}

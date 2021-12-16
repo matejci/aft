@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hashtag.name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @hashtag.link %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @hashtag.status %>
+</p>
+
+<p>
+  <strong>Takeover:</strong>
+  <%= @hashtag.takeover %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @hashtag.created_by %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @hashtag.category_id %>
+</p>
+
+<%= link_to 'Edit', edit_hashtag_path(@hashtag) %> |
+<%= link_to 'Back', hashtags_path %>
