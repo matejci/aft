@@ -59,7 +59,7 @@ class AppTokenValidationService
       response = { base: 'Oops, you appear to be in a time machine. Please update to the latest app version!',
                    latest_version: app.version,
                    your_version: app_version,
-                   link: 'https://apps.apple.com/app/apple-store/id1556959297?mt=8' }
+                   link: 'https://apps.apple.com/app/1600466655' }
 
       raise AppVersionError.new(response), 'Wrong APP version'
     end

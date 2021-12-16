@@ -12,7 +12,7 @@ module Aws
       P7: '1619019125119-860jpt'  # 294x634 128Kbps
     }.freeze
 
-    def initialize(file:, pipeline_name: "#{ENV['HEROKU_ENV']}_pipeline")
+    def initialize(file:, pipeline_name: ENV['AWS_TRANSCODE_PIPELINE'])
       raise 'No file given' if file.blank?
 
       @file = file

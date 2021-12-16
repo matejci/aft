@@ -34,7 +34,7 @@ class RemoveAccountService
     user.posts.reindex
     user.reindex
 
-    SendgridAutomation::UpsertContactJob.perform_later(user.id.to_s)
+    # SendgridAutomation::UpsertContactJob.perform_later(user.id.to_s)
 
     { success: true }
   end

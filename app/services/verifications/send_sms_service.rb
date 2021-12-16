@@ -14,7 +14,7 @@ module Verifications
       prepare_verification
 
       message = Twilio::REST::Client.new.messages.create(
-        from: '+1 213 905 6195',
+        from: ENV['TWILIO_NUMBER'],
         to: verification.phone.delete('-'),
         body: "#{verification.code} is your App for teachers verification code"
       )

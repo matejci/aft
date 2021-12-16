@@ -3,22 +3,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # ActionMailer::Base.smtp_settings = {
-  #   user_name: 'apikey',
-  #   password: ENV['SENDGRID_API_KEY'],
-  #   domain: 'takko.app',
-  #   address: 'smtp.sendgrid.net',
-  #   port: 587,
-  #   authentication: :plain,
-  #   enable_starttls_auto: true
-  # }
-
   config.time_zone = 'Pacific Time (US & Canada)'
 
   # allow iframes
-  config.action_dispatch.default_headers = {
-    'X-Frame-Options' => 'ALLOWALL'
-  }
+  config.action_dispatch.default_headers = { 'X-Frame-Options' => 'ALLOWALL' }
 
   # config.middleware.use(Mongoid::QueryCache::Middleware)
 

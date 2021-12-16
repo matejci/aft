@@ -1,6 +1,4 @@
-# takko web :taco:
-
-![takko gif](/app/assets/images/takko-animated-logo.gif)
+# teachers web
 
 ## Starting up the Web Server
 Running the server on http://localhost:3000

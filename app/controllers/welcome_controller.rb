@@ -73,7 +73,7 @@ class WelcomeController < ApplicationController
   end
 
   def api_docs
-    html = Aws::S3::Object.new(ENV['AWS_BUCKET'], 'api_doc.html', region: 'us-west-1').get.body.string
+    html = Aws::S3::Object.new(ENV['API_DOCS_BUCKET'], 'api_doc.html', region: 'us-west-1').get.body.string
 
     render html: html.html_safe, content_type: 'text/html' # rubocop: disable Rails/OutputSafety
   end

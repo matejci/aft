@@ -12,7 +12,7 @@ resource 'Welcome' do
       context '200' do
         before do
           Rails.cache.clear
-          category = Category.takko_tutorial_category
+          category = Category.aft_tutorial_category
           post = create(:post, :public, category_id: category.id)
           create(:post, :public, parent_id: post.id, category_id: category.id)
         end

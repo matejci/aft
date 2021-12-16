@@ -18,7 +18,7 @@ module Admin
     attr_reader :query_string, :page
 
     def search_posts
-      filters = { category_id: { not: Category.takko_tutorial_category._id.to_s } }
+      filters = { category_id: { not: Category.aft_tutorial_category._id.to_s } }
 
       query_options = {
         where: filters,

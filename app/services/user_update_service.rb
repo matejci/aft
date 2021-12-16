@@ -28,7 +28,7 @@ class UserUpdateService
 
     before_save
     user.save(validate: false)
-    upsert_sendgrid_contact
+    # upsert_sendgrid_contact
 
     complete_signup
 

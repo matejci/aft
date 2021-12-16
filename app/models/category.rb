@@ -46,9 +46,9 @@ class Category
     end
   end
 
-  def self.takko_tutorial_category
-    Rails.cache.fetch('takko-tutorial-category') do
-      find_by(link: 'takko-tutorial')
+  def self.aft_tutorial_category
+    Rails.cache.fetch('aft-tutorial-category') do
+      find_by(link: 'aft-tutorial')
     end
   end
 

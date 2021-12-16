@@ -114,10 +114,6 @@ class User # rubocop:disable Metrics/ClassLength
   field :votes_count, type: Integer, default: 0
   field :counted_watchtime, type: Float, default: 0
 
-  # archived stripe data
-  field :stripe_ids, type: Array, default: []
-  field :stripe_ext_ids, type: Array, default: []
-
   enum :removal_reason, %i[user_requested]
   enum :acct_status, %i[active deactivated deleted restricted], default: :active
   enum :admin_role, %i[basic support manager administrator super_administrator non_admin], default: :non_admin
@@ -200,9 +196,9 @@ class User # rubocop:disable Metrics/ClassLength
     !non_admin?
   end
 
-  def self.takko_user
-    Rails.cache.fetch('takko-user') do
-      active.find_by(username: 'takko')
+  def self.aft_user
+    Rails.cache.fetch('aft-user') do
+      active.find_by(username: 'aft-user')
     end
   end
 
@@ -350,7 +346,7 @@ class User # rubocop:disable Metrics/ClassLength
   end
 
   def follow_takko
-    follow! User.find_by(username: 'takko')
+    follow! User.find_by(username: 'aftuser')
   end
 
   def follow_url

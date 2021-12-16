@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class VerificationMailer < ApplicationMailer
-  default from: 'App for teachers admin <noreply@takko.app>'
+  default from: 'App for teachers admin <noreply@appforteachers.com>'
   layout 'mailer'
 
   def send_code
@@ -9,8 +9,8 @@ class VerificationMailer < ApplicationMailer
 
     mail(
       to: verification.email,
-      subject: 'App for teachers verification code',
-      body: "#{verification.code} is your App for teachers verification code"
+      subject: 'App For Teachers verification code',
+      body: "#{verification.code} is your App For Teachers verification code"
     )
   end
 end

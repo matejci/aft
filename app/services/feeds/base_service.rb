@@ -21,7 +21,7 @@ module Feeds
 
     def match_query
       query = {}
-      query[:category_id] = { not: Category.takko_tutorial_category.id.to_s } if feed_type != 'home'
+      query[:category_id] = { not: Category.aft_tutorial_category.id.to_s } if feed_type != 'home'
       query.merge!(send("#{feed_type}_filters"))
       query[:blocked] = { not: user_id } if user_id.present?
       query

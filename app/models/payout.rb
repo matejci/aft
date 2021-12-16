@@ -27,10 +27,6 @@ class Payout
   field :paypal_item_id, type: String
   field :paypal_status, type: String
 
-  # archived stripe data
-  field :stripe_payout_id,   type: String
-  field :stripe_transfer_id, type: String
-
   # NOTE: default will be `pending` for existing watch time
   # `estimate` for forecatsted watch time (future feature)
   enum :status, %i[estimate pending unpaid in_delivery paid denied]

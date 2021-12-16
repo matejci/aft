@@ -68,7 +68,7 @@ class PayoutProcessor
       next unless (user = User.find(item['user_id']))
 
       PushNotifications::ProcessorService.new(
-        action: :payout, notifiable: user, actor: User.takko_user, recipient: user, body: item['amount_in_cents'] / 100.0
+        action: :payout, notifiable: user, actor: User.aft_user, recipient: user, body: item['amount_in_cents'] / 100.0
       ).call
     end
   end

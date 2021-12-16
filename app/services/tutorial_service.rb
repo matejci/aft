@@ -18,7 +18,7 @@ class TutorialService
   attr_reader :page_num
 
   def tutorial_items
-    category = Category.takko_tutorial_category
+    category = Category.aft_tutorial_category
 
     posts = Post.active.includes(:feed_item, :user, :category, :takkos)
                 .where(category_id: category.id, parent_id: nil)

@@ -1,2 +1,8 @@
 Release notes, AppForTeachers WEB/API
 =====================================
+
+2021-12-18
+----------
+- Run rake tasks: 'bundle exec rails aft:seed',
+                  'bundle exec rails db:full_text_search',
+                  'bundle exec rails configurations:init'

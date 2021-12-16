@@ -25,7 +25,7 @@ module Leaderboard
     end
 
     def takkos_match_query
-      { parent_id: { '$ne' => nil }, active: true, own_takko: false, category_id: { '$ne' => Category.takko_tutorial_category.id }, view_permission: :public }
+      { parent_id: { '$ne' => nil }, active: true, own_takko: false, category_id: { '$ne' => Category.aft_tutorial_category.id }, view_permission: :public }
     end
 
     def sort_query
