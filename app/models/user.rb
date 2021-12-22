@@ -18,12 +18,9 @@ class User # rubocop:disable Metrics/ClassLength
   has_one :paypal_account, dependent: :destroy, autobuild: true
   has_one :email_verification, dependent: :destroy
   has_one :phone_verification, dependent: :destroy
-  has_one :feed_item, as: :itemizable, dependent: :destroy
   has_one :invitation, autosave: true, dependent: :nullify
   has_one :configuration, class_name: 'UserConfiguration', dependent: :destroy, autobuild: true
 
-  has_many :feed, dependent: :destroy
-  has_many :profile_feed, dependent: :destroy
   has_many :posts, dependent: :destroy
   has_many :sessions, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -154,7 +151,7 @@ class User # rubocop:disable Metrics/ClassLength
 
   with_options if: :takko_managed? do
     validate     :cannot_change_username
-    after_create :follow_takko, :prep_feed
+    after_create :follow_takko
   end
 
   with_options if: :claiming do
@@ -168,9 +165,9 @@ class User # rubocop:disable Metrics/ClassLength
 
   before_destroy :remember_id
   after_destroy :remove_id_directory
-  after_save :feed_featurable, if: :force_index_changed?
+
   after_save :update_username, if: :username_changed?
-  after_save :touch_feed_item, :touch_posts, if: :visible_fields_changed?
+  after_save :touch_posts, if: :visible_fields_changed?
 
   def self.find_with(email_or_phone)
     type = EmailFormatValidator::REGEX.match(email_or_phone) ? :email : :phone
@@ -199,14 +196,6 @@ class User # rubocop:disable Metrics/ClassLength
   def self.aft_user
     Rails.cache.fetch('aft-user') do
       active.find_by(username: 'aft-user')
-    end
-  end
-
-  def feed_featurable(featurable = should_index?)
-    if featurable
-      create_feed_item if feed_item.nil?
-    else
-      feed_item&.destroy
     end
   end
 
@@ -240,21 +229,6 @@ class User # rubocop:disable Metrics/ClassLength
     posts.active.takko.where(view_permission: :public, own_takko: false).count
   end
 
-  # Feed
-
-  ProfileFeed.types.each do |type|
-    # ex. profile_public_post
-    define_method("profile_#{type}") { profile_feed.send(type).first }
-  end
-
-  def private_posts(viewer)
-    if self == viewer
-      ProfileFeed.private_items(self)
-    else
-      ActivePostsQuery.new(profile_followees.items, viewer).call
-    end
-  end
-
   def self.most_viewed_ids
     Rails.cache.fetch('users/most_viewed_ids', expires_in: 5.minutes) do
       Post.collection.aggregate([
@@ -264,10 +238,6 @@ class User # rubocop:disable Metrics/ClassLength
                                   { '$limit': 20 }
                                 ]).pluck(:_id)
     end
-  end
-
-  def touch_feed_item
-    feed_item&.touch
   end
 
   def authenticate(password)
@@ -419,10 +389,6 @@ class User # rubocop:disable Metrics/ClassLength
 
   def email_or_phone_present
     errors.add(:base, 'Email or Phone Number is required') unless email.present? || phone.present?
-  end
-
-  def prep_feed
-    ProfileFeed.init!(self) # create profile feed
   end
 
   def reset_takko_managed

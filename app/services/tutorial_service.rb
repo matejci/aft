@@ -20,9 +20,9 @@ class TutorialService
   def tutorial_items
     category = Category.aft_tutorial_category
 
-    posts = Post.active.includes(:feed_item, :user, :category, :takkos)
+    posts = Post.active.includes(:user, :category, :takkos)
                 .where(category_id: category.id, parent_id: nil)
-                .where.not(title: 'INTRO VIDEO').order(created_at: -1).page(page_num).per(PER_PAGE)
+                .order(created_at: -1).page(page_num).per(PER_PAGE)
 
     total_pages = posts.total_pages
 
@@ -31,7 +31,7 @@ class TutorialService
     posts.each do |post|
       cp = CustomPost.new
       cp.post = post
-      cp.feed_item = post.feed_item || FeedItem.new
+      cp.feed_item = post.feed_item_id
       cp.user = post.user
       cp.category = post.category
       cp.takkos = prepare_takkos(post)

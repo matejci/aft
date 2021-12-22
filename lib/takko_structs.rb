@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module TakkoStructs
-  CustomPost = Struct.new('CustomPost', :post, :feed_item, :user, :category, :takkos, :carousel_muted)
+  CustomPost = Struct.new('CustomPost', :post, :user, :category, :takkos, :carousel_muted)
   CustomTakko = Struct.new('CustomTakko', :post, :user, :category, :can_takko, :voted, :takkos_received, :bookmarked)
 
   HashtagPost = Struct.new('HashtagPost', :id, :title, :description, :media_thumbnail_dimensions, :media_thumbnail, :user, :link_title, :views_count)

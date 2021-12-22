@@ -27,7 +27,6 @@ module Posts
       posts_data.each_with_object([]) do |post, results|
         cp = CustomPost.new
         cp.post = post
-        cp.feed_item = post.feed_item || FeedItem.new
         cp.user = post.user
         cp.category = post.category
         cp.takkos = prepare_takkos(post)

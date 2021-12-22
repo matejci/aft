@@ -14,7 +14,5 @@ FactoryBot.define do
     sequence(:display_name) { Faker::Name.name }
     counted_watchtime { rand(1..100) }
     comments_count { rand(1..100) }
-
-    after(:create) { |user| user.send(:prep_feed) }
   end
 end

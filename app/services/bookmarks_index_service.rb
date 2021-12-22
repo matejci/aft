@@ -36,7 +36,7 @@ class BookmarksIndexService
 
   def query_options
     {
-      includes: [:feed_item, :parent, :user, :category, :takkos],
+      includes: [:parent, :user, :category, :takkos],
       where: { :id.in => bookmarks },
       order: { publish_date: { order: 'desc', unmapped_type: 'long' } },
       page: page,

@@ -11,7 +11,7 @@ class Post # rubocop:disable Metrics/ClassLength
   taggable_fields %w[title description]
 
   MINIMUM_VIDEO_LENGTH = 3
-  MAXIMUM_VIDEO_LENGTH = 30
+  MAXIMUM_VIDEO_LENGTH = 60
 
   ORDER_HASH = {
     comments: { comments_count: :desc },
@@ -23,12 +23,12 @@ class Post # rubocop:disable Metrics/ClassLength
   }.freeze
 
   has_and_belongs_to_many :hashtags
-  has_one  :feed_item, as: :itemizable, dependent: :destroy
-  has_many :comments,                        dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_many :reports, as: :reportable, dependent: :destroy
   has_many :upvotes,                         dependent: :destroy
   has_many :downvotes,                       dependent: :destroy
   has_many :notifications, as: :notifiable,  dependent: :destroy
+
   # TODO: should not delete views, view will belong to archived post
   has_many :view_trackings,                  dependent: :destroy
   has_many :views,                           dependent: :destroy
@@ -58,6 +58,7 @@ class Post # rubocop:disable Metrics/ClassLength
   field :description, type: String
   field :video_length, type: Float # in seconds
   field :own_takko, type: Boolean
+  field :feed_item_id, type: String
 
   mount_uploader :media_file, MediaUploader
   mount_uploader :media_thumbnail, MediaThumbnailUploader
@@ -67,7 +68,6 @@ class Post # rubocop:disable Metrics/ClassLength
   field :animated_cover_offset, type: Float
   field :link, type: String
   field :link_title, type: String
-
   field :allow_comments, type: Boolean, default: true
 
   # count fields
@@ -125,7 +125,6 @@ class Post # rubocop:disable Metrics/ClassLength
   after_destroy :remove_id_directory
 
   after_save   :reindex, if: :searchable_fields_changed?
-  after_save   :update_feed_item
   after_save   :destroy_dependents, :destroy_notification, if: :archiving
 
   def self.most_viewed_ids
@@ -142,10 +141,6 @@ class Post # rubocop:disable Metrics/ClassLength
     Rails.cache.fetch('posts/most_viewed_ids', expires_in: 5.minutes) do
       most_viewed_recent.post_order(:views).limit(20).pluck(:id)
     end
-  end
-
-  def self.feed_item_ids
-    FeedItem.ids(:post, pluck(:id))
   end
 
   def self.sort_option(key)
@@ -303,18 +298,6 @@ class Post # rubocop:disable Metrics/ClassLength
     return unless (changes.keys & %w[completed status publish archived]).any?
 
     self.active = completed && status && publish && !archived
-  end
-
-  def update_feed_item
-    if feed_item.present?
-      if !active?
-        feed_item.destroy
-      elsif view_permission_changed?
-        feed_item.touch
-      end
-    elsif active?
-      create_feed_item
-    end
   end
 
   def visible_fields_changed?

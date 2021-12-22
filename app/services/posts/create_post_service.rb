@@ -16,7 +16,7 @@ module Posts
     attr_reader :user, :params
 
     def create_post
-      post = user.posts.new(params)
+      post = user.posts.new(params.merge(feed_item_id: SecureRandom.hex))
       load_group_permissions(post)
 
       if post.save

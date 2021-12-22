@@ -17,7 +17,7 @@ module Posts
     attr_reader :id, :link, :viewer
 
     def load_post
-      post = Post.active.includes(:user, :category, :feed_item, :takkos, :parent).any_of({ id: id }, { link: link }).first
+      post = Post.active.includes(:user, :category, :takkos, :parent).any_of({ id: id }, { link: link }).first
 
       return unless post
 

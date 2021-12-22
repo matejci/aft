@@ -14,8 +14,8 @@ class Category
   index link: 1
 
   scope :active, -> { where(status: true) }
-  scope :tutorial, -> { where(link: 'takko-tutorial') }
-  scope :without_tutorial, -> { where.not(link: 'takko-tutorial') }
+  scope :tutorial, -> { where(link: 'aft-tutorial') }
+  scope :without_tutorial, -> { where.not(link: 'aft-tutorial') }
 
   validates :name, presence: { message: 'Required' }
   validates :link, presence: { message: 'Required' }, on: :update

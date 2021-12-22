@@ -18,7 +18,7 @@ module Posts
     attr_reader :post, :params
 
     def takkos
-      takkos = post.takkos.active.includes(:user, :category, :feed_item)
+      takkos = post.takkos.active.includes(:user, :category)
                    .post_order(params[:order] || post.takko_order)
                    .page(params[:page].presence || 1)
                    .per(params[:per_page].presence || PER_PAGE)

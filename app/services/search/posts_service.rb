@@ -25,7 +25,7 @@ module Search
     end
 
     def prepare_data
-      collection = Post.search_for(query, viewer_id: viewer&.id&.to_s, per_page: per_page, page: page, includes: [:user, :category, :parent, :feed_item, :takkos])
+      collection = Post.search_for(query, viewer_id: viewer&.id&.to_s, per_page: per_page, page: page, includes: [:user, :category, :parent, :takkos])
       total_pages = collection.total_pages
       collection = collection.to_a
 

@@ -43,7 +43,7 @@ module Leaderboard
       end
 
       def posts_leaderboard(order_field)
-        posts = Post.active.without_tutorials.includes(:user, :category, :feed_item, :takkos, :parent).where.not(:user_id.in => excluded_users_ids)
+        posts = Post.active.without_tutorials.includes(:user, :category, :takkos, :parent).where.not(:user_id.in => excluded_users_ids)
         posts = posts.where(view_permission: :public)
         posts = posts.where(:publish_date.gte => resolve_period) if period != 'all_time'
         posts = posts.desc(order_field).page(page).per(per_page)
@@ -74,7 +74,7 @@ module Leaderboard
         return Post.where(:_id.in => aggregation.pluck(:_id)).pluck(:user_id) if force_cache_expire
 
         # this does not return posts sorted by most takkos
-        posts = Post.includes(:user, :category, :feed_item, :takkos, :parent).where(:_id.in => aggregation.pluck(:_id)).to_a
+        posts = Post.includes(:user, :category, :takkos, :parent).where(:_id.in => aggregation.pluck(:_id)).to_a
 
         collection = []
 

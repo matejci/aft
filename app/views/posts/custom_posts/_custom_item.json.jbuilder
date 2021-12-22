@@ -2,7 +2,7 @@
 
 json.item do
   json.type 'post'
-  json.id custom_post.feed_item.id
+  json.id custom_post.post.feed_item_id
 
   json.parent_id custom_post.post.parent_id || custom_post.post.id
   json.selected_id custom_post.post.id

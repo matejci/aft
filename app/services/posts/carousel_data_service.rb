@@ -28,7 +28,7 @@ module Posts
       end
 
       takkos = Post.active.includes(:category, :user, :parent).where(:parent_id.in => (original_posts_ids + parent_ids).uniq).to_a
-      parents = Post.includes(:category, :user, :feed_item).where(:_id.in => parent_ids).to_a
+      parents = Post.includes(:category, :user).where(:_id.in => parent_ids).to_a
 
       user_ids = (collection.pluck(:user_id, :original_user_id).flatten + takkos.pluck(:user_id)).uniq
       users = User.includes(:blocks, :blocking).where(:_id.in => user_ids).to_a

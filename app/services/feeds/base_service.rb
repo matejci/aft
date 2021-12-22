@@ -10,7 +10,7 @@ module Feeds
 
     def default_query_options(page_number:, per_page:)
       {
-        includes: [:feed_item, :parent, :user, :category, :takkos],
+        includes: [:parent, :user, :category, :takkos],
         where: match_query,
         order: { publish_date: { order: 'desc', unmapped_type: 'long' } },
         page: page_number,

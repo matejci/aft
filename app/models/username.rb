@@ -85,7 +85,6 @@ class Username
     return if user.blank?
 
     user.force_searchable(searchable)
-    user.feed_featurable
   end
 
   def should_attach?

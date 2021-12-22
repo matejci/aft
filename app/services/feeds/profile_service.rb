@@ -26,7 +26,7 @@ module Feeds
     end
 
     def prepare_posts
-      query = Post.active.includes(:feed_item, :category, :takkos, :parent, :user).where(user_id: user.id)
+      query = Post.active.includes(:category, :takkos, :parent, :user).where(user_id: user.id)
 
       query = case posts_type
               when 'private'

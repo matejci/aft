@@ -46,7 +46,6 @@ class UserUpdateService
     return unless user.completed_signup && user.previous_changes.include?(:completed_signup)
 
     user.claim_invitation
-    user.prep_feed unless user.feed.any?
     user.reindex # make user searchable
     user.follow_takko # auto-follow takko account
   end

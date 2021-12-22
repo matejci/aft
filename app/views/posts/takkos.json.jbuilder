@@ -6,7 +6,7 @@ json.takkos_count @collection[:takkos_count]
 post = @collection[:post]
 
 json.data do
-  json.id post&.feed_item&.id
+  json.id post.feed_item_id
   json.parent_id post.parent_id || post.id
   json.selected_id post.id
   json.default_takko_order post.takko_order
