@@ -35,7 +35,7 @@ module Feeds
 
       return { collection: [], total_pages: 0, type: 'discover' } if post_ids.empty?
 
-      posts = Post.active.includes(:user, :category, :feed_item, :takkos, :parent).where(:id.in => post_ids)
+      posts = Post.active.includes(:user, :category, :takkos, :parent).where(:id.in => post_ids)
       posts = posts.where.not(:user_id.in => viewer.block_user_ids) if viewer
       posts = posts.page(page_number).per(PER_PAGE[:discover_feed])
 

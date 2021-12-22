@@ -5,7 +5,7 @@ require 'acceptance_helper'
 resource 'API::V1::Invitations' do
   include_context 'authenticated request', user_session: true
 
-  header 'X-API-VERSION', 'api.takko.v1'
+  header 'X-API-VERSION', 'api.appforteachers.v1'
 
   parameter :contacts, required: true
 

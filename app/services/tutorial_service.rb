@@ -31,7 +31,6 @@ class TutorialService
     posts.each do |post|
       cp = CustomPost.new
       cp.post = post
-      cp.feed_item = post.feed_item_id
       cp.user = post.user
       cp.category = post.category
       cp.takkos = prepare_takkos(post)

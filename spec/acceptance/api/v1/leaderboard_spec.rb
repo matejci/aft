@@ -10,7 +10,7 @@ resource 'API::V1::Leaderboard::Posts' do
     - if `period` param is not specified, endpoints will fallback to 'all_time'
   DOC
 
-  header 'X-API-VERSION', 'api.takko.v1'
+  header 'X-API-VERSION', 'api.appforteachers.v1'
 
   parameter :period, type: :string, required: false
 

@@ -4,7 +4,7 @@ require 'acceptance_helper'
 
 resource 'API::V1::Paypal Account' do
   include_context 'authenticated request', user_session: true
-  header 'X-API-VERSION', 'api.takko.v1'
+  header 'X-API-VERSION', 'api.appforteachers.v1'
 
   route '/paypal_account.json', 'paypal account' do
     patch 'update paypal account' do

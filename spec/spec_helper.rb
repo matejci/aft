@@ -30,7 +30,7 @@ RSpec.configure do |config|
         # to override app#init
         app.set(app_id: ENV['APP_ID'], public_key: ENV['APP_PUBLIC_KEY'], secret: ENV['APP_SECRET'])
       end
-      Category.create_with(name: 'Takko Tutorial').find_or_create_by(link: 'takko-tutorial')
+      Category.create_with(name: 'Aft Tutorial').find_or_create_by(link: 'aft-tutorial')
       # Rails.cache.write('takko-user', create(:user, username: 'takko'))
       example.run
     end
@@ -46,8 +46,7 @@ RSpec.configure do |config|
 
   def user_json(user)
     Jbuilder.new do |json|
-      json.extract! user, :id, :username, :display_name, :profile_thumb_url,
-                    :profile_image_version, :verified
+      json.extract! user, :id, :username, :display_name, :profile_thumb_url, :profile_image_version, :verified
     end.attributes!
   end
 end

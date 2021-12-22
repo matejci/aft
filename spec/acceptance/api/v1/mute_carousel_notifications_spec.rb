@@ -5,7 +5,7 @@ require 'acceptance_helper'
 resource 'API::V1::UserConfiguration::Unmute/MuteCarouselNotitifications' do
   include_context 'authenticated request', user_session: true
 
-  header 'X-API-VERSION', 'api.takko.v1'
+  header 'X-API-VERSION', 'api.appforteachers.v1'
 
   explanation <<~DOC
     - turn on/off notifications for particular carousel by passing the ID of the original post

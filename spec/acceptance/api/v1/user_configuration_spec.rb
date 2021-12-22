@@ -10,7 +10,7 @@ resource 'API::V1::UserConfiguration::PushNotificationsSettings' do
     - valid values for `followed`, `payout` and `followee_posted` attributes: `on`, `off`
   DOC
 
-  header 'X-API-VERSION', 'api.takko.v1'
+  header 'X-API-VERSION', 'api.appforteachers.v1'
 
   before { create(:user_configuration, user: user) }
 

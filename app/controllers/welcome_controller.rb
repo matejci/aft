@@ -4,14 +4,15 @@ class WelcomeController < ApplicationController
   skip_before_action :web_app_token_init, :validate_app_token, :set_current_user, only: [:apple_app_site_association, :api_docs, :hls]
 
   def index
-    case request.server_name
-    when 'www.recipetube.me', 'recipetube.me'
-      redirect_to campaigns_recipetube_path
-    when 'www.cryptotube.me', 'cryptotube.me'
-      redirect_to campaigns_cryptotube_path
-    when 'www.kpopfam.com', 'kpopfam.com'
-      redirect_to campaigns_kpopfam_path
-    end
+    # case request.server_name
+    # when 'www.recipetube.me', 'recipetube.me'
+    #   redirect_to campaigns_recipetube_path
+    # when 'www.cryptotube.me', 'cryptotube.me'
+    #   redirect_to campaigns_cryptotube_path
+    # when 'www.kpopfam.com', 'kpopfam.com'
+    #   redirect_to campaigns_kpopfam_path
+    # end
+    render 'admin/index' if @current_user&.admin?
   end
 
   def apple_app_site_association

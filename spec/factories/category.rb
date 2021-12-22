@@ -5,8 +5,8 @@ FactoryBot.define do
     name { 'general' }
 
     trait :tutorial do
-      name { 'Takko Tutorial' }
-      link { 'takko-tutorial' }
+      name { 'Aft Tutorial' }
+      link { 'aft-tutorial' }
     end
   end
 end

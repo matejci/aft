@@ -4,7 +4,7 @@ require 'acceptance_helper'
 
 resource 'API::V1::Banners' do
   include_context 'authenticated request'
-  header 'X-API-VERSION', 'api.takko.v1'
+  header 'X-API-VERSION', 'api.appforteachers.v1'
 
   before { create_list(:banner, 5, order: rand(10)) }
 

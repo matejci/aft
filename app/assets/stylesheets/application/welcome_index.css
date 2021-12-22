@@ -1,0 +1,939 @@
+#welcome_index {
+  background: #0D0D0D;
+}
+
+@media (min-width : 768px) {
+  #welcome_index {
+    height: 965px;
+  }
+
+  .aft_pic {
+    position: absolute;
+    top: 55px;
+    width: 490px;
+    left: 84px;
+  }
+
+  .aft_logo_text {
+    position: absolute;
+    left: 86px;
+  }
+
+  .aft-logo {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    width: 25px;
+  }
+
+  .aft_text_1 {
+    position: absolute;
+    width: 350px;
+    top: 510px;
+    left: -102px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 37px;
+    line-height: 35px;
+    color: #FFFFFF;
+  }
+
+  .atf_text_1_1 {
+    color: #DE4554;
+  }
+
+  .aft_text_2 {
+    position: absolute;
+    width: 405px;
+    top: 628px;
+    left: -138px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
+
+  .aft_download_apple {
+    position: absolute;
+    top: 785px;
+    left: -95px;
+    cursor: pointer;
+    width: 285px;
+  }
+
+  .aft_join_waiting_list {
+    position: absolute;
+    top: 840px;
+    left: -95px;
+    cursor: pointer;
+    width: 285px;
+  }
+
+  .aft-footer {
+    position: absolute;
+    height: 140px;
+    width: 100%;
+    background: #FFFFFF;
+    /* bottom: 0px; */
+    /* margin-top: auto; */
+  }
+
+  .aft-logo {
+    position: absolute;
+    left: 50px;
+    top: 15px;
+    width: 35px;
+  }
+
+  .kit_text {
+    top: 18px;
+    right: 17px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 36px;
+    color: #353535;
+    text-align: right;
+  }
+
+  .kit_text_2 {
+    color: #DE4554;
+  }
+
+  .aft-links {
+    position: absolute;
+    width: 223px;
+    height: 88px;
+    left: 20px;
+    top: 35px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 3px;
+  }
+
+  .help {
+    position: absolute;
+    width: 223px;
+    height: 32px;
+    top: 28px;
+    left: 24px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .help_advertise {
+    font-weight: normal;
+  }
+
+  .advertise {
+    position: absolute;
+    width: 223px;
+    height: 32px;
+    left: 24px;
+    top: 71px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .signup_text {
+    position: absolute;
+    width: 237px;
+    left: 62px;
+    top: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: right;
+    color: #353535;
+  }
+
+  .signup_text_2 {
+    color: #DE4554;
+  }
+
+  .aft-social-links {
+    position: absolute;
+    top: 40px;
+    left: 32px;
+  }
+
+  .aft-social-icon {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .txt_subscription {
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    position: absolute;
+    width: 222px;
+    height: 35px;
+    left: 112px;
+    top: -18px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+    border-color: #EEEEEE;
+  }
+
+  .subscription_arrow {
+    left: 332px;
+    position: absolute;
+    top: -18px;
+    height: 35px;
+  }
+}
+
+@media (min-width : 1024px) {
+
+  #welcome_index {
+    height: 590px;
+  }
+
+  .aft_pic {
+    position: absolute;
+    top: 95px;
+    width: 415px;
+    left: 20px;
+  }
+
+  .aft_logo_text {
+    position: absolute;
+    top: 20px;
+    left: -45px;
+  }
+
+  .aft_text_1 {
+    position: absolute;
+    width: 390px;
+    top: 82px;
+    left: 111px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 35px;
+    color: #FFFFFF;
+  }
+
+  .atf_text_1_1 {
+    color: #DE4554;
+  }
+
+  .aft_text_2 {
+    position: absolute;
+    width: 409px;
+    height: 175px;
+    top: 200px;
+    left: 111px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+
+  .aft_download_apple {
+    position: absolute;
+    top: 358px;
+    left: 111px;
+    cursor: pointer;
+    width: 300px;
+  }
+
+  .aft_join_waiting_list {
+    position: absolute;
+    top: 410px;
+    left: 111px;
+    cursor: pointer;
+    width: 300px;
+  }
+
+  .aft-footer {
+    position: absolute;
+    height: 236px;
+    width: 100%;
+    background: #FFFFFF;
+  }
+
+  .signup_text {
+    position: absolute;
+    width: 237px;
+    left: 169px;
+    top: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: right;
+    color: #353535;
+    text-align: right;
+  }
+
+  .subscription_arrow {
+    left: 448px;
+    position: absolute;
+    top: -18px;
+    height: 44px;
+  }
+
+  .txt_subscription {
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    left: 199px;
+    top: -18px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+    border-color: #EEEEEE;
+  }
+}
+
+@media (min-width : 1280px) {
+  .aft_pic {
+    position: absolute;
+    top: 70px;
+    width: 485px;
+    left: 60px;
+  }
+
+  .aft_logo_text {
+    position: absolute;
+    left: -7px;
+    top: 20px;
+  }
+
+  .aft_text_1 {
+    position: absolute;
+    width: 470px;
+    top: 63px;
+    left: 172px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 44px;
+    color: #FFFFFF;
+  }
+
+  .atf_text_1_1 {
+    color: #DE4554;
+  }
+
+  .aft_text_2 {
+    position: absolute;
+    width: 463px;
+    height: 175px;
+    top: 210px;
+    left: 172px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
+
+  .aft_download_apple {
+    position: absolute;
+    top: 396px;
+    left: 172px;
+    cursor: pointer;
+    width: 300px;
+  }
+
+  .aft_join_waiting_list {
+    position: absolute;
+    top: 450px;
+    left: 172px;
+    cursor: pointer;
+    width: 300px;
+  }
+
+  .aft-footer {
+    position: absolute;
+    width: 100%;
+    background: #FFFFFF;
+  }
+
+  .aft-logo {
+    position: absolute;
+    left: 100px;
+    top: 25px;
+    width: 35px;
+  }
+
+  .kit_text {
+    height: 36px;
+    top: 30px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 36px;
+    color: #353535;
+  }
+
+  .kit_text_2 {
+    color: #DE4554;
+  }
+
+  .aft-links {
+    position: absolute;
+    width: 223px;
+    height: 88px;
+    left: 88px;
+    top: 52px;
+    /*font-family: Nunito Sans;*/
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 3px;
+  }
+
+  .help {
+    position: absolute;
+    width: 223px;
+    height: 32px;
+    left: 0px;
+    top: 52px;
+    /*font-family: Nunito Sans;*/
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .help_advertise {
+    font-weight: normal;
+  }
+
+  .advertise {
+    position: absolute;
+    width: 223px;
+    height: 32px;
+    left: 0px;
+    top: 93px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .signup_text {
+    position: absolute;
+    width: 237px;
+    height: 38px;
+    left: 277px;
+    top: 44px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    color: #353535;
+  }
+
+  .signup_text_2 {
+    color: #DE4554;
+  }
+
+  .aft-social-links {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+  }
+
+  .aft-social-icon {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .txt_subscription {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 350px;
+    height: 53px;
+    left: 235px;
+    top: 20px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+    border-color: #EEEEEE;
+  }
+
+  .subscription_arrow {
+    left: 585px;
+    position: absolute;
+    top: 20px;
+    height: 53px;
+  }
+}
+
+@media (min-width : 1366px) {
+  .signup_text {
+    left: 312px;
+  }
+
+  .subscription_arrow {
+    left: 614px;
+  }
+
+  .txt_subscription {
+    left: 265px;
+  }
+}
+
+@media (min-width : 1400px) {
+  .signup_text {
+    left: 326px;
+  }
+
+  .subscription_arrow {
+    left: 630px;
+  }
+
+  .txt_subscription {
+    left: 280px;
+  }
+}
+
+@media (min-width : 1600px) {
+  .signup_text {
+    left: 408px;
+  }
+
+  .subscription_arrow {
+    left: 728px;
+  }
+
+  .txt_subscription {
+    left: 378px;
+  }
+}
+
+@media (min-width : 1920px) {
+  #welcome_index {
+    height: 750px;
+  }
+
+  .aft_pic {
+    position: absolute;
+    width: 100%;
+    left: 20px;
+  }
+
+  .aft_logo_text {
+    position: absolute;
+    left: -45px;
+    top: 20px;
+  }
+
+  .aft-logo {
+    position: absolute;
+    left: 125px;
+    top: 25px;
+    width: 35px;
+  }
+
+  .aft_text_1 {
+    position: absolute;
+    width: 526px;
+    height: 210px;
+    left: 260px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 70px;
+    color: #FFFFFF;
+  }
+
+  .atf_text_1_1 {
+    color: #DE4554;
+  }
+
+  .aft_text_2 {
+    position: absolute;
+    width: 520px;
+    height: 175px;
+    top: 320px;
+    left: 260px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+  }
+
+  .aft_download_apple {
+    position: absolute;
+    top: 520px;
+    left: 260px;
+    cursor: pointer;
+  }
+
+  .aft_join_waiting_list {
+    position: absolute;
+    top: 580px;
+    left: 260px;
+    cursor: pointer;
+  }
+
+  .aft-footer {
+    position: absolute;
+    background: #FFFFFF;
+  }
+
+  .kit_text {
+    height: 36px;
+    top: 30px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 36px;
+    color: #353535;
+  }
+
+  .kit_text_2 {
+    color: #DE4554;
+  }
+
+  .aft-links {
+    position: absolute;
+    width: 223px;
+    height: 88px;
+    left: 112px;
+    top: 52px;
+    /*font-family: Nunito Sans;*/
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 3px;
+  }
+
+  .help {
+    position: absolute;
+    width: 223px;
+    height: 32px;
+    left: 0px;
+    top: 52px;
+    /*font-family: Nunito Sans;*/
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .help_advertise {
+    font-weight: normal;
+  }
+
+  .advertise {
+    position: absolute;
+    width: 223px;
+    height: 32px;
+    left: 0px;
+    top: 93px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .signup_text {
+    position: absolute;
+    width: 237px;
+    height: 38px;
+    left: 541px;
+    top: 44px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    color: #353535;
+  }
+
+  .signup_text_2 {
+    color: #DE4554;
+  }
+
+  .aft-social-links {
+    position: absolute;
+    top: 60px;
+    left: 125px;
+  }
+
+  .aft-social-icon {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .txt_subscription {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 350px;
+    height: 53px;
+    left: 537px;
+    top: 20px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+    border-color: #EEEEEE;
+  }
+
+  .subscription_arrow {
+    left: 885px;
+    position: absolute;
+    top: 20px;
+  }
+}
+
+@media (min-width : 2160px) {
+  .aft_pic {
+    width: 640px;
+  }
+
+  .signup_text {
+    left: 640px;
+  }
+
+  .subscription_arrow {
+    left: 1005px;
+  }
+
+  .txt_subscription {
+    left: 656px;
+  }
+}
+
+@media (min-width : 2560px) {
+  #welcome_index {
+    height: 1000px;
+  }
+
+  .aft_logo_text {
+    width: 560px;
+  }
+
+  .aft_pic {
+    top: 140px;
+    position: absolute;
+    left: 54px;
+    width: 100%;
+  }
+
+  .aft_text_1 {
+    position: absolute;
+    width: 526px;
+    height: 210px;
+    left: 400px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 68px;
+    color: #FFFFFF;
+    top: 118px;
+  }
+
+  .aft_text_2 {
+    position: absolute;
+    width: 636px;
+    height: 175px;
+    top: 430px;
+    left: 400px;
+    /* font-family: Nunito Sans; */
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+
+  .aft_download_apple {
+    position: absolute;
+    top: 690px;
+    left: 400px;
+    cursor: pointer;
+    width: 500px;
+  }
+
+  .aft_join_waiting_list {
+    position: absolute;
+    top: 790px;
+    left: 400px;
+    cursor: pointer;
+    width: 500px;
+  }
+
+  .aft-logo {
+    width: 55px;
+  }
+
+  .kit_text {
+    top: 45px;
+    font-size: 50px;
+    right: 85px;
+  }
+
+  .aft-links {
+    top: 110px;
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .aft-social-links {
+    position: absolute;
+    top: 195px;
+    left: 125px;
+    width: 350px;
+  }
+
+  .help {
+    top: 110px;
+    font-size: 22px;
+    line-height: 18px;
+    left: 150px;
+  }
+
+  .advertise {
+    top: 184px;
+    font-size: 22px;
+    line-height: 18px;
+    left: 150px;
+  }
+
+  .help_advertise {
+    line-height: 40px;
+  }
+
+  .subscription_arrow {
+    left: 1142px;
+    top: 88px;
+  }
+
+  .txt_subscription {
+    left: 743px;
+    top: 88px;
+    width: 400px;
+  }
+
+  .signup_text {
+    line-height: 35px;
+    left: 627px;
+    width: 415px;
+    top: 80px;
+    font-size: 28px;
+    left: 562px;
+  }
+}
+
+
+@media (min-width : 3440px) {
+  #welcome_index {
+    height: 1270px;
+  }
+
+  .signup_text {
+    left: 928px;
+  }
+
+  .subscription_arrow {
+    left: 1583px;
+  }
+
+  .txt_subscription {
+    left: 1185px;
+  }
+
+  .help {
+    left: 400px;
+  }
+
+  .advertise {
+    left: 400px;
+  }
+
+  .aft_join_waiting_list {
+    top: 1065px;
+    left: 600px;
+  }
+
+  .aft_download_apple {
+    top: 960px;
+    left: 600px;
+  }
+
+  .aft_text_2 {
+    width: 843px;
+    top: 640px;
+    left: 600px;
+    font-size: 29px;
+    line-height: 40px;
+  }
+
+  .aft_text_1 {
+    width: 711px;
+    left: 600px;
+    font-size: 90px;
+    line-height: 106px;
+    top: 136px;
+  }
+}
+
+@media (min-width : 3840px) {
+   #welcome_index {
+    height: 1470px;
+  }
+
+  .signup_text {
+    left: 1098px;
+  }
+
+  .subscription_arrow {
+    left: 1783px;
+  }
+
+  .txt_subscription {
+    left: 1385px;
+  }
+}
