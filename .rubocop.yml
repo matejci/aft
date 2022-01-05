@@ -196,3 +196,6 @@ Style/CommentedKeyword:
 
 Naming/VariableNumber:
   Enabled: false
+
+Style/Proc
+  Enabled: false

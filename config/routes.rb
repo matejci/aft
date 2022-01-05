@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   if Rails.env.production?
     Sidekiq::Web.use Rack::Auth::Basic do |username, password|
       ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(username), ::Digest::SHA256.hexdigest(ENV['SIDEKIQ_USERNAME'])) &
-        ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(password), ::Digest::SHA256.hexdigest(ENV['SIDEKIQ_PASSWORD']))
+      ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(password), ::Digest::SHA256.hexdigest(ENV['SIDEKIQ_PASSWORD']))
     end
   end
 
@@ -57,6 +57,10 @@ Rails.application.routes.draw do
       resources :invitations, only: :none do
         post 'phonebook-sync', on: :collection
       end
+
+      resources :rooms, only: [:create, :index, :show] do
+        resources :messages, only: [:create, :index]
+      end
     end
 
     # scope module: 'v2', constraints: ApiConstraints.new(version: 2) do
@@ -64,14 +68,14 @@ Rails.application.routes.draw do
     # end
   end
 
-  namespace :campaigns do
-    get :recipetube, action: :recipetube
-    get :cryptotube, action: :cryptotube
-    get :kpopfam, action: :kpopfam
-    post :subscribe, action: :subscribe
-  end
+  # namespace :campaigns do
+  #   get :recipetube, action: :recipetube
+  #   get :cryptotube, action: :cryptotube
+  #   get :kpopfam, action: :kpopfam
+  #   post :subscribe, action: :subscribe
+  # end
 
-  get 'download', to: redirect('https://apple.co/36paLVl')
+  get 'download', to: redirect('https://apps.apple.com/app/1600466655')
 
   post 'paypal/webhook', to: 'paypal#webhook'
 end

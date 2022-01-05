@@ -43,9 +43,11 @@ class User # rubocop:disable Metrics/ClassLength
   has_many :user_groups, dependent: :destroy
   has_many :contests, dependent: :nullify
   has_many :shares, dependent: :destroy
+  has_many :sent_messages, class_name: 'Message', dependent: :destroy
 
   has_and_belongs_to_many :pools
   has_and_belongs_to_many :pool_intervals
+  has_and_belongs_to_many :rooms
 
   field :ip_address, type: String
   field :last_activity, type: DateTime
