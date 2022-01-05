@@ -41,5 +41,7 @@ module AppForTeachers
     config.autoload_paths += Dir[Rails.root.join('app/queries')]
     config.autoload_paths += Dir[Rails.root.join('app/validators')]
     config.autoload_paths << config.root.join('lib')
+
+    config.action_cable.disable_request_forgery_protection = true
   end
 end

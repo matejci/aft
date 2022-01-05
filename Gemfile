@@ -39,13 +39,7 @@ gem 'aws-sdk-sns'
 
 gem 'sidekiq'
 
-gem 'pry-rails'
-
-gem 'json'
-
 gem 'rack-cors'
-
-gem 'jquery-fileupload-rails'
 
 # mailer
 gem 'sendgrid', '~> 1.2', '>= 1.2.4'
@@ -61,6 +55,7 @@ gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 gem 'bugsnag', '~> 6.13', '>= 6.13.1'
 
 gem 'awesome_print'
+gem 'pry-rails'
 
 gem 'puma'
 gem 'puma_worker_killer'
@@ -76,7 +71,6 @@ gem 'redis'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'rspec_api_documentation'
-
 gem 'rubyzip'
 
 group :development, :test do

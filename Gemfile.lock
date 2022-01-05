@@ -208,10 +208,6 @@ GEM
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     jmespath (1.4.0)
-    jquery-fileupload-rails (1.0.0)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
-      sassc
     json (2.5.1)
     jwt (1.5.6)
     kaminari-actionview (1.2.1)
@@ -509,8 +505,6 @@ DEPENDENCIES
   foreman
   haml
   jbuilder (~> 2.7)
-  jquery-fileupload-rails
-  json
   jwt
   kaminari-actionview
   kaminari-mongoid
