@@ -12,7 +12,7 @@ class WelcomeController < ApplicationController
     # when 'www.kpopfam.com', 'kpopfam.com'
     #   redirect_to campaigns_kpopfam_path
     # end
-    render 'admin/index' if @current_user&.admin?
+    redirect_to '/admin/studio' if @current_user&.admin?
   end
 
   def apple_app_site_association
