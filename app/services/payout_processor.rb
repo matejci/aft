@@ -31,7 +31,9 @@ class PayoutProcessor
     end
 
     Paypal::CreateBatchService.new(date: date, items: batch_items).call
-    send_pending_notifications(pending_items)
+
+    # NOTE: currently disabling sending of `payout` notifications
+    # send_pending_notifications(pending_items)
 
     { success: true, batch_items_count: batch_items.length, pending_items_count: pending_items.length }
   end
