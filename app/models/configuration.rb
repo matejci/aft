@@ -10,6 +10,7 @@ class Configuration
   field :boost_list, type: Array, default: []
   field :boost_value, type: Integer, default: 2
   field :post_boost, type: Hash, default: { post_ids: [], boost_value: 1.0, expires_at: Time.current }
+  field :monetization_enabled, type: Boolean, default: false
 
   belongs_to :app
 end

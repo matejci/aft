@@ -1,1 +1,3 @@
-json.extract! @configuration, :app_id, :ads, :support
+# frozen_string_literal: true
+
+json.extract! @configuration, :ads, :support, :monetization_enabled
