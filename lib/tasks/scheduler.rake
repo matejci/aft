@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-# desc 'process pool'
-# task process_pool: :environment do
-#   puts 'processing pool...'
-#   CronJobs.process_pool!
-#   puts 'done processing!'
-# end
+desc 'process pool'
+task process_pool: :environment do
+  puts 'processing pool...'
+  CronJobs.process_pool!
+  puts 'done processing!'
+end
 
 desc 'count views'
 task count_views: :environment do
