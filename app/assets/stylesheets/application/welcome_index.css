@@ -34,90 +34,6 @@
   color: #FFFFFF;
 }
 
-.txt_fn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px;
-  position: absolute;
-  width: 355px;
-  height: 53px;
-  left: 910px;
-  top: 155px;
-  background: #EEEEEE;
-}
-
-.txt_ln {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px;
-  position: absolute;
-  width: 355px;
-  height: 53px;
-  left: 910px;
-  top: 215px;
-  background: #EEEEEE;
-}
-
-.txt_phone {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px;
-  position: absolute;
-  width: 355px;
-  height: 53px;
-  left: 910px;
-  top: 155px;
-  background: #EEEEEE;
-}
-
-.txt_age {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px;
-  position: absolute;
-  width: 355px;
-  height: 53px;
-  left: 910px;
-  top: 215px;
-  background: #EEEEEE;
-}
-
-#subscriber_mobile_device {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 14px;
-  position: absolute;
-  width: 355px;
-  height: 53px;
-  left: 910px;
-  top: 277px;
-  background: #EEEEEE;
-}
-
-.next_btn {
-  position: absolute;
-  top: 290px;
-  left: 910px;
-  cursor: pointer;
-}
-
-.next_btn_2 {
-  position: absolute;
-  top: 347px;
-  left: 910px;
-  cursor: pointer;
-}
-
 .header_text_3 {
   position: absolute !important;
   width: 767px !important;
@@ -131,68 +47,6 @@
   line-height: 55px;
   text-align: center;
   color: #FFFFFF;
-}
-
-.txt_share {
-  justify-content: center;
-  align-items: center;
-  padding: 14px;
-  position: absolute;
-  width: 397px;
-  height: 55px;
-  left: 805px;
-  top: 462px;
-  background: #EEEEEE;
-  border-radius: 2px 0px 0px 2px;
-}
-
-.copy_icon {
-  position: absolute;
-  width: 59.47px;
-  height: 53px;
-  left: 1200px;
-  top: 463px;
-  background: #E8E8E8;
-  border-radius: 0px 2px 2px 0px;
-  cursor: pointer;
-}
-
-.back_link {
-  position: absolute;
-  width: 475px;
-  height: 25px;
-  left: 780px;
-  top: 546px;
-  font-family: BR Candor;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  color: #BBBBBB;
-}
-
-.aft_subscription_errors {
-  position: absolute;
-  font-size: 30px;
-  color: red;
-  top: 220px;
-  left: 810px;
-}
-
-.back_link_errors {
-  position: absolute;
-  width: 475px;
-  height: 25px;
-  left: 842px;
-  top: 405px;
-  font-family: BR Candor;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  color: #BBBBBB;
 }
 
 @media (min-width : 768px) {
@@ -393,6 +247,172 @@
     height: 35px;
     cursor: pointer;
   }
+
+  .txt_fn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 224px;
+    top: 155px;
+    background: #EEEEEE;
+  }
+
+  .txt_ln {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 224px;
+    top: 220px;
+    background: #EEEEEE;
+  }
+
+  .txt_phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 224px;
+    top: 155px;
+    background: #EEEEEE;
+  }
+
+  .txt_age {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 224px;
+    top: 215px;
+    background: #EEEEEE;
+  }
+
+  #subscriber_mobile_device {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 224px;
+    top: 277px;
+    background: #EEEEEE;
+  }
+
+  .next_btn {
+    position: absolute;
+    top: 293px;
+    left: 224px;
+    cursor: pointer;
+  }
+
+  .next_btn_2 {
+    position: absolute;
+    top: 347px;
+    left: 224px;
+    cursor: pointer;
+  }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 0px;
+    top: 212px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 53px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .copy_icon {
+    position: absolute;
+    width: 59.47px;
+    height: 53px;
+    left: 563px;
+    top: 463px;
+    background: #E8E8E8;
+    border-radius: 0px 2px 2px 0px;
+    cursor: pointer;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 166px;
+    top: 462px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 152px;
+    top: 586px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    color: red;
+    font-size: 24px;
+    position: absolute;
+    top: 290px;
+    left: 171px;
+  }
+
+  .back_link_errors {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 149px;
+    top: 408px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_apple {
+    left: 55px;
+    position: absolute;
+  }
 }
 
 @media (min-width : 1024px) {
@@ -502,6 +522,169 @@
     background: #EEEEEE;
     border-radius: 2px 0px 0px 2px;
     border-color: #EEEEEE;
+  }
+
+  .aft_subscription_errors {
+    left: 287px;
+    top: 200px;
+  }
+
+  .back_link_errors {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 273px;
+    top: 300px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .txt_fn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 350px;
+    top: 155px;
+    background: #EEEEEE;
+  }
+
+  .txt_ln {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 350px;
+    top: 220px;
+    background: #EEEEEE;
+  }
+
+  .next_btn {
+    position: absolute;
+    top: 293px;
+    left: 350px;
+    cursor: pointer;
+  }
+
+  .txt_phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 350px;
+    top: 155px;
+    background: #EEEEEE;
+  }
+
+  .txt_age {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 350px;
+    top: 215px;
+    background: #EEEEEE;
+  }
+
+  #subscriber_mobile_device {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 355px;
+    height: 53px;
+    left: 350px;
+    top: 277px;
+    background: #EEEEEE;
+  }
+
+  .next_btn_2 {
+    position: absolute;
+    top: 347px;
+    left: 350px;
+    cursor: pointer;
+  }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 120px;
+    top: 212px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .copy_icon {
+    position: absolute;
+    width: 59.47px;
+    height: 53px;
+    left: 674px;
+    top: 393px;
+    background: #E8E8E8;
+    border-radius: 0px 2px 2px 0px;
+    cursor: pointer;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 277px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 262px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_apple {
+    left: -40px;
+    position: absolute;
   }
 }
 
@@ -690,6 +873,94 @@
     top: 20px;
     height: 53px;
   }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 245px;
+    top: 212px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 403px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 386px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 427px;
+  }
+
+  .back_link_errors {
+    left: 404px;
+  }
+
+  .txt_fn {
+    left: 472px;
+  }
+
+  .txt_ln {
+    left: 472px;
+  }
+
+  .next_btn {
+    left: 472px;
+  }
+
+  .txt_phone {
+    left: 472px;
+  }
+
+  .txt_age {
+    left: 472px;
+  }
+
+  #subscriber_mobile_device {
+    left: 472px;
+  }
+
+  .next_btn_2 {
+    left: 472px;
+  }
+
+  .copy_icon {
+    left: 800px;
+  }
+
+  .aft_apple {
+    left: -40px;
+    position: absolute;
+  }
 }
 
 @media (min-width : 1366px) {
@@ -703,6 +974,94 @@
 
   .txt_subscription {
     left: 265px;
+  }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 245px;
+    top: 212px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 403px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 386px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 474px;
+  }
+
+  .back_link_errors {
+    left: 450px;
+  }
+
+  .txt_fn {
+    left: 514px;
+  }
+
+  .txt_ln {
+    left: 514px;
+  }
+
+  .next_btn {
+    left: 514px;
+  }
+
+  .txt_phone {
+    left: 514px;
+  }
+
+  .txt_age {
+    left: 514px;
+  }
+
+  #subscriber_mobile_device {
+    left: 514px;
+  }
+
+  .next_btn_2 {
+    left: 514px;
+  }
+
+  .copy_icon {
+    left: 800px;
+  }
+
+  .aft_apple {
+    left: -40px;
+    position: absolute;
   }
 }
 
@@ -718,6 +1077,94 @@
   .txt_subscription {
     left: 280px;
   }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 288px;
+    top: 212px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 446px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 434px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 492px;
+  }
+
+  .back_link_errors {
+    left: 475px;
+  }
+
+  .txt_fn {
+    left: 530px;
+  }
+
+  .txt_ln {
+    left: 530px;
+  }
+
+  .next_btn {
+    left: 530px;
+  }
+
+  .txt_phone {
+    left: 530px;
+  }
+
+  .txt_age {
+    left: 530px;
+  }
+
+  #subscriber_mobile_device {
+    left: 530px;
+  }
+
+  .next_btn_2 {
+    left: 530px;
+  }
+
+  .copy_icon {
+    left: 843px;
+  }
+
+  .aft_apple {
+    left: -40px;
+    position: absolute;
+  }
 }
 
 @media (min-width : 1600px) {
@@ -731,6 +1178,94 @@
 
   .txt_subscription {
     left: 378px;
+  }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 393px;
+    top: 170px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 552px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 536px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 607px;
+  }
+
+  .back_link_errors {
+    left: 584px;
+  }
+
+  .txt_fn {
+    left: 632px;
+  }
+
+  .txt_ln {
+    left: 632px;
+  }
+
+  .next_btn {
+    left: 632px;
+  }
+
+  .txt_phone {
+    left: 632px;
+  }
+
+  .txt_age {
+    left: 632px;
+  }
+
+  #subscriber_mobile_device {
+    left: 632px;
+  }
+
+  .next_btn_2 {
+    left: 632px;
+  }
+
+  .copy_icon {
+    left: 948px;
+  }
+
+  .aft_apple {
+    left: -40px;
+    position: absolute;
   }
 }
 
@@ -918,6 +1453,94 @@
     position: absolute;
     top: 20px;
   }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 554px;
+    top: 170px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 720px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 698px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 766px;
+  }
+
+  .back_link_errors {
+    left: 730px;
+  }
+
+  .txt_fn {
+    left: 788px;
+  }
+
+  .txt_ln {
+    left: 788px;
+  }
+
+  .next_btn {
+    left: 788px;
+  }
+
+  .txt_phone {
+    left: 788px;
+  }
+
+  .txt_age {
+    left: 788px;
+  }
+
+  #subscriber_mobile_device {
+    left: 788px;
+  }
+
+  .next_btn_2 {
+    left: 788px;
+  }
+
+  .copy_icon {
+    left: 1116px;
+  }
+
+  .aft_apple {
+    left: -40px;
+    position: absolute;
+  }
 }
 
 @media (min-width : 2160px) {
@@ -935,6 +1558,94 @@
 
   .txt_subscription {
     left: 656px;
+  }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 677px;
+    top: 170px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 841px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 843px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 875px;
+  }
+
+  .back_link_errors {
+    left: 852px;
+  }
+
+  .txt_fn {
+    left: 911px;
+  }
+
+  .txt_ln {
+    left: 911px;
+  }
+
+  .next_btn {
+    left: 911px;
+  }
+
+  .txt_phone {
+    left: 911px;
+  }
+
+  .txt_age {
+    left: 911px;
+  }
+
+  #subscriber_mobile_device {
+    left: 911px;
+  }
+
+  .next_btn_2 {
+    left: 911px;
+  }
+
+  .copy_icon {
+    left: 1238px;
+  }
+
+  .aft_apple {
+    left: -40px;
+    position: absolute;
   }
 }
 
@@ -1059,8 +1770,99 @@
     font-size: 28px;
     left: 562px;
   }
-}
 
+  .aft_apple {
+    width: 50px;
+  }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 880px;
+    top: 170px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 1033px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 1026px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 1073px;
+  }
+
+  .back_link_errors {
+    left: 1043px;
+  }
+
+  .txt_fn {
+    left: 1116px;
+  }
+
+  .txt_ln {
+    left: 1116px;
+  }
+
+  .next_btn {
+    left: 1116px;
+  }
+
+  .txt_phone {
+    left: 1116px;
+  }
+
+  .txt_age {
+    left: 1116px;
+  }
+
+  #subscriber_mobile_device {
+    left: 1116px;
+  }
+
+  .next_btn_2 {
+    left: 1116px;
+  }
+
+  .copy_icon {
+    left: 1429px;
+  }
+
+  .aft_apple {
+    left: -96px;
+    position: absolute;
+  }
+}
 
 @media (min-width : 3440px) {
   #welcome_index {
@@ -1112,6 +1914,95 @@
     line-height: 106px;
     top: 136px;
   }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 1302px;
+    top: 170px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 1456px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 1460px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 1513px;
+  }
+
+  .back_link_errors {
+    left: 1500px;
+  }
+
+  .txt_fn {
+    left: 1551px;
+  }
+
+  .txt_ln {
+    left: 1551px;
+  }
+
+  .next_btn {
+    left: 1551px;
+  }
+
+  .txt_phone {
+    left: 1551px;
+  }
+
+  .txt_age {
+    left: 1551px;
+  }
+
+  #subscriber_mobile_device {
+    left: 1551px;
+  }
+
+  .next_btn_2 {
+    left: 1551px;
+  }
+
+  .copy_icon {
+    left: 1852px;
+  }
+
+  .aft_apple {
+    left: -200px;
+    position: absolute;
+    top: 42px;
+  }
 }
 
 @media (min-width : 3840px) {
@@ -1129,5 +2020,94 @@
 
   .txt_subscription {
     left: 1385px;
+  }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 1500px;
+    top: 170px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 1667px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 1656px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 1716px;
+  }
+
+  .back_link_errors {
+    left: 1700px;
+  }
+
+  .txt_fn {
+    left: 1745px;
+  }
+
+  .txt_ln {
+    left: 1745px;
+  }
+
+  .next_btn {
+    left: 1745px;
+  }
+
+  .txt_phone {
+    left: 1745px;
+  }
+
+  .txt_age {
+    left: 1745px;
+  }
+
+  #subscriber_mobile_device {
+    left: 1745px;
+  }
+
+  .next_btn_2 {
+    left: 1745px;
+  }
+
+  .copy_icon {
+    left: 2063px;
+  }
+
+  .aft_apple {
+    left: -200px;
+    top: 42px;
+    position: absolute;
   }
 }
