@@ -52,7 +52,6 @@ scope '', path: '', constraints: ApiConstraints.new(version: 0) do
 
     member do
       post :upvote
-      # post :downvote # not used since IOS app v.1.3.0.3
     end
   end
 
@@ -106,7 +105,8 @@ scope '', path: '', constraints: ApiConstraints.new(version: 0) do
   end
 
   resources :sessions
-  resources :subscribers
+
+  resources :subscribers, only: [:create, :update, :index]
 
   resources :profiles, only: :show, param: :username do
     member do
@@ -136,9 +136,6 @@ scope '', path: '', constraints: ApiConstraints.new(version: 0) do
     match '(*any)', to: redirect(subdomain: ''), via: :all
   end
 
-  # unsubscribe route
-  # http://www.takkoapp.com/email/unsubscribe/@subscriber.unsubscribe_hash
-  get '/email/unsubscribe/:unsubscribe_hash', to: 'subscribers#unsubscribe'
 
   get '/settings', to: 'users#edit'
 

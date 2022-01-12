@@ -7,8 +7,8 @@ class Subscriber
 
   belongs_to :parent, optional: true, class_name: 'Subscriber'
 
-  field :firstName, type: String
-  field :lastName, type: String
+  field :first_name, type: String
+  field :last_name, type: String
   field :email, type: String
   field :age, type: String
   field :phone, type: String
@@ -51,8 +51,8 @@ class Subscriber
   attr_accessor :referral, :triggerEmail
 
   with_options on: :update do
-    validates :firstName, presence: { message: 'Please enter your first name' }
-    validates :lastName, presence: { message: 'Please enter your last name' }
+    validates :first_name, presence: { message: 'Please enter your first name' }
+    validates :last_name, presence: { message: 'Please enter your last name' }
     validates :mobile_device, presence: { message: 'Please select your device' },
                               if: :mobile_device_changed?
   end
@@ -152,10 +152,10 @@ class Subscriber
   end
 
   def share_link_update
-    return unless firstName_changed?
+    return unless first_name_changed?
 
     self.link = loop do
-      share_link = firstName.parameterize(separator: '') + SecureRandom.random_number(1000..9999).to_s
+      share_link = first_name.parameterize(separator: '') + SecureRandom.random_number(1000..9999).to_s
       break share_link unless Subscriber.where(link: share_link).exists?
     end
   end

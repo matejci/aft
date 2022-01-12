@@ -1,0 +1,50 @@
+<%= javascript_pack_tag 'welcome_index' %>
+
+<div class="content step_2" id="welcome_index">
+  <div ft-links="container-fluid">
+    <br />
+    <div class="row">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-11">
+        <%= image_tag('aft_apple.png', alt: 'aft_apple', class: 'aft_logo_text') %>
+      </div>
+    </div>
+    <br />
+    <div class='row'>
+      <div class='col header_text'>
+        App for <span class='header_text_red'>Teachers</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col content_text">
+        Let’s mobilize and stand together.
+      </div>
+    </div>
+
+    <%= form_tag(subscriber_path(id: @subscriber.id), method: :patch, id: :aft_subscription_form) do %>
+      <div class="row">
+        <div class="col">
+            <%= text_field_tag('subscriber[phone]', '', placeholder: 'Phone (optional)', class: 'txt_phone', type: :text, autocomplete: 'off') %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <%= text_field_tag('subscriber[age]', '', placeholder: 'How old are you?', class: 'txt_age', type: :text, autocomplete: 'off', required: true) %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <%= select_tag('subscriber[mobile_device]', options_for_select(['Android', 'iPhone'])) %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <%= image_tag('aft_next_btn.png', alt: 'next_btn', class: 'next_btn_2') %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render partial: 'footer' %>

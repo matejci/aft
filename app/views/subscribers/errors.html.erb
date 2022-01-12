@@ -1,0 +1,39 @@
+<%= javascript_pack_tag 'welcome_index' %>
+
+<div class="content errors" id="welcome_index">
+  <div ft-links="container-fluid">
+    <br />
+    <div class="row">
+      <div class="col-lg-1"></div>
+      <div class="col-lg-11">
+        <%= image_tag('aft_apple.png', alt: 'aft_apple', class: 'aft_logo_text') %>
+      </div>
+    </div>
+    <br />
+    <div class='row'>
+      <div class='col header_text'>
+        App for <span class='header_text_red'>Teachers</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col content_text">
+        Let’s mobilize and stand together.
+      </div>
+    </div>
+
+    <div class="row">
+    	<div class="col aft_subscription_errors">
+    		<%= @subscriber.errors.map(&:message).join(',') %>
+    	</div>
+  	</div>
+
+  	<div class="row">
+      <div class="col">
+        <%= link_to('Back to home', root_path, class: 'back_link_errors') %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render partial: 'footer' %>

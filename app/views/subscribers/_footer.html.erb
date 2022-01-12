@@ -1,0 +1,70 @@
+<div class="conteiner-fluid">
+  <div class="aft-footer">
+    <div class="row">
+      <div class="col-2 col-md-2 col-lg-2">
+        <%= image_tag('aft-logo.png', alt: 'aft-logo', class: 'aft-logo') %>
+      </div>
+      <div class="col-2 col-md-2 col-lg-2"></div>
+      <div class="col-8 col-md-8 col-lg-8 kit_text">
+        Let's keep <span class="kit_text_2">in touch!</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-md-4 col-lg-4 aft-links">
+        <p>
+          <%= link_to('Community Guidelines', '') %>
+        </p>
+        <p>
+          <%= link_to('Terms of Use', '') %>
+        </p>
+        <p>
+          <%= link_to('Privacy Policy', '') %>
+        </p>
+        <p>Copyright ©
+          <%= Time.current.year %> Content Creators, Inc.</p>
+      </div>
+      <div class="col-3 col-md-3 col-lg-3">
+        <div class="help">
+          Need help?
+          <span class="help_advertise">support@appforteachers.com</span>
+        </div>
+        <div class="advertise">
+          Want to advertise?
+          <span class="help_advertise">advertising@appforteachers.com</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-5 col-lg-5">
+        <div class="signup_text">
+          Sign up to get updates about
+          <span class="signup_text_2">Apps for Teachers</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="aft-social-links">
+          <%= link_to('https://apps.apple.com/app/1600466655') do %>
+            <%= image_tag('tw_icon.png', alt: 'twitter', class: 'aft-social-icon') %>
+          <% end %>
+          <%= link_to('https://apps.apple.com/app/1600466655') do %>
+            <%= image_tag('ln_icon.png', alt: 'linkedin', class: 'aft-social-icon') %>
+          <% end %>
+          <%= link_to('https://apps.apple.com/app/1600466655') do %>
+            <%= image_tag('yt_icon.png', alt: 'youtube', class: 'aft-social-icon') %>
+          <% end %>
+          <%= link_to('https://apps.apple.com/app/1600466655') do %>
+            <%= image_tag('ig_icon.png', alt: 'instagram', class: 'aft-social-icon') %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="subscription">
+          <%= form_tag(subscribers_path, method: :post, id: :aft_subscription_form) do %>
+            <%= text_field_tag('subscriber[email]', '', placeholder: 'Enter email address', class: 'txt_subscription', type: :email, autocomplete: 'off') %>
+            <%= image_tag('aft_subscribe_arrow.png', alt: 'subscribe_arrow', class: 'subscription_arrow') %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
