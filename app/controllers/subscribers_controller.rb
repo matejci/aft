@@ -8,11 +8,6 @@ class SubscribersController < ApplicationController
 
   def index
     @subscribers = Subscriber.all.order_by([:created_at, :desc]).page(params[:page]).per(params[:limit])
-
-    respond_to do |format|
-      format.html { redirect_to '/admin', notice: 'Welcome to Admin Panel' }
-      format.json { render :index, status: :ok }
-    end
   end
 
   def create

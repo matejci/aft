@@ -1,0 +1,12 @@
+<!-- TODO: implement UI -->
+
+<% @subscribers.each do |sub| %>
+	<%= sub.email %>
+	<%= sub.first_name %>
+	<%= sub.last_name %>
+	<%= sub.phone %>
+	<%= sub.age %>
+	<%= sub.mobile_device %>
+	<%= sub.created_at %>
+	<hr/>
+<% end %>

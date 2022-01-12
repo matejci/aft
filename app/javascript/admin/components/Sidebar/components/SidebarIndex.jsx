@@ -94,6 +94,9 @@ export default class SidebarIndex extends React.Component {
       case 'boost_list':
         itemProps = { href: '/admin/boost_list/index', onClick: null }
         break;
+      case 'subscribers':
+        itemProps = { href: '/subscribers', onClick: null }
+        break;
       default:
         itemProps = { href: `/admin/${item}`, onClick: null }
     }
