@@ -47,21 +47,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @post.update(post_params)
-        partial = if @post.active?
-          :show
-        else
-          { partial: 'posts/preview', locals: { post: @post } }
-        end
-
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { render partial, status: :ok, location: @post }
-      else
-        format.html { render :edit }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
+    render json: { errors: @post.errors } , status: :unprocessable_entity and return unless @post.update(post_params)
   end
 
   def destroy
@@ -109,7 +95,6 @@ class PostsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_post
     return if (@post = params[:link] ? Post.active.find_by(link: params[:link]) : Post.active.find(params[:id]))
 
