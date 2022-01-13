@@ -12,13 +12,13 @@
     <div class="row">
       <div class="col-3 col-md-4 col-lg-4 aft-links">
         <p>
-          <%= link_to('Community Guidelines', '') %>
+          <%= link_to('Community Guidelines', guidelines_path) %>
         </p>
         <p>
-          <%= link_to('Terms of Use', '') %>
+          <%= link_to('Terms of Use', terms_path) %>
         </p>
         <p>
-          <%= link_to('Privacy Policy', '') %>
+          <%= link_to('Privacy Policy', privacy_path) %>
         </p>
         <p>Copyright ©
           <%= Time.current.year %> Content Creators, Inc.</p>
@@ -43,16 +43,16 @@
     <div class="row">
       <div class="col-6">
         <div class="aft-social-links">
-          <%= link_to('https://apps.apple.com/app/1600466655') do %>
+          <%= link_to('https://twitter.com/AppForTeachers') do %>
             <%= image_tag('tw_icon.png', alt: 'twitter', class: 'aft-social-icon') %>
           <% end %>
-          <%= link_to('https://apps.apple.com/app/1600466655') do %>
+          <%= link_to('https://www.linkedin.com/company/app-for-teachers') do %>
             <%= image_tag('ln_icon.png', alt: 'linkedin', class: 'aft-social-icon') %>
           <% end %>
-          <%= link_to('https://apps.apple.com/app/1600466655') do %>
+          <%= link_to('https://www.youtube.com/channel/UCdHHQP9t1-aj2P1SDaGpVZA') do %>
             <%= image_tag('yt_icon.png', alt: 'youtube', class: 'aft-social-icon') %>
           <% end %>
-          <%= link_to('https://apps.apple.com/app/1600466655') do %>
+          <%= link_to('https://www.instagram.com/appforteachers') do %>
             <%= image_tag('ig_icon.png', alt: 'instagram', class: 'aft-social-icon') %>
           <% end %>
         </div>
