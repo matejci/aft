@@ -42,9 +42,9 @@ module PushNotifications
     def create_notification
       model = action == :payout ? 'payout_notifications' : 'notifications'
 
-      notifiable.public_send(model).create!(actor: actor, recipient: recipient, action: action,
-                                            headings: headings, description: description, image_url: image_url,
-                                            notifiable_url: notifiable_url)
+      notifiable.public_send(model).find_or_create_by(actor: actor, recipient: recipient, action: action,
+                                                      headings: headings, description: description, image_url: image_url,
+                                                      notifiable_url: notifiable_url)
     end
 
     def headings # rubocop:disable Metrics/PerceivedComplexity
@@ -101,11 +101,11 @@ module PushNotifications
       return '' if action == :payout
 
       img = case action
-            when :followed
-              actor.profile_image
-            else
-              obj = notifiable.is_a?(Post) ? notifiable : notifiable.post
-              obj.media_thumbnail
+      when :followed
+        actor.profile_image
+      else
+        obj = notifiable.is_a?(Post) ? notifiable : notifiable.post
+        obj.media_thumbnail
       end
 
       img.thumb.url || ''
