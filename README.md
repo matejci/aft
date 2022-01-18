@@ -24,10 +24,9 @@ https://takko-staging-env.herokuapp.com/api/docs
 
 ## Heroku ENVS, deployment strategy and git flow
 
-We have 3 environments where Takko is deployed:
-- Dev - https://takko-dev-env.herokuapp.com
-- Staging - https://takko-staging-env.herokuapp.com
-- Production - https://takko.herokuapp.com
+We have 2 environments where AFT is deployed:
+- Dev/STG - https://teachers-dev.herokuapp.com
+- Production - https://teachers-prod.herokuapp.com
 
 There are two important git branches: `staging` and `master`
 
@@ -63,17 +62,17 @@ Once we want to release new version, we need to:
 
 4. once we do some basic tests on production and see everything went well, we merge release branch to `master`
 
-If during the sprint we need to deploy hotfix to PROD Heroku env, we are going to find most recent `release_yyyy_mm_dd` branch on git repository (https://github.com/Content-Creators/takko-web/branches) and then create a new branch off of it with `hotfix_x` suffix, where `x` is the number of hotfix we are deploying for that release version.
+If during the sprint we need to deploy hotfix to PROD Heroku env, we are going to find most recent `release_yyyy_mm_dd` branch on git repository and then create a new branch off of it with `hotfix_x` suffix, where `x` is the number of hotfix we are deploying for that release version.
 example:
-- let's say most recent release branch is named `release_2021_06_09`, when we are creating our first hotfix, we'll do it like this:
+- let's say most recent release branch is named `release_2022_02_01`, when we are creating our first hotfix, we'll do it like this:
 
 ```shell
-git checkout release_2021_06_09
-git checkout -b "release_2021_06_09_hotfix_1"
+git checkout release_2022_02_01
+git checkout -b "release_2022_02_01_hotfix_1"
 ...
 # commit changes
-git push origin release_2021_06_09_hotfix_1
-git push <prod> release_2021_06_09_hotfix_1
+git push origin release_2022_02_01_hotfix_1
+git push <prod> release_2022_02_01_hotfix_1
 ```
 
 * **IMPORTANT **after deploying to PROD, make sure that your hotfix is merged to `master` and `staging` branches!
