@@ -37,6 +37,8 @@ module Posts
       post.archived = true
       post.archived_at = Time.current
       post.save(validate: false) # will run callbacks
+
+      HlsVersionsCleanerJob.perform_later(post.id.to_s)
     end
   end
 end
