@@ -19,17 +19,17 @@ namespace :aft do
                            secret: '2d0j5YHqNxnnBvn7OGedVU92AomhD6cAgDf6EOdw9L4THU96L7hUCaUub2eY0viIg_Q',
                            status: true)
 
-    App.find_or_create_by!(app_id: '38202194907761873073',
+    App.find_or_create_by!(app_id: '12171451176048326830',
                            app_type: :ios,
                            csrf: false,
                            description: 'App For Teachers iOS app',
                            email: 'admin@takkoapp.com',
-                           key: 'Ya9nRnw-SnCrIpYuTBkKfHcvAvNi6e8lFf8D15JajQ7VZr2eao8lOHv2rIMIeUvFAlU',
+                           key: 'nKZJcLXr_V_Nd89gAxgPVnQyzv1l13msKL-PCLnZ3hDvC8pbSbkwsHE21TIOrVp5OH4',
                            name: 'App For Teachers iOS',
-                           public_key: '4fa1f93e7a0e0513562d6d5b7df45f0e9ba819e088657e7af4',
+                           public_key: '0b68924a696462acfa5f5a663ece24c52db099178b040babc2',
                            publish: false,
                            requests: 0,
-                           secret: 't0J8gHr8BDlvunSBux5fjL-6zu00hwcue3Dd_Djdl0GLPpnBk7Wq1I3QtVT9a0tJihk',
+                           secret: 'clricKZf_SnG0HdmwibY4qrc5693vIpKgHaX5HlteGXvCM464dETm3N4MnHX6ypjO7E',
                            status: true)
 
     App.find_or_create_by!(app_id: '85205862369669018330',
