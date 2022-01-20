@@ -28,7 +28,7 @@ class ProfileImageUploader < CarrierWave::Uploader::Base
   def default_url(*_args)
     # For Rails 3.1+ asset pipeline compatibility:
     # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "grey_taco.jpg"].compact.join('_'))
-    ActionController::Base.helpers.asset_path('fallback/takko_icon.png') # temporarily - thumb only
+    ActionController::Base.helpers.asset_path('fallback/profile_image.png') # temporarily - thumb only
   end
 
   # Process files as they are uploaded:
