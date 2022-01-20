@@ -229,15 +229,17 @@
   .txt_subscription {
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 12px;
     position: absolute;
     width: 222px;
     height: 35px;
     left: 112px;
     top: -18px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
+    display: flex;
+    flex-direction: row;
   }
 
   .subscription_arrow {
@@ -254,12 +256,14 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
+    padding-left: 120px;
     position: absolute;
     width: 355px;
     height: 53px;
     left: 224px;
     top: 155px;
     background: #EEEEEE;
+    border-radius: 50px;
   }
 
   .txt_ln {
@@ -268,12 +272,14 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
+    padding-left: 120px;
     position: absolute;
     width: 355px;
     height: 53px;
     left: 224px;
     top: 220px;
     background: #EEEEEE;
+    border-radius: 50px;
   }
 
   .txt_phone {
@@ -288,6 +294,8 @@
     left: 224px;
     top: 155px;
     background: #EEEEEE;
+    border-radius: 50px;
+    padding-left: 101px;
   }
 
   .txt_age {
@@ -302,6 +310,8 @@
     left: 224px;
     top: 215px;
     background: #EEEEEE;
+    border-radius: 50px;
+    padding-left: 101px;
   }
 
   #subscriber_mobile_device {
@@ -316,6 +326,8 @@
     left: 224px;
     top: 277px;
     background: #EEEEEE;
+    border-radius: 50px;
+    padding-left: 120px;
   }
 
   .next_btn {
@@ -353,7 +365,6 @@
     height: 53px;
     left: 563px;
     top: 463px;
-    background: #E8E8E8;
     border-radius: 0px 2px 2px 0px;
     cursor: pointer;
   }
@@ -368,7 +379,7 @@
     left: 166px;
     top: 462px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -513,14 +524,14 @@
   .txt_subscription {
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 12px;
     position: absolute;
     width: 250px;
     height: 44px;
     left: 199px;
     top: -18px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
   }
 
@@ -556,6 +567,8 @@
     left: 350px;
     top: 155px;
     background: #EEEEEE;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .txt_ln {
@@ -570,6 +583,8 @@
     left: 350px;
     top: 220px;
     background: #EEEEEE;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn {
@@ -591,6 +606,8 @@
     left: 350px;
     top: 155px;
     background: #EEEEEE;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
@@ -605,6 +622,8 @@
     left: 350px;
     top: 215px;
     background: #EEEEEE;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
@@ -619,6 +638,8 @@
     left: 350px;
     top: 277px;
     background: #EEEEEE;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
@@ -649,7 +670,6 @@
     height: 53px;
     left: 674px;
     top: 393px;
-    background: #E8E8E8;
     border-radius: 0px 2px 2px 0px;
     cursor: pointer;
   }
@@ -664,7 +684,7 @@
     left: 277px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -863,7 +883,7 @@
     left: 235px;
     top: 20px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
   }
 
@@ -899,7 +919,7 @@
     left: 403px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -927,10 +947,14 @@
 
   .txt_fn {
     left: 472px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .txt_ln {
     left: 472px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn {
@@ -939,14 +963,20 @@
 
   .txt_phone {
     left: 472px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
     left: 472px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
     left: 472px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
@@ -974,6 +1004,8 @@
 
   .txt_subscription {
     left: 265px;
+    border-radius: 50px 0px 0px 50px;
+    border-color: #EEEEEE;
   }
 
   .header_text_3 {
@@ -1001,7 +1033,7 @@
     left: 403px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -1029,10 +1061,14 @@
 
   .txt_fn {
     left: 514px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .txt_ln {
     left: 514px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn {
@@ -1041,14 +1077,20 @@
 
   .txt_phone {
     left: 514px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
     left: 514px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
     left: 514px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
@@ -1076,6 +1118,8 @@
 
   .txt_subscription {
     left: 280px;
+    border-radius: 50px 0px 0px 50px;
+    border-color: #EEEEEE;
   }
 
   .header_text_3 {
@@ -1103,7 +1147,7 @@
     left: 446px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -1131,10 +1175,14 @@
 
   .txt_fn {
     left: 530px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .txt_ln {
     left: 530px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn {
@@ -1143,14 +1191,20 @@
 
   .txt_phone {
     left: 530px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
     left: 530px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
     left: 530px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
@@ -1178,6 +1232,8 @@
 
   .txt_subscription {
     left: 378px;
+    border-radius: 50px 0px 0px 50px;
+    border-color: #EEEEEE;
   }
 
   .header_text_3 {
@@ -1205,7 +1261,7 @@
     left: 552px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -1233,10 +1289,14 @@
 
   .txt_fn {
     left: 632px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .txt_ln {
     left: 632px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn {
@@ -1245,14 +1305,20 @@
 
   .txt_phone {
     left: 632px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
     left: 632px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
     left: 632px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
@@ -1444,7 +1510,7 @@
     left: 537px;
     top: 20px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
   }
 
@@ -1479,7 +1545,7 @@
     left: 720px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -1506,11 +1572,15 @@
   }
 
   .txt_fn {
+    padding-left: 120px;
+    border-radius: 50px;
     left: 788px;
   }
 
   .txt_ln {
     left: 788px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn {
@@ -1519,14 +1589,20 @@
 
   .txt_phone {
     left: 788px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
     left: 788px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
     left: 788px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
@@ -1558,6 +1634,8 @@
 
   .txt_subscription {
     left: 656px;
+    border-radius: 50px 0px 0px 50px;
+    border-color: #EEEEEE;
   }
 
   .header_text_3 {
@@ -1585,7 +1663,7 @@
     left: 841px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -1613,10 +1691,14 @@
 
   .txt_fn {
     left: 911px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .txt_ln {
     left: 911px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn {
@@ -1625,14 +1707,20 @@
 
   .txt_phone {
     left: 911px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
     left: 911px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
     left: 911px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
@@ -1760,6 +1848,8 @@
     left: 743px;
     top: 88px;
     width: 400px;
+    border-radius: 50px 0px 0px 50px;
+    border-color: #EEEEEE;
   }
 
   .signup_text {
@@ -1800,7 +1890,7 @@
     left: 1033px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -1828,10 +1918,14 @@
 
   .txt_fn {
     left: 1116px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .txt_ln {
     left: 1116px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn {
@@ -1840,14 +1934,20 @@
 
   .txt_phone {
     left: 1116px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
     left: 1116px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
     left: 1116px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
@@ -1879,6 +1979,8 @@
 
   .txt_subscription {
     left: 1185px;
+    border-radius: 50px 0px 0px 50px;
+    border-color: #EEEEEE;
   }
 
   .help {
@@ -1940,7 +2042,7 @@
     left: 1456px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -1968,9 +2070,13 @@
 
   .txt_fn {
     left: 1551px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .txt_ln {
+    padding-left: 120px;
+    border-radius: 50px;
     left: 1551px;
   }
 
@@ -1980,14 +2086,20 @@
 
   .txt_phone {
     left: 1551px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
     left: 1551px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
     left: 1551px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
@@ -2020,6 +2132,8 @@
 
   .txt_subscription {
     left: 1385px;
+    border-radius: 50px 0px 0px 50px;
+    border-color: #EEEEEE;
   }
 
   .header_text_3 {
@@ -2047,7 +2161,7 @@
     left: 1667px;
     top: 392px;
     background: #EEEEEE;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
@@ -2075,10 +2189,14 @@
 
   .txt_fn {
     left: 1745px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .txt_ln {
     left: 1745px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn {
@@ -2087,14 +2205,20 @@
 
   .txt_phone {
     left: 1745px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   .txt_age {
     left: 1745px;
+    padding-left: 101px;
+    border-radius: 50px;
   }
 
   #subscriber_mobile_device {
     left: 1745px;
+    padding-left: 120px;
+    border-radius: 50px;
   }
 
   .next_btn_2 {
