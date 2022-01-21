@@ -49,6 +49,415 @@
   color: #FFFFFF;
 }
 
+.header_text_2 {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  #welcome_index {
+    height: 750px;
+  }
+
+  .aft_pic {
+    position: absolute;
+    width: 355px;
+  }
+
+  .aft_logo_text {
+    position: absolute;
+    left: 88px;
+    width: 230px;
+  }
+
+  .aft-logo {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    width: 25px;
+  }
+
+  .aft_text_1 {
+    position: absolute;
+    width: 322px;
+    text-align: center;
+    top: 343px;
+    left: -135px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+  }
+
+  .atf_text_1_1 {
+    color: #DE4554;
+  }
+
+  .aft_text_2 {
+    position: absolute;
+    width: 323px;
+    top: 422px;
+    left: -124px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+  }
+
+  .aft_download_apple {
+    position: absolute;
+    top: 560px;
+    left: -89px;
+    cursor: pointer;
+    width: 234px;
+    height: 41px;
+  }
+
+  .aft_join_waiting_list {
+    position: absolute;
+    top: 614px;
+    left: -89px;
+    cursor: pointer;
+    width: 234px;
+    height: 41px;
+  }
+
+  .aft-footer {
+    position: absolute;
+    width: 100%;
+    background: #FFFFFF;
+  }
+
+  .aft-logo {
+    position: absolute;
+    top: 250px;
+    left: 202px;
+  }
+
+  .kit_text {
+    top: 15px;
+    left: -42px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #353535;
+  }
+
+  .kit_text_2 {
+    color: #DE4554;
+  }
+
+  .aft-links {
+    height: 88px;
+    left: 73px;
+    top: 280px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    line-height: 3px;
+  }
+
+  .aft-link {
+    width: 250px;
+  }
+
+  .help {
+    position: absolute;
+    width: 223px;
+    top: 135px;
+    left: -3px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .help_advertise {
+    font-weight: normal;
+  }
+
+  .advertise {
+    position: absolute;
+    width: 223px;
+    height: 32px;
+    left: 0px;
+    top: 180px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .signup_text {
+    position: absolute;
+    width: 190px;
+    left: -96px;
+    top: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #353535;
+  }
+
+  .signup_text_2 {
+    color: #DE4554;
+  }
+
+  .aft-social-links {
+    position: absolute;
+    top: 290px;
+    left: 131px;
+    width: 200px;
+  }
+
+  .aft-social-icon {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .txt_subscription {
+    justify-content: center;
+    padding: 10px;
+    position: absolute;
+    width: 226px;
+    height: 41px;
+    left: -128px;
+    top: -12px;
+    background: #EEEEEE;
+    border-radius: 50px 0px 0px 50px;
+    border-color: #EEEEEE;
+  }
+
+  .subscription_arrow {
+    left: 97px;
+    position: absolute;
+    top: -12px;
+    height: 41px;
+    cursor: pointer;
+  }
+
+  .txt_fn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    padding-left: 80px;
+    position: absolute;
+    width: 272px;
+    height: 41px;
+    left: 80px;
+    top: 138px;
+    background: #EEEEEE;
+    border-radius: 50px;
+  }
+
+  .txt_ln {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    padding-left: 80px;
+    position: absolute;
+    width: 272px;
+    height: 41px;
+    left: 80px;
+    top: 185px;
+    background: #EEEEEE;
+    border-radius: 50px;
+  }
+
+  .txt_phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 272px;
+    height: 41px;
+    left: 80px;
+    top: 108px;
+    background: #EEEEEE;
+    border-radius: 50px;
+    padding-left: 59px;
+  }
+
+  .txt_age {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 272px;
+    height: 41px;
+    left: 80px;
+    top: 153px;
+    background: #EEEEEE;
+    border-radius: 50px;
+    padding-left: 57px;
+  }
+
+  #subscriber_mobile_device {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 272px;
+    height: 41px;
+    left: 80px;
+    top: 199px;
+    background: #EEEEEE;
+    border-radius: 50px;
+    padding-left: 88px;
+  }
+
+  .next_btn {
+    position: absolute;
+    top: 241px;
+    left: 80px;
+    width: 272px;
+    cursor: pointer;
+  }
+
+  .next_btn_2 {
+    position: absolute;
+    top: 254px;
+    left: 80px;
+    cursor: pointer;
+    height: 41px;
+  }
+
+  .header_text {
+    position: absolute;
+    width: 526px;
+    top: 75px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .header_text_3 {
+    position: absolute !important;
+    left: 0px;
+    top: 212px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .header_text_2 {
+    position: absolute !important;
+    height: 165px;
+    left: 2px;
+    top: 135px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #FFFFFF;
+    display: block;
+  }
+
+  .content_text {
+    display: none;
+  }
+
+  .copy_icon {
+    position: absolute;
+    width: 59.47px;
+    height: 39px;
+    left: 300px;
+    top: 332px;
+    border-radius: 0px 2px 2px 0px;
+    cursor: pointer;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    width: 238px;
+    height: 41px;
+    left: 65px;
+    top: 331px;
+    background: #EEEEEE;
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  .back_link {
+    position: absolute;
+    left: 152px;
+    top: 408px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    color: red;
+    font-size: 20px;
+    position: absolute !important;
+    top: 210px;
+    left: 78px;
+    width: 240px !important;
+    text-align: center;
+  }
+
+  .back_link_errors {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: -23px;
+    top: 250px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_apple {
+    left: 188px;
+    position: absolute;
+  }
+
+}
+
+
 @media (min-width : 768px) {
   #welcome_index {
     height: 965px;

@@ -1,5 +1,4 @@
 <%= javascript_pack_tag 'welcome_index' %>
-
 <div class="content step_3" id="welcome_index">
   <div ft-links="container-fluid">
     <br />
@@ -11,27 +10,28 @@
     </div>
     <br />
     <div class='row'>
+      <div class='col header_text_2'>
+        App for <span class='header_text_red'>Teachers</span>
+      </div>
+    </div>
+    <div class='row'>
       <div class='col header_text_3'>
         <p><span class='header_text_red'>Congrats!</span> You're #1 in line.</p>
         <p>Share this link and get early access</p>
         <p>to claim your username!</p>
       </div>
     </div>
-
     <div class='row'>
       <div class='col'>
         <%= text_field_tag(:share, "#{root_url}#{@subscriber.link}", class: 'txt_share', type: :text, autocomplete: 'off') %>
         <%= image_tag('copy_icon.png', alt: 'copy_icon', class: 'copy_icon') %>
       </div>
     </div>
-
     <div class="row">
       <div class="col">
         <%= link_to('Back to home', root_path, class: 'back_link') %>
       </div>
     </div>
-
   </div>
 </div>
-
 <%= render partial: 'footer' %>
