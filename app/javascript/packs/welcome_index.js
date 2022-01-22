@@ -21,7 +21,8 @@ function handleEnterKey(e) {
 }
 
 function joinListBtnHandler(e) {
-  $('#subscriber_email').css({ opacity: 0 }).animate({ opacity: 1 }, 700).focus();
+  e.preventDefault();
+  $('#subscriber_email').fadeTo(100, 0.1).fadeTo(200, 1.0).focus();
 }
 
 function submitFormHandler(e) {
@@ -33,3 +34,4 @@ function submitFormHandler(e) {
     form.dispatchEvent(new Event('submit', { bubbles: true }));
   }
 }
+

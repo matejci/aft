@@ -454,9 +454,7 @@
     left: 188px;
     position: absolute;
   }
-
 }
-
 
 @media (min-width : 768px) {
   #welcome_index {
@@ -2370,6 +2368,159 @@
   .aft_apple {
     left: -96px;
     position: absolute;
+  }
+}
+
+@media (min-width : 3072px) {
+  #welcome_index {
+    height: 1270px;
+  }
+
+  .signup_text {
+    left: 775px;
+  }
+
+  .subscription_arrow {
+    left: 1400px;
+  }
+
+  .txt_subscription {
+    left: 1000px;
+    border-radius: 50px 0px 0px 50px;
+    border-color: #EEEEEE;
+  }
+
+  .help {
+    left: 400px;
+  }
+
+  .advertise {
+    left: 400px;
+  }
+
+  .aft_join_waiting_list {
+    top: 1065px;
+    left: 600px;
+  }
+
+  .aft_download_apple {
+    top: 960px;
+    left: 600px;
+  }
+
+  .aft_text_2 {
+    width: 843px;
+    top: 640px;
+    left: 600px;
+    font-size: 29px;
+    line-height: 40px;
+  }
+
+  .aft_text_1 {
+    width: 711px;
+    left: 600px;
+    font-size: 90px;
+    line-height: 106px;
+    top: 136px;
+  }
+
+  .header_text_3 {
+    position: absolute !important;
+    width: 767px !important;
+    height: 165px;
+    left: 1302px;
+    top: 170px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: absolute;
+    width: 399px;
+    height: 55px;
+    left: 1456px;
+    top: 392px;
+    background: #EEEEEE;
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  .back_link {
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 1460px;
+    top: 480px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #BBBBBB;
+  }
+
+  .aft_subscription_errors {
+    left: 1335px;
+  }
+
+  .back_link_errors {
+    left: 1320px;
+  }
+
+  .txt_fn {
+    left: 1367px;
+    padding-left: 120px;
+    border-radius: 50px;
+  }
+
+  .txt_ln {
+    padding-left: 120px;
+    border-radius: 50px;
+    left: 1367px;
+  }
+
+  .next_btn {
+    left: 1367px;
+  }
+
+  .txt_phone {
+    left: 1367px;
+    padding-left: 101px;
+    border-radius: 50px;
+  }
+
+  .txt_age {
+    left: 1367px;
+    padding-left: 101px;
+    border-radius: 50px;
+  }
+
+  #subscriber_mobile_device {
+    left: 1367px;
+    padding-left: 120px;
+    border-radius: 50px;
+  }
+
+  .next_btn_2 {
+    left: 1367px;
+  }
+
+  .copy_icon {
+    left: 1852px;
+  }
+
+  .aft_apple {
+    left: -140px;
+    position: absolute;
+    top: 42px;
   }
 }
 
