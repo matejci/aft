@@ -1,4 +1,4 @@
-#welcome_index {
+.welcome_index {
   background: #0D0D0D;
 }
 
@@ -54,18 +54,21 @@
 }
 
 @media (max-width: 575.98px) {
-  #welcome_index {
-    height: 750px;
+  .welcome_index {
+    height: 675px;
   }
 
   .aft_pic {
     position: absolute;
     width: 355px;
+    top: 45px;
+    left: 45px;
   }
 
   .aft_logo_text {
     position: absolute;
-    left: 88px;
+    left: 100px;
+    top: 20px;
     width: 230px;
   }
 
@@ -80,8 +83,8 @@
     position: absolute;
     width: 322px;
     text-align: center;
-    top: 343px;
-    left: -135px;
+    top: 365px;
+    left: -90px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -97,8 +100,8 @@
   .aft_text_2 {
     position: absolute;
     width: 323px;
-    top: 422px;
-    left: -124px;
+    top: 435px;
+    left: -80px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: normal;
@@ -109,8 +112,8 @@
 
   .aft_download_apple {
     position: absolute;
-    top: 560px;
-    left: -89px;
+    top: 565px;
+    left: -195px;
     cursor: pointer;
     width: 234px;
     height: 41px;
@@ -119,7 +122,7 @@
   .aft_join_waiting_list {
     position: absolute;
     top: 614px;
-    left: -89px;
+    left: -195px;
     cursor: pointer;
     width: 234px;
     height: 41px;
@@ -256,41 +259,37 @@
     align-items: center;
     padding: 14px;
     padding-left: 80px;
-    position: absolute;
+    position: relative;
     width: 272px;
     height: 41px;
-    left: 80px;
-    top: 138px;
+    left: 62px;
+    top: 114px;
     background: #EEEEEE;
     border-radius: 50px;
   }
 
   .txt_ln {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
     padding-left: 80px;
-    position: absolute;
+    position: relative;
     width: 272px;
     height: 41px;
-    left: 80px;
-    top: 185px;
+    left: 62px;
+    top: 124px;
     background: #EEEEEE;
     border-radius: 50px;
   }
 
   .txt_phone {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 272px;
     height: 41px;
-    left: 80px;
+    left: 62px;
     top: 108px;
     background: #EEEEEE;
     border-radius: 50px;
@@ -298,48 +297,44 @@
   }
 
   .txt_age {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 272px;
     height: 41px;
-    left: 80px;
-    top: 153px;
+    left: 62px;
+    top: 114px;
     background: #EEEEEE;
     border-radius: 50px;
     padding-left: 57px;
   }
 
   #subscriber_mobile_device {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     width: 272px;
     height: 41px;
-    left: 80px;
-    top: 199px;
+    left: 62px;
+    top: 122px;
     background: #EEEEEE;
     border-radius: 50px;
     padding-left: 88px;
   }
 
   .next_btn {
-    position: absolute;
-    top: 241px;
-    left: 80px;
+    position: relative;
+    top: 148px;
+    left: 62px;
     width: 272px;
     cursor: pointer;
   }
 
   .next_btn_2 {
-    position: absolute;
-    top: 254px;
-    left: 80px;
+    position: relative;
+    top: 136px;
+    left: 62px;
     cursor: pointer;
     height: 41px;
   }
@@ -347,7 +342,7 @@
   .header_text {
     position: absolute;
     width: 526px;
-    top: 75px;
+    top: 100px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -358,9 +353,9 @@
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     left: 0px;
-    top: 212px;
+    top: 245px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -371,9 +366,7 @@
   }
 
   .header_text_2 {
-    position: absolute !important;
-    height: 165px;
-    left: 2px;
+    position: relative !important;
     top: 135px;
     font-family: BR Candor;
     font-style: normal;
@@ -385,37 +378,37 @@
     display: block;
   }
 
+  .txt_share {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    width: 238px;
+    height: 41px;
+    left: 46px;
+    top: 266px;
+    background: #EEEEEE;
+    border-radius: 50px 0px 0px 50px;
+  }
+
   .content_text {
     display: none;
   }
 
   .copy_icon {
-    position: absolute;
+    position: relative;
     width: 59.47px;
     height: 39px;
-    left: 300px;
-    top: 332px;
+    left: 38px;
+    top: 266px;
     border-radius: 0px 2px 2px 0px;
     cursor: pointer;
   }
 
-  .txt_share {
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    position: absolute;
-    width: 238px;
-    height: 41px;
-    left: 65px;
-    top: 331px;
-    background: #EEEEEE;
-    border-radius: 50px 0px 0px 50px;
-  }
-
   .back_link {
-    position: absolute;
-    left: 152px;
-    top: 408px;
+    position: relative;
+    left: 140px;
+    top: 309px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: normal;
@@ -428,9 +421,8 @@
   .aft_subscription_errors {
     color: red;
     font-size: 20px;
-    position: absolute !important;
-    top: 210px;
-    left: 78px;
+    position: relative !important;
+    top: 165px;
     width: 240px !important;
     text-align: center;
   }
@@ -439,7 +431,7 @@
     position: absolute;
     width: 475px;
     height: 25px;
-    left: -23px;
+    left: -30px;
     top: 250px;
     font-family: BR Candor;
     font-style: normal;
@@ -452,25 +444,27 @@
 
   .aft_apple {
     left: 188px;
+    top: 20px;
     position: absolute;
   }
 }
 
 @media (min-width : 768px) {
-  #welcome_index {
+  .welcome_index {
     height: 965px;
   }
 
   .aft_pic {
     position: absolute;
     top: 55px;
-    width: 490px;
-    left: 84px;
+    width: 565px;
+    left: 123px;
   }
 
   .aft_logo_text {
     position: absolute;
-    left: 86px;
+    left: 200px;
+    top: 20px;
   }
 
   .aft-logo {
@@ -482,15 +476,16 @@
 
   .aft_text_1 {
     position: absolute;
-    width: 350px;
-    top: 510px;
-    left: -102px;
+    width: 500px;
+    top: 570px;
+    left: -121px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
     font-size: 37px;
     line-height: 35px;
     color: #FFFFFF;
+    text-align: center;
   }
 
   .atf_text_1_1 {
@@ -499,10 +494,9 @@
 
   .aft_text_2 {
     position: absolute;
-    width: 405px;
-    top: 628px;
-    left: -138px;
-    /* font-family: Nunito Sans; */
+    width: 378px;
+    top: 666px;
+    left: -60px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: normal;
@@ -513,32 +507,25 @@
 
   .aft_download_apple {
     position: absolute;
-    top: 785px;
-    left: -95px;
+    top: 825px;
+    left: -278px;
     cursor: pointer;
-    width: 285px;
+    width: 280px;
+    height: 41px;
   }
 
   .aft_join_waiting_list {
     position: absolute;
-    top: 840px;
-    left: -95px;
+    top: 875px;
+    left: -282px;
     cursor: pointer;
     width: 285px;
-  }
-
-  .aft-footer {
-    position: absolute;
-    height: 140px;
-    width: 100%;
-    background: #FFFFFF;
-    /* bottom: 0px; */
-    /* margin-top: auto; */
+    height: 41px;
   }
 
   .aft-logo {
     position: absolute;
-    left: 50px;
+    left: 33px;
     top: 15px;
     width: 35px;
   }
@@ -578,8 +565,7 @@
     width: 223px;
     height: 32px;
     top: 28px;
-    left: 24px;
-    /* font-family: Nunito Sans; */
+    left: -40px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -595,9 +581,8 @@
     position: absolute;
     width: 223px;
     height: 32px;
-    left: 24px;
+    left: -40px;
     top: 71px;
-    /* font-family: Nunito Sans; */
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -608,7 +593,7 @@
   .signup_text {
     position: absolute;
     width: 237px;
-    left: 62px;
+    left: -4px;
     top: 20px;
     font-style: normal;
     font-weight: bold;
@@ -658,105 +643,119 @@
   }
 
   .txt_fn {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
     padding-left: 120px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 224px;
-    top: 155px;
+    left: 195px;
+    top: 185px;
     background: #EEEEEE;
     border-radius: 50px;
   }
 
   .txt_ln {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
     padding-left: 120px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 224px;
-    top: 220px;
+    left: -165px;
+    top: 245px;
     background: #EEEEEE;
     border-radius: 50px;
   }
 
   .txt_phone {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 224px;
-    top: 155px;
+    left: 188px;
+    top: 187px;
     background: #EEEEEE;
     border-radius: 50px;
     padding-left: 101px;
   }
 
   .txt_age {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 224px;
-    top: 215px;
+    left: -171px;
+    top: 244px;
     background: #EEEEEE;
     border-radius: 50px;
     padding-left: 101px;
   }
 
   #subscriber_mobile_device {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 224px;
-    top: 277px;
+    left: 189px;
+    top: 249px;
     background: #EEEEEE;
     border-radius: 50px;
     padding-left: 120px;
   }
 
   .next_btn {
-    position: absolute;
-    top: 293px;
-    left: 224px;
+    position: relative;
+    top: 257px;
+    left: 195px;
     cursor: pointer;
   }
 
   .next_btn_2 {
-    position: absolute;
-    top: 347px;
-    left: 224px;
+    position: relative;
+    top: 314px;
+    left: -170px;
     cursor: pointer;
   }
 
+  .header_text {
+    height: 70px;
+    top: 127px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 70px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .header_text_2 {
+    height: 70px;
+    display: block;
+    top: 127px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 70px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
   .header_text_3 {
-    position: absolute !important;
     width: 767px !important;
     height: 165px;
     left: 0px;
-    top: 212px;
+    top: 273px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -764,6 +763,7 @@
     line-height: 53px;
     text-align: center;
     color: #FFFFFF;
+    position: relative !important;
   }
 
   .copy_icon {
@@ -828,8 +828,27 @@
   }
 
   .aft_apple {
-    left: 55px;
+    left: 365px;
     position: absolute;
+    top: 20px;
+  }
+
+  .content_text {
+    display: none;
+  }
+}
+
+@media (min-width : 820px) {
+  .signup_text {
+    left: 14px;
+  }
+
+  .subscription_arrow {
+    left: 360px;
+  }
+
+  .txt_subscription {
+    left: 139px;
   }
 }
 
@@ -842,27 +861,28 @@
   .aft_pic {
     position: absolute;
     top: 95px;
-    width: 415px;
-    left: 20px;
+    width: 503px;
+    left: 68px;
   }
 
   .aft_logo_text {
     position: absolute;
     top: 20px;
-    left: -45px;
+    left: 34px;
   }
 
   .aft_text_1 {
     position: absolute;
     width: 390px;
-    top: 82px;
-    left: 111px;
+    top: 128px;
+    left: 223px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
     line-height: 35px;
     color: #FFFFFF;
+    text-align: left;
   }
 
   .atf_text_1_1 {
@@ -873,9 +893,8 @@
     position: absolute;
     width: 409px;
     height: 175px;
-    top: 200px;
-    left: 111px;
-    /* font-family: Nunito Sans; */
+    top: 254px;
+    left: 225px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: normal;
@@ -886,16 +905,16 @@
 
   .aft_download_apple {
     position: absolute;
-    top: 358px;
-    left: 111px;
+    top: 417px;
+    left: -127px;
     cursor: pointer;
     width: 300px;
   }
 
   .aft_join_waiting_list {
     position: absolute;
-    top: 410px;
-    left: 111px;
+    top: 473px;
+    left: -127px;
     cursor: pointer;
     width: 300px;
   }
@@ -963,104 +982,92 @@
   }
 
   .txt_fn {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 350px;
-    top: 155px;
+    left: 323px;
+    top: 179px;
     background: #EEEEEE;
     padding-left: 120px;
     border-radius: 50px;
   }
 
   .txt_ln {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 350px;
-    top: 220px;
+    left: -37px;
+    top: 241px;
     background: #EEEEEE;
     padding-left: 120px;
     border-radius: 50px;
   }
 
   .next_btn {
-    position: absolute;
-    top: 293px;
-    left: 350px;
+    position: relative;
+    top: 262px;
+    left: 323px;
     cursor: pointer;
   }
 
   .txt_phone {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 350px;
-    top: 155px;
+    left: 317px;
+    top: 173px;
     background: #EEEEEE;
     padding-left: 101px;
     border-radius: 50px;
   }
 
   .txt_age {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 350px;
-    top: 215px;
+    left: -43px;
+    top: 231px;
     background: #EEEEEE;
     padding-left: 101px;
     border-radius: 50px;
   }
 
   #subscriber_mobile_device {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 355px;
     height: 53px;
-    left: 350px;
-    top: 277px;
+    left: 319px;
+    top: 238px;
     background: #EEEEEE;
     padding-left: 120px;
     border-radius: 50px;
   }
 
   .next_btn_2 {
-    position: absolute;
-    top: 347px;
-    left: 350px;
+    position: relative;
+    top: 310px;
+    left: -42px;
     cursor: pointer;
   }
 
   .header_text_3 {
-    position: absolute !important;
-    width: 767px !important;
     height: 165px;
-    left: 120px;
+    left: 3px;
     top: 212px;
     font-family: BR Candor;
     font-style: normal;
@@ -1069,6 +1076,10 @@
     line-height: 50px;
     text-align: center;
     color: #FFFFFF;
+  }
+
+  .header_text_2 {
+    display: none;
   }
 
   .copy_icon {
@@ -1110,30 +1121,43 @@
   }
 
   .aft_apple {
-    left: -40px;
-    position: absolute;
+    left: 6px;
+    position: relative;
+  }
+
+  .content_text {
+    display: block;
+    height: 25px;
+    top: 145px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
   }
 }
 
 @media (min-width : 1280px) {
   .aft_pic {
-    position: absolute;
+    position: relative;
     top: 70px;
-    width: 485px;
-    left: 60px;
+    width: 560px;
+    left: 84px;
   }
 
   .aft_logo_text {
     position: absolute;
-    left: -7px;
-    top: 20px;
+    left: 65px;
+    top: 32px;
   }
 
   .aft_text_1 {
-    position: absolute;
+    position: relative;
     width: 470px;
-    top: 63px;
-    left: 172px;
+    top: 108px;
+    left: 236px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -1147,12 +1171,11 @@
   }
 
   .aft_text_2 {
-    position: absolute;
+    position: relative;
     width: 463px;
     height: 175px;
-    top: 210px;
-    left: 172px;
-    /* font-family: Nunito Sans; */
+    top: 134px;
+    left: 235px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: normal;
@@ -1162,30 +1185,24 @@
   }
 
   .aft_download_apple {
-    position: absolute;
-    top: 396px;
-    left: 172px;
+    position: relative;
+    top: 443px;
+    left: -203px;
     cursor: pointer;
     width: 300px;
   }
 
   .aft_join_waiting_list {
-    position: absolute;
-    top: 450px;
-    left: 172px;
+    position: relative;
+    top: 456px;
+    left: -203px;
     cursor: pointer;
     width: 300px;
   }
 
-  .aft-footer {
-    position: absolute;
-    width: 100%;
-    background: #FFFFFF;
-  }
-
   .aft-logo {
     position: absolute;
-    left: 100px;
+    left: 58px;
     top: 25px;
     width: 35px;
   }
@@ -1193,6 +1210,7 @@
   .kit_text {
     height: 36px;
     top: 30px;
+    left: -35px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -1209,9 +1227,8 @@
     position: absolute;
     width: 223px;
     height: 88px;
-    left: 88px;
+    left: 45px;
     top: 52px;
-    /*font-family: Nunito Sans;*/
     font-family: BR Candor;
     font-style: normal;
     font-weight: normal;
@@ -1223,9 +1240,8 @@
     position: absolute;
     width: 223px;
     height: 32px;
-    left: 0px;
+    left: 73px;
     top: 52px;
-    /*font-family: Nunito Sans;*/
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -1241,9 +1257,8 @@
     position: absolute;
     width: 223px;
     height: 32px;
-    left: 0px;
+    left: 73px;
     top: 93px;
-    /* font-family: Nunito Sans; */
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -1255,7 +1270,7 @@
     position: absolute;
     width: 237px;
     height: 38px;
-    left: 277px;
+    left: 259px;
     top: 44px;
     font-style: normal;
     font-weight: bold;
@@ -1272,7 +1287,7 @@
   .aft-social-links {
     position: absolute;
     top: 60px;
-    left: 100px;
+    left: 62px;
   }
 
   .aft-social-icon {
@@ -1285,9 +1300,9 @@
     align-items: center;
     padding: 14px;
     position: absolute;
-    width: 350px;
+    width: 330px;
     height: 53px;
-    left: 235px;
+    left: 227px;
     top: 20px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
@@ -1295,17 +1310,16 @@
   }
 
   .subscription_arrow {
-    left: 585px;
+    left: 556px;
     position: absolute;
     top: 20px;
     height: 53px;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 245px;
     top: 212px;
     font-family: BR Candor;
     font-style: normal;
@@ -1353,41 +1367,50 @@
   }
 
   .txt_fn {
-    left: 472px;
+    left: 448px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_ln {
-    left: 472px;
+    left: 89px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn {
-    left: 472px;
+    left: -271px;
+    position: relative;
+    top: 310px;
   }
 
   .txt_phone {
-    left: 472px;
+    left: 446px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_age {
-    left: 472px;
+    left: 88px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   #subscriber_mobile_device {
-    left: 472px;
+    left: -271px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
+    top: 290px;
   }
 
   .next_btn_2 {
-    left: 472px;
+    left: 445px;
+    position: relative;
   }
 
   .copy_icon {
@@ -1395,31 +1418,31 @@
   }
 
   .aft_apple {
-    left: -40px;
-    position: absolute;
+    left: 30px;
+    position: relative;
+    top: 30px;
   }
 }
 
 @media (min-width : 1366px) {
   .signup_text {
-    left: 312px;
+    left: 294px;
   }
 
   .subscription_arrow {
-    left: 614px;
+    left: 596px;
   }
 
   .txt_subscription {
-    left: 265px;
+    left: 268px;
     border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 245px;
     top: 212px;
     font-family: BR Candor;
     font-style: normal;
@@ -1434,20 +1457,20 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
+    position: relative;
     width: 399px;
     height: 55px;
-    left: 403px;
+    left: 450px;
     top: 392px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
-    position: absolute;
+    position: relative;
     width: 475px;
     height: 25px;
-    left: 386px;
+    left: 625px;
     top: 480px;
     font-family: BR Candor;
     font-style: normal;
@@ -1467,73 +1490,80 @@
   }
 
   .txt_fn {
-    left: 514px;
+    left: 487px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_ln {
-    left: 514px;
+    left: 127px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn {
-    left: 514px;
+    left: -232px;
+    position: relative;
   }
 
   .txt_phone {
-    left: 514px;
+    left: 488px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_age {
-    left: 514px;
+    left: 126px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   #subscriber_mobile_device {
-    left: 514px;
+    left: -232px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn_2 {
-    left: 514px;
+    left: 487px;
+    position: relative;
   }
 
   .copy_icon {
-    left: 800px;
+    left: 442px;
+    top: 392px;
+    position: relative;
   }
 
   .aft_apple {
-    left: -40px;
-    position: absolute;
+    position: relative;
   }
 }
 
 @media (min-width : 1400px) {
   .signup_text {
-    left: 326px;
+    left: 309px;
   }
 
   .subscription_arrow {
-    left: 630px;
+    left: 614px;
   }
 
   .txt_subscription {
-    left: 280px;
+    left: 285px;
     border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 288px;
     top: 212px;
     font-family: BR Candor;
     font-style: normal;
@@ -1548,20 +1578,18 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
-    width: 399px;
-    height: 55px;
-    left: 446px;
+    position: relative;
+    width: 415px;
+    height: 53px;
     top: 392px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
-    position: absolute;
+    position: relative;
     width: 475px;
     height: 25px;
-    left: 434px;
     top: 480px;
     font-family: BR Candor;
     font-style: normal;
@@ -1581,73 +1609,79 @@
   }
 
   .txt_fn {
-    left: 530px;
+    left: 508px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_ln {
-    left: 530px;
+    left: 147px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn {
-    left: 530px;
+    left: -213px;
+    position: relative;
   }
 
   .txt_phone {
-    left: 530px;
+    left: 508px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_age {
-    left: 530px;
+    left: 148px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   #subscriber_mobile_device {
-    left: 530px;
+    left: -211px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn_2 {
-    left: 530px;
+    left: 509px;
+    position: relative;
   }
 
   .copy_icon {
-    left: 843px;
+    position: relative;
   }
 
   .aft_apple {
-    left: -40px;
+    left: 40px;
     position: absolute;
   }
 }
 
 @media (min-width : 1600px) {
   .signup_text {
-    left: 408px;
+    left: 392px;
   }
 
   .subscription_arrow {
-    left: 728px;
+    left: 713px;
   }
 
   .txt_subscription {
-    left: 378px;
+    left: 385px;
     border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 393px;
     top: 170px;
     font-family: BR Candor;
     font-style: normal;
@@ -1662,20 +1696,19 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
-    width: 399px;
+    position: relative;
+    width: 600px;
     height: 55px;
-    left: 552px;
     top: 392px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
-    position: absolute;
+    position: relative;
     width: 475px;
     height: 25px;
-    left: 536px;
+    left: 732px;
     top: 480px;
     font-family: BR Candor;
     font-style: normal;
@@ -1695,49 +1728,57 @@
   }
 
   .txt_fn {
-    left: 632px;
+    left: 604px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_ln {
-    left: 632px;
+    left: 243px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn {
-    left: 632px;
+    left: -117px;
+    position: relative;
   }
 
   .txt_phone {
-    left: 632px;
+    left: 605px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_age {
-    left: 632px;
+    left: 246px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   #subscriber_mobile_device {
-    left: 632px;
+    left: -115px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn_2 {
-    left: 632px;
+    left: -474px;
+    top: 360px;
+    position: relative;
   }
 
   .copy_icon {
-    left: 948px;
+    position: relative;
   }
 
   .aft_apple {
-    left: -40px;
+    left: 40px;
     position: absolute;
   }
 }
@@ -1748,15 +1789,15 @@
   }
 
   .aft_pic {
-    position: absolute;
-    width: 100%;
-    left: 20px;
+    position: relative;
+    width: 750px;
+    left: 129px;
   }
 
   .aft_logo_text {
     position: absolute;
-    left: -45px;
-    top: 20px;
+    left: 123px;
+    top: 40px;
   }
 
   .aft-logo {
@@ -1767,10 +1808,10 @@
   }
 
   .aft_text_1 {
-    position: absolute;
+    position: relative;
     width: 526px;
     height: 210px;
-    left: 260px;
+    left: 450px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -1784,12 +1825,10 @@
   }
 
   .aft_text_2 {
-    position: absolute;
+    position: relative;
     width: 520px;
     height: 175px;
-    top: 320px;
-    left: 260px;
-    /* font-family: Nunito Sans; */
+    left: 450px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: normal;
@@ -1799,16 +1838,16 @@
   }
 
   .aft_download_apple {
-    position: absolute;
-    top: 520px;
-    left: 260px;
+    position: relative;
+    top: 570px;
+    left: -182px;
     cursor: pointer;
   }
 
   .aft_join_waiting_list {
-    position: absolute;
-    top: 580px;
-    left: 260px;
+    position: relative;
+    top: 628px;
+    left: -485px;
     cursor: pointer;
   }
 
@@ -1826,6 +1865,7 @@
     font-size: 28px;
     line-height: 36px;
     color: #353535;
+    left: -100px;
   }
 
   .kit_text_2 {
@@ -1838,7 +1878,6 @@
     height: 88px;
     left: 112px;
     top: 52px;
-    /*font-family: Nunito Sans;*/
     font-family: BR Candor;
     font-style: normal;
     font-weight: normal;
@@ -1850,9 +1889,8 @@
     position: absolute;
     width: 223px;
     height: 32px;
-    left: 0px;
+    left: 200px;
     top: 52px;
-    /*font-family: Nunito Sans;*/
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -1868,9 +1906,8 @@
     position: absolute;
     width: 223px;
     height: 32px;
-    left: 0px;
+    left: 200px;
     top: 93px;
-    /* font-family: Nunito Sans; */
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -1882,7 +1919,7 @@
     position: absolute;
     width: 237px;
     height: 38px;
-    left: 541px;
+    left: 459px;
     top: 44px;
     font-style: normal;
     font-weight: bold;
@@ -1914,7 +1951,7 @@
     position: absolute;
     width: 350px;
     height: 53px;
-    left: 537px;
+    left: 461px;
     top: 20px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
@@ -1922,16 +1959,15 @@
   }
 
   .subscription_arrow {
-    left: 885px;
+    left: 810px;
     position: absolute;
     top: 20px;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 554px;
     top: 170px;
     font-family: BR Candor;
     font-style: normal;
@@ -1946,20 +1982,20 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
-    width: 399px;
+    position: relative;
+    width: 600px;
     height: 55px;
-    left: 720px;
+    left: 614px;
     top: 392px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
-    position: absolute;
+    position: relative;
     width: 475px;
     height: 25px;
-    left: 698px;
+    left: 885px;
     top: 480px;
     font-family: BR Candor;
     font-style: normal;
@@ -1981,76 +2017,79 @@
   .txt_fn {
     padding-left: 120px;
     border-radius: 50px;
-    left: 788px;
+    left: 763px;
+    position: relative;
   }
 
   .txt_ln {
-    left: 788px;
     padding-left: 120px;
     border-radius: 50px;
+    left: 404px;
+    position: relative;
   }
 
   .next_btn {
-    left: 788px;
+    left: 42px;
+    position: relative;
   }
 
   .txt_phone {
-    left: 788px;
+    left: 766px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_age {
-    left: 788px;
+    left: 404px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   #subscriber_mobile_device {
-    left: 788px;
+    left: 45px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn_2 {
-    left: 788px;
+    left: -316px;
+    position: relative;
   }
 
   .copy_icon {
-    left: 1116px;
+    left: 606px;
+    position: relative;
   }
 
   .aft_apple {
-    left: -40px;
+    left: 100px;
     position: absolute;
   }
 }
 
 @media (min-width : 2160px) {
-  .aft_pic {
-    width: 640px;
-  }
-
   .signup_text {
-    left: 640px;
+    left: 559px;
   }
 
   .subscription_arrow {
-    left: 1005px;
+    left: 935px;
   }
 
   .txt_subscription {
-    left: 656px;
+    left: 587px;
     border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 677px;
-    top: 170px;
+    top: 275px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -2064,20 +2103,20 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
-    width: 399px;
+    position: relative;
+    width: 816px;
     height: 55px;
-    left: 841px;
+    left: 614px;
     top: 392px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
-    position: absolute;
+    position: relative;
     width: 475px;
     height: 25px;
-    left: 843px;
+    left: 1000px;
     top: 480px;
     font-family: BR Candor;
     font-style: normal;
@@ -2090,56 +2129,86 @@
 
   .aft_subscription_errors {
     left: 875px;
+    top: 305px;
+  }
+
+  .content_text {
+    display: block;
+    height: 25px;
+    top: 195px;
+    font-family: BR Candor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
   }
 
   .back_link_errors {
     left: 852px;
+    top: 400px;
   }
 
   .txt_fn {
-    left: 911px;
+    left: 884px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
+    top: 250px;
   }
 
   .txt_ln {
-    left: 911px;
+    left: 523px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
+    top: 309px;
   }
 
   .next_btn {
-    left: 911px;
+    left: 166px;
+    position: relative;
+    top: 375px;
   }
 
   .txt_phone {
-    left: 911px;
+    left: 883px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
+    top: 246px;
   }
 
   .txt_age {
-    left: 911px;
+    left: 526px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
+    top: 304px;
   }
 
   #subscriber_mobile_device {
-    left: 911px;
+    left: 165px;
+    top: 364px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn_2 {
-    left: 911px;
+    left: -195px;
+    top: 433px;
+    position: relative;
   }
 
   .copy_icon {
-    left: 1238px;
+    left: 605px;
+    position: relative;
   }
 
   .aft_apple {
-    left: -40px;
+    left: 100px;
     position: absolute;
   }
 }
@@ -2155,32 +2224,28 @@
 
   .aft_pic {
     top: 140px;
-    position: absolute;
-    left: 54px;
-    width: 100%;
+    position: relative;
+    left: 168px;
   }
 
   .aft_text_1 {
-    position: absolute;
-    width: 526px;
+    position: relative;
+    width: 570px;
     height: 210px;
-    left: 400px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
     font-size: 65px;
     line-height: 68px;
     color: #FFFFFF;
-    top: 118px;
+    top: 205px;
   }
 
   .aft_text_2 {
-    position: absolute;
+    position: relative;
     width: 636px;
     height: 175px;
-    top: 430px;
-    left: 400px;
-    /* font-family: Nunito Sans; */
+    top: 236px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: normal;
@@ -2190,19 +2255,21 @@
   }
 
   .aft_download_apple {
-    position: absolute;
-    top: 690px;
-    left: 400px;
+    position: relative;
+    top: 684px;
+    left: -400px;
     cursor: pointer;
     width: 500px;
+    height: 75px;
   }
 
   .aft_join_waiting_list {
-    position: absolute;
-    top: 790px;
-    left: 400px;
+    position: relative;
+    top: 703px;
+    left: -401px;
     cursor: pointer;
     width: 500px;
+    height: 75px;
   }
 
   .aft-logo {
@@ -2269,15 +2336,16 @@
   }
 
   .aft_apple {
-    width: 50px;
+    left: 90px;
+    top: 50px;
+    position: relative;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 880px;
-    top: 170px;
+    top: 200px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -2291,20 +2359,20 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
-    width: 399px;
+    position: relative;
+    width: 639px;
     height: 55px;
-    left: 1033px;
+    left: 933px;
     top: 392px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
-    position: absolute;
+    position: relative;
     width: 475px;
     height: 25px;
-    left: 1026px;
+    left: 1201px;
     top: 480px;
     font-family: BR Candor;
     font-style: normal;
@@ -2324,50 +2392,53 @@
   }
 
   .txt_fn {
-    left: 1116px;
+    left: 1085px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_ln {
-    left: 1116px;
+    left: 725px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn {
-    left: 1116px;
+    left: 365px;
+    position: relative;
   }
 
   .txt_phone {
-    left: 1116px;
+    left: 1083px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_age {
-    left: 1116px;
+    left: 724px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   #subscriber_mobile_device {
-    left: 1116px;
+    left: 364px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn_2 {
-    left: 1116px;
+    left: 4px;
+    position: relative;
   }
 
   .copy_icon {
-    left: 1429px;
-  }
-
-  .aft_apple {
-    left: -96px;
-    position: absolute;
+    position: relative;
+    left: 923px;
   }
 }
 
@@ -2376,18 +2447,26 @@
     height: 1270px;
   }
 
+  .aft_pic {
+    top: 140px;
+    position: relative;
+    left: 153px;
+    width: 1200px;
+  }
+
   .signup_text {
-    left: 775px;
+    left: 759px;
   }
 
   .subscription_arrow {
-    left: 1400px;
+    left: 1380px;
   }
 
   .txt_subscription {
-    left: 1000px;
+    left: 920px;
     border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
+    width: 460px;
   }
 
   .help {
@@ -2399,37 +2478,40 @@
   }
 
   .aft_join_waiting_list {
-    top: 1065px;
-    left: 600px;
+    top: 995px;
+    left: -309px;
+    position: relative;
   }
 
   .aft_download_apple {
-    top: 960px;
-    left: 600px;
+    top: 950px;
+    left: -310px;
+    position: relative;
   }
 
   .aft_text_2 {
     width: 843px;
-    top: 640px;
-    left: 600px;
+    top: 380px;
+    left: 700px;
     font-size: 29px;
     line-height: 40px;
+    position: relative;
   }
 
   .aft_text_1 {
-    width: 711px;
-    left: 600px;
+    width: 780px;
+    left: 700px;
     font-size: 90px;
     line-height: 106px;
-    top: 136px;
+    top: 209px;
+    position: relative;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 1302px;
-    top: 170px;
+    top: 200px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -2443,20 +2525,20 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
-    width: 399px;
+    position: relative;
+    width: 700px;
     height: 55px;
-    left: 1456px;
+    left: 1173px;
     top: 392px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
-    position: absolute;
+    position: relative;
     width: 475px;
     height: 25px;
-    left: 1460px;
+    left: 1496px;
     top: 480px;
     font-family: BR Candor;
     font-style: normal;
@@ -2476,51 +2558,59 @@
   }
 
   .txt_fn {
-    left: 1367px;
+    left: 1344px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_ln {
     padding-left: 120px;
     border-radius: 50px;
-    left: 1367px;
+    left: 985px;
+    position: relative;
   }
 
   .next_btn {
-    left: 1367px;
+    left: 626px;
+    position: relative;
   }
 
   .txt_phone {
-    left: 1367px;
+    left: 1343px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_age {
-    left: 1367px;
+    left: 983px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   #subscriber_mobile_device {
-    left: 1367px;
+    left: 625px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn_2 {
-    left: 1367px;
+    left: 267px;
+    position: relative;
   }
 
   .copy_icon {
-    left: 1852px;
+    left: 1164px;
+    position: relative;
   }
 
   .aft_apple {
-    left: -140px;
-    position: absolute;
-    top: 42px;
+    top: 50px;
+    left: 100px;
+    position: relative;
   }
 }
 
@@ -2530,17 +2620,18 @@
   }
 
   .signup_text {
-    left: 928px;
+    left: 916px;
   }
 
   .subscription_arrow {
-    left: 1583px;
+    left: 1567px;
   }
 
   .txt_subscription {
-    left: 1185px;
+    left: 1105px;
     border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
+    width: 466px;
   }
 
   .help {
@@ -2553,36 +2644,39 @@
 
   .aft_join_waiting_list {
     top: 1065px;
-    left: 600px;
+    left: -909px;
+    height: 75px;
+    position: relative;
   }
 
   .aft_download_apple {
     top: 960px;
-    left: 600px;
+    left: -400px;
+    position: relative;
+    height: 75px;
   }
 
   .aft_text_2 {
     width: 843px;
-    top: 640px;
-    left: 600px;
+    top: 372px;
     font-size: 29px;
     line-height: 40px;
+    position: relative;
   }
 
   .aft_text_1 {
-    width: 711px;
-    left: 600px;
+    width: 783px;
     font-size: 90px;
     line-height: 106px;
-    top: 136px;
+    top: 200px;
+    position: relative;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 1302px;
-    top: 170px;
+    top: 200px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -2596,20 +2690,20 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
-    width: 399px;
+    position: relative;
+    width: 650px;
     height: 55px;
-    left: 1456px;
+    left: 1356px;
     top: 392px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
-    position: absolute;
+    position: relative;
     width: 475px;
     height: 25px;
-    left: 1460px;
+    left: 1664px;
     top: 480px;
     font-family: BR Candor;
     font-style: normal;
@@ -2629,51 +2723,59 @@
   }
 
   .txt_fn {
-    left: 1551px;
+    left: 1526px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_ln {
     padding-left: 120px;
     border-radius: 50px;
-    left: 1551px;
+    left: 1166px;
+    position: relative;
   }
 
   .next_btn {
-    left: 1551px;
+    left: 809px;
+    position: relative;
   }
 
   .txt_phone {
-    left: 1551px;
+    left: 1528px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_age {
-    left: 1551px;
+    left: 1167px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   #subscriber_mobile_device {
-    left: 1551px;
+    left: 809px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn_2 {
-    left: 1551px;
+    left: 449px;
+    position: relative;
   }
 
   .copy_icon {
-    left: 1852px;
+    left: 1347px;
+    position: relative;
   }
 
   .aft_apple {
-    left: -200px;
-    position: absolute;
-    top: 42px;
+    left: 100px;
+    position: relative;
+    top: 50px;
   }
 }
 
@@ -2683,25 +2785,24 @@
   }
 
   .signup_text {
-    left: 1098px;
+    left: 1080px;
   }
 
   .subscription_arrow {
-    left: 1783px;
+    left: 1772px;
   }
 
   .txt_subscription {
-    left: 1385px;
+    left: 1308px;
     border-radius: 50px 0px 0px 50px;
     border-color: #EEEEEE;
   }
 
   .header_text_3 {
-    position: absolute !important;
+    position: relative !important;
     width: 767px !important;
     height: 165px;
-    left: 1500px;
-    top: 170px;
+    top: 200px;
     font-family: BR Candor;
     font-style: normal;
     font-weight: bold;
@@ -2715,20 +2816,20 @@
     justify-content: center;
     align-items: center;
     padding: 14px;
-    position: absolute;
-    width: 399px;
+    position: relative;
+    width: 607px;
     height: 55px;
-    left: 1667px;
+    left: 1581px;
     top: 392px;
     background: #EEEEEE;
     border-radius: 50px 0px 0px 50px;
   }
 
   .back_link {
-    position: absolute;
+    position: relative;
     width: 475px;
     height: 25px;
-    left: 1656px;
+    left: 1821px;
     top: 480px;
     font-family: BR Candor;
     font-style: normal;
@@ -2748,50 +2849,58 @@
   }
 
   .txt_fn {
-    left: 1745px;
+    left: 1724px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_ln {
-    left: 1745px;
+    left: 1365px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn {
-    left: 1745px;
+    left: 1005px;
+    position: relative;
   }
 
   .txt_phone {
-    left: 1745px;
+    left: 1728px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   .txt_age {
-    left: 1745px;
+    left: 1370px;
     padding-left: 101px;
     border-radius: 50px;
+    position: relative;
   }
 
   #subscriber_mobile_device {
-    left: 1745px;
+    left: 1011px;
     padding-left: 120px;
     border-radius: 50px;
+    position: relative;
   }
 
   .next_btn_2 {
-    left: 1745px;
+    left: 650px;
+    position: relative;
   }
 
   .copy_icon {
-    left: 2063px;
+    left: 1573px;
+    position: relative;
   }
 
   .aft_apple {
-    left: -200px;
+    left: 100px;
     top: 42px;
-    position: absolute;
+    position: relative;
   }
 }

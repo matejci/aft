@@ -1,45 +1,29 @@
 <%= javascript_pack_tag 'welcome_index' %>
 
-<div class="content step_1" id="welcome_index">
-  <div ft-links="container-fluid">
-    <br />
-    <div class="row">
-      <div class="col-lg-1"></div>
-      <div class="col-lg-11">
-        <%= image_tag('aft_apple.png', alt: 'aft_apple', class: 'aft_apple') %>
-      </div>
+<div id="step_1" class="container-fluid welcome_index">
+  <div class="row">
+    <div class="col-lg-12">
+      <%= image_tag('aft_apple.png', alt: 'aft_apple', class: 'aft_apple') %>
     </div>
-    <br />
-    <div class='row'>
-      <div class='col header_text'>
-        App for <span class='header_text_red'>Teachers</span>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col content_text">
-        Let’s mobilize and stand together.
-      </div>
-    </div>
-
-    <%= form_tag(subscriber_path(id: @subscriber.id), method: :patch, id: :aft_subscription_form) do %>
-      <div class="row">
-        <div class="col">
-            <%= text_field_tag('subscriber[first_name]', '', placeholder: 'First Name', class: 'txt_fn', type: :text, autocomplete: 'off', required: true) %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-            <%= text_field_tag('subscriber[last_name]', '', placeholder: 'Last Name', class: 'txt_ln', type: :text, autocomplete: 'off', required: true) %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-            <%= image_tag('aft_next_btn.png', alt: 'next_btn', class: 'next_btn') %>
-        </div>
-      </div>
-    <% end %>
   </div>
+
+  <div class='row'>
+    <div class='col header_text'>
+      App for <span class='header_text_red'>Teachers</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col content_text">
+      Let’s mobilize and stand together.
+    </div>
+  </div>
+
+  <%= form_tag(subscriber_path(id: @subscriber.id), method: :patch, id: :step_1_form) do %>
+    <%= text_field_tag('subscriber[first_name]', '', placeholder: 'First Name', class: 'txt_fn', type: :text, autocomplete: 'off', required: true) %>
+    <%= text_field_tag('subscriber[last_name]', '', placeholder: 'Last Name', class: 'txt_ln', type: :text, autocomplete: 'off', required: true) %>
+    <%= image_tag('aft_next_btn.png', alt: 'next_btn', class: 'next_btn') %>
+  <% end %>
 </div>
 
 <%= render partial: 'footer' %>

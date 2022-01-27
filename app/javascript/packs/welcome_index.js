@@ -26,12 +26,14 @@ function joinListBtnHandler(e) {
 }
 
 function submitFormHandler(e) {
-  let form = $('form')[0];
+  // e.currentTarget.classList[0]
+
+  var form = $('form')[0];
 
   if (form.requestSubmit) {
     form.requestSubmit();
   } else {
-    form.dispatchEvent(new Event('submit', { bubbles: true }));
+    form.submit();
   }
 }
 

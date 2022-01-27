@@ -1,48 +1,38 @@
 <%= javascript_pack_tag 'welcome_index' %>
-<div class="content" id="welcome_index">
-  <div class="container-fluid">
-    <br />
-    <div class="row">
-      <div class="col-lg-1"></div>
-      <div class="col-lg-11">
-        <%= image_tag('aft_logo_text.svg', alt: 'aft_logo_text', class: 'aft_logo_text') %>
+
+<div id="welcome_index" class="welcome_index">
+  <div class="row">
+    <div class="col-lg-12">
+      <%= image_tag('aft_logo_text.svg', alt: 'aft_logo_text', class: 'aft_logo_text') %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-4'>
+      <%= image_tag('aft_pic.png', alt: 'aft_pic', class: 'aft_pic') %>
+    </div>
+
+    <div class="col-4">
+      <div class="aft_text_1">
+        a community where<span class="atf_text_1_1"> teachers support teachers</span>
+      </div>
+      <div class="aft_text_2">
+        <p>We hear it all the time - it's tough being a teacher these days and you can't get the support you need.
+          That's why App for Teachers exists.</p>
+        <p>This is a place where teachers can meet other teachers,
+          share ideas & resources, collaborate, and help one another.
+          Let's mobilize and stand together.</p>
       </div>
     </div>
-    <br />
-    <div class='row'>
-      <div class='col'>
-        <div class='row'>
-          <div class='offset-1 col-4'>
-            <%= image_tag('aft_pic.png', alt: 'aft_pic', class: 'aft_pic') %>
-          </div>
-          <div class="col-6">
-            <div class="col-6">
-              <div class="aft_text_1">
-                a community where<span class="atf_text_1_1"> teachers support teachers</span>
-              </div>
-              <div class="aft_text_2">
-                <p>We hear it all the time - it's tough being a teacher these days and you can't get the support you need.
-                  That's why App for Teachers exists.</p>
-                <p>This is a place where teachers can meet other teachers,
-                  share ideas & resources, collaborate, and help one another.
-                  Let's mobilize and stand together.</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div>
-                <%= link_to('https://apps.apple.com/app/1600466655') do %>
-                  <%= image_tag('aft_download_apple.png', alt: 'aft_download_apple', class: 'aft_download_apple') %>
-                <% end %>
-              </div>
-              <div>
-                <%= link_to('') do %>
-                  <%= image_tag('aft_join_waiting_list.png', alt: 'aft_join_waiting_list', class: 'aft_join_waiting_list') %>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+    <div class="col-4">
+      <%= link_to('https://apps.apple.com/app/1600466655') do %>
+        <%= image_tag('aft_download_apple.png', alt: 'aft_download_apple', class: 'aft_download_apple') %>
+      <% end %>
+
+      <%= link_to('') do %>
+        <%= image_tag('aft_join_waiting_list.png', alt: 'aft_join_waiting_list', class: 'aft_join_waiting_list') %>
+      <% end %>
     </div>
   </div>
 </div>
