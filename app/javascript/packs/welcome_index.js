@@ -26,8 +26,8 @@ function joinListBtnHandler(e) {
 }
 
 function submitFormHandler(e) {
-  // e.currentTarget.classList[0]
   e.preventDefault();
+
   var caller = e.currentTarget.classList[0];
   var form_id = $("#welcome_index").length;
 

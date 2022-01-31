@@ -81,7 +81,7 @@ module PushNotifications
       when :commented
         "left a comment: #{notifiable.text}"
       when :added_takko
-        "added a video to a carousel you follow: #{notifiable.parent.title}"
+        "added a video to a carousel you follow: #{notifiable.parent.description.truncate(30)}"
       when :upvoted
         post_type = notifiable.takko? ? 'Takko' : 'Post'
 
@@ -123,16 +123,19 @@ module PushNotifications
     end
 
     def mentioned_description
-      return "their title: #{notifiable.title}" if notifiable.title.include?("@#{recipient.username}")
+      description = notifiable.description.truncate(30)
+      notifiable.takko? ? "a takko: #{description}" : "a post: #{description}"
 
-      notifiable.takko? ? "a takko: #{notifiable.description.truncate(60)}" : "a post: #{notifiable.description.truncate(60)}"
+      notifiable.takko? ? "a takko" : "a post"
     end
 
     def followee_posted_description
+      description = notifiable.description.truncate(30)
+
       if notifiable.takko?
-        "added a video to #{notifiable.parent.user.username}'s post: #{notifiable.parent.title}"
+        "added a video to #{notifiable.parent.user.username}'s post: #{description}"
       else
-        "made a post: #{notifiable.title}"
+        "made a post: #{description}"
       end
     end
 
