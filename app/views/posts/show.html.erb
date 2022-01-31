@@ -10,7 +10,7 @@
     "description": "<%= meta_tags_content[:desc] %>",
     "thumbnailUrl": "<%= meta_tags_content[:og_image] %>",
     "contentUrl": "<%= meta_tags_content[:og_url] %>",
-    "embedUrl": "<%= "#{root_url}embed/#{@post.post.link}" %>"
+    "embedUrl": "<%= @post.nil? ? '' : "#{root_url}embed/#{@post.post.link}" %>"
   }
 </script>
 

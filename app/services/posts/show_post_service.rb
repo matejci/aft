@@ -2,9 +2,8 @@
 
 module Posts
   class ShowPostService
-    def initialize(id:, link:, viewer:)
-      @id = id
-      @link = link
+    def initialize(identifier:, viewer:)
+      @identifier = identifier
       @viewer = viewer
     end
 
@@ -14,12 +13,12 @@ module Posts
 
     private
 
-    attr_reader :id, :link, :viewer
+    attr_reader :identifier, :viewer
 
     def load_post
-      post = Post.active.includes(:user, :category, :takkos, :parent).any_of({ id: id }, { link: link }).first
+      post = Post.active.includes(:user, :category, :takkos, :parent).any_of({ id: identifier }, { link: identifier }).first
 
-      return unless post
+      return unless post || post&.available?(viewer)
 
       Rails.cache.fetch("post_#{post.id}_#{post.updated_at.to_i}") do
         collection = [post]

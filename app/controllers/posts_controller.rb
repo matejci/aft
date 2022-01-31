@@ -5,8 +5,8 @@ class PostsController < ApplicationController
 
   protect_from_forgery except: :widget
 
-  before_action :set_post,    except: [:index, :create, :widget]
-  before_action :post_access, only: [:show, :report, :upvote, :downvote, :takkos]
+  before_action :set_post, except: [:index, :create, :widget, :show]
+  before_action :post_access, only: [:report, :upvote, :downvote, :takkos]
   before_action :check_owner, only: [:edit, :update, :destroy]
   before_action :confirm_user_logged_in, except: [:index, :show, :embed, :takkos, :report, :widget]
   after_action  :allow_iframe, only: :embed
@@ -16,11 +16,18 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Posts::ShowPostService.new(id: params[:id], link: params[:link], viewer: @current_user).call
+    identifier = params[:id].presence || params[:link].presence
+
+    @post = Posts::ShowPostService.new(identifier: identifier, viewer: @current_user).call
 
     respond_to do |format|
-      format.html
-      format.json { render partial: 'posts/custom_posts/custom_item', locals: { custom_post: @post } }
+      if @post.nil?
+        format.json { render json: { base: 'Post is not available' }, status: :forbidden }
+        format.html { render text: 'Post not available' }
+      else
+        format.json { render partial: 'posts/custom_posts/custom_item', locals: { custom_post: @post } }
+        format.html
+      end
     end
   end
 
