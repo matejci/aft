@@ -16,7 +16,7 @@ function copyToClipboard(e) {
 
 function handleEnterKey(e) {
    if (e.which == 13) {
-    submitFormHandler();
+    submitFormHandler(e);
    }
 }
 
@@ -26,12 +26,21 @@ function joinListBtnHandler(e) {
 }
 
 function submitFormHandler(e) {
-  let form = $('form')[0];
+  // e.currentTarget.classList[0]
+  e.preventDefault();
+  var caller = e.currentTarget.classList[0];
+  var form_id = $("#welcome_index").length;
+
+  if (form_id == 0 && (caller == 'subscription_arrow' || caller == 'txt_subscription')) {
+    return false;
+  }
+
+  var form = $('form')[0];
 
   if (form.requestSubmit) {
     form.requestSubmit();
   } else {
-    form.dispatchEvent(new Event('submit', { bubbles: true }));
+    form.submit();
   }
 }
 
