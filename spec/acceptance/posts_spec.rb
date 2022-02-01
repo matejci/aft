@@ -100,6 +100,7 @@ resource 'Posts' do
         parameter :video_length, required: true
         parameter :view_permission, required: true
         parameter :takko_permission, required: true
+        parameter :description, required: true
         parameter :viewer_ids, 'array of user ids who can view'
         parameter :viewer_group_ids, 'array of user group ids who can view'
         parameter :takkoer_ids, 'array of user ids who can takko'
@@ -119,6 +120,7 @@ resource 'Posts' do
       let(:video_length) { 5 }
       let(:title) { 'new post' }
       let(:category_id) { category.id }
+      let(:description) { 'blabla' }
 
       context '201' do
         example '201' do
