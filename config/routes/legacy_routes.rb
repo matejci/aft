@@ -107,6 +107,7 @@ scope '', path: '', constraints: ApiConstraints.new(version: 0) do
   resources :sessions
 
   resources :subscribers, only: [:create, :update, :index]
+  get '/share/:link', to: 'subscribers#share'
 
   resources :profiles, only: :show, param: :username do
     member do
@@ -136,11 +137,7 @@ scope '', path: '', constraints: ApiConstraints.new(version: 0) do
     match '(*any)', to: redirect(subdomain: ''), via: :all
   end
 
-
   get '/settings', to: 'users#edit'
-
-  # share route
-  get '/s/:link', to: 'subscribers#share'
 
   post '/current/user/session', to: 'users#current_user_session'
   get '/signup', to: 'users#new'

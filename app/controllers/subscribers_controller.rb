@@ -4,7 +4,9 @@ class SubscribersController < ApplicationController
   before_action :confirm_admin_logged_in, only: :index
   before_action :set_subscriber, only: :update
 
-  def share; end
+  def share
+    redirect_to root_url
+  end
 
   def index
     @subscribers = Subscriber.all.order_by([:created_at, :desc]).page(params[:page]).per(params[:limit])
