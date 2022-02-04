@@ -83,7 +83,7 @@ module PushNotifications
       when :added_takko
         "added a video to a carousel you follow: #{notifiable.parent.description.truncate(30)}"
       when :upvoted
-        post_type = notifiable.takko? ? 'Takko' : 'Post'
+        post_type = notifiable.takko? ? 'Response' : 'Post'
 
         "upvoted your #{post_type}"
       when :payout
@@ -124,9 +124,9 @@ module PushNotifications
 
     def mentioned_description
       description = notifiable.description.truncate(30)
-      notifiable.takko? ? "a takko: #{description}" : "a post: #{description}"
+      notifiable.takko? ? "a response: #{description}" : "a post: #{description}"
 
-      notifiable.takko? ? "a takko" : "a post"
+      notifiable.takko? ? "a response" : "a post"
     end
 
     def followee_posted_description
