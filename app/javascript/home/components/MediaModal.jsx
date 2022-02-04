@@ -265,10 +265,6 @@ export default class MediaModal extends React.Component {
 
               </div>
 
-              <div className={styles.postTitle}>
-                { post.title }
-              </div>
-
               <br />
               <p>
                 <a href={"http://localhost:3000/p/"+post.link} target="_blank">http://localhost:3000/p/{post.link}</a>

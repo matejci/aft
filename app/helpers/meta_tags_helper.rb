@@ -22,7 +22,7 @@ module MetaTagsHelper
         share_image_url = ''
         og_url = ''
       else
-        title = @post.post.title.length <= 25 ? "#{@post.post.title} | @#{@post.user.username}" : @post.post.title
+        title = @post.post.description.size <= 25 ? "#{@post.post.description} | @#{@post.user.username}" : @post.post.description
         description = (@post.post.description.presence || "Watch @#{@post.user.username} on App For Teachers!").truncate(160, omission: '...')
         share_image_url = @post.post.media_thumbnail.original_thumb.url
         og_url = "#{root_url}p/#{@post.post.link}"

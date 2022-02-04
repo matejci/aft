@@ -59,7 +59,6 @@ class ViewData extends React.Component {
                 <tr>
                   <th>video id</th>
                   <th>post/takko</th>
-                  <th>video title</th>
                   <th>date published</th>
                   <th>video length</th>
                   <th>total views</th>
@@ -76,7 +75,6 @@ class ViewData extends React.Component {
                   <tr key={post.id} id={post.id} onClick={(e) => this.showViewerData(e)}>
                     <th>{post.id}</th>
                     <td>{post.post}</td>
-                    <td>{post.title}</td>
                     <td>{post.date_published}</td>
                     <td>{post.video_length}</td>
                     <td>{post.total_views}</td>

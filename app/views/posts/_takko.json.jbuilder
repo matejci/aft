@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 json.cache! takko do
-  json.extract! takko, :id, :link, :title, :publish_date, :description, :media_file_url, :video_length, :video_transcoded, :media_thumbnail_dimensions, :animated_cover_url, :media_type
+  json.extract! takko, :id, :link, :publish_date, :description, :media_file_url, :video_length, :video_transcoded, :media_thumbnail_dimensions, :animated_cover_url, :media_type
   json.published time_ago_in_words(takko.publish_date)
   json.media_thumbnail takko.media_thumbnail.as_json
   json.master_playlist "#{takko.media_file_url}_playlist.m3u8"

@@ -4,10 +4,10 @@ require 'acceptance_helper'
 
 resource 'Posts' do
   explanation <<~EXPLANATION
-    - `/posts/:id.json` for showing post + carousel
-    - `can_comment/can_takko/voted` are available only when viewer is present
-    - `/posts/:id/edit.json` for pre-filling edit post form
-    - only owner can access this info
+  - `/posts/:id.json` for showing post + carousel
+  - `can_comment/can_takko/voted` are available only when viewer is present
+  - `/posts/:id/edit.json` for pre-filling edit post form
+  - only owner can access this info
   EXPLANATION
 
   include_context 'authenticated request', user_session: true
@@ -93,7 +93,6 @@ resource 'Posts' do
     post 'create post' do
       with_options scope: :post do
         parameter :category_id, required: true
-        parameter :title, required: true
         parameter :animated_cover, required: true
         parameter :media_file, required: true
         parameter :media_thumbnail, required: true
@@ -118,7 +117,6 @@ resource 'Posts' do
       let(:animated_cover) { Rack::Test::UploadedFile.new('spec/fixtures/media_file.mp4', 'video/mp4') }
       let(:media_thumbnail) { Rack::Test::UploadedFile.new('spec/fixtures/media_thumbnail.png', 'image/png') }
       let(:video_length) { 5 }
-      let(:title) { 'new post' }
       let(:category_id) { category.id }
       let(:description) { 'blabla' }
 
@@ -127,7 +125,7 @@ resource 'Posts' do
           do_request
 
           expect(status).to eq 201
-          expect(parsed_response).to include('id', 'category_id', 'link', 'title', 'total_views', 'media_thumbnail_url', 'media_file_url', 'minimum_video_length', 'media_type')
+          expect(parsed_response).to include('id', 'category_id', 'link', 'total_views', 'media_thumbnail_url', 'media_file_url', 'minimum_video_length', 'media_type')
         end
       end
 
@@ -171,8 +169,8 @@ resource 'Posts' do
 
   route '/posts/:id/takkos.json', 'View all takkos' do
     explanation <<~DOCS
-      - API will accept 5 different `order` param values: `comments`, `newest`, `oldest`, `upvotes` and `views`
-      - if `order` param is not used, API will fallback to `Post`'s order setting
+    - API will accept 5 different `order` param values: `comments`, `newest`, `oldest`, `upvotes` and `views`
+    - if `order` param is not used, API will fallback to `Post`'s order setting
     DOCS
 
     before do
@@ -193,7 +191,7 @@ resource 'Posts' do
           expect(parsed_response['total_pages']).to eq(2)
           expect(parsed_response['takkos_count']).to eq(10)
           expect(parsed_response.dig('data', 'items').size).to eq(8)
-          expect(parsed_response.dig('data', 'items', 0).keys).to include('id', 'link', 'title', 'publish_date', 'description', 'media_file_url',
+          expect(parsed_response.dig('data', 'items', 0).keys).to include('id', 'link', 'publish_date', 'description', 'media_file_url',
                                                                           'video_length', 'video_transcoded', 'media_thumbnail_dimensions', 'published',
                                                                           'media_thumbnail', 'master_playlist', 'user', 'category', 'total_views',
                                                                           'comments_count', 'upvotes_count', 'media_type')

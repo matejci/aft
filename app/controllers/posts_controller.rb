@@ -122,7 +122,7 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(
-      :parent_id, :category_id, :title, :description, :media_file, :media_type,
+      :parent_id, :category_id, :description, :media_file, :media_type,
       :media_thumbnail, :allow_comments, :view_permission, :takko_permission,
       :takko_order, :video_length, :publish, :link_title, :animated_cover, :animated_cover_offset,
       viewer_ids: [], viewer_group_ids: [], takkoer_ids: [], takkoer_group_ids: []

@@ -6,13 +6,13 @@ class Post
     include Searchable
 
     included do
-      searchkick text_middle: %i[title description username hashtags],
-                 callbacks: false
+      searchkick text_middle: %i[description username hashtags],
+        callbacks: false
 
       scope :search_import, -> { active.includes(:hashtags, :parent, :user) }
 
       def self.search_for(query, attrs)
-        filters = { fields: ['title^2', :description, :username, { hashtags: :exact }] }
+        filters = { fields: [:description, :username, { hashtags: :exact }] }
         filters[:where] = viewer_filter(attrs.delete(:viewer_id)) if attrs.key?(:viewer_id)
 
         super(query, filters.deep_merge(attrs))
@@ -34,7 +34,7 @@ class Post
 
     def search_data
       {
-        title: title, description: description, publish_date: publish_date, user_id: user_id.to_s, category_id: category_id.to_s,
+        description: description, publish_date: publish_date, user_id: user_id.to_s, category_id: category_id.to_s,
         view_public: view_public?, original_post_id: original_post_id.to_s
       }.merge(
         search_hashtags, search_username, search_blocked_filter, search_permitted_filter, search_sort

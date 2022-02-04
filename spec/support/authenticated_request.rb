@@ -33,7 +33,7 @@ def jwt_encode(payload, session)
 end
 
 def create_curated_posts(app)
-  curated_posts = create_list(:post, 5, title: 'CURATED_POST')
+  curated_posts = create_list(:post, 5, description: 'CURATED_POST')
   conf = app.create_configuration
   conf.curated_posts << curated_posts.pluck(:id)
   conf.curated_posts.flatten!

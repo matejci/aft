@@ -1,5 +1,5 @@
 json.(@user, :username, :full_name)
-json.(@post, :title, :type)
+json.(@post, :type)
 json.date_published @post.publish_date.strftime('%m/%d/%Y')
 json.viewed_date    @date.strftime('%m/%d/%Y')
 
