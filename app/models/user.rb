@@ -318,7 +318,7 @@ class User # rubocop:disable Metrics/ClassLength
   end
 
   def follow_takko
-    follow! User.find_by(username: 'aftuser')
+    follow! User.find_by(username: 'AppForTeachers')
   end
 
   def follow_url
