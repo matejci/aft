@@ -5,7 +5,6 @@ FactoryBot.define do
     parent_id { nil }
     user
     category { Category.find_by(name: 'general') || create(:category) }
-    sequence(:title) { |n| "p_#{n}" }
     description      { 'description 123' }
     video_length     { 12.34 }
     animated_cover   { File.open('public/test.mp4') }

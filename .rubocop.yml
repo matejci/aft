@@ -197,5 +197,5 @@ Style/CommentedKeyword:
 Naming/VariableNumber:
   Enabled: false
 
-Style/Proc
+Style/Proc:
   Enabled: false

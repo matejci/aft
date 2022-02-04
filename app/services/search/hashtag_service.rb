@@ -34,7 +34,6 @@ module Search
       posts.each_with_object([]) do |post, results|
         results << HashtagPost.new.tap do |cp|
           cp.id = post.id
-          cp.title = post.title
           cp.description = post.description
           cp.media_thumbnail_dimensions = post.media_thumbnail_dimensions
           cp.media_thumbnail = post.media_thumbnail.url

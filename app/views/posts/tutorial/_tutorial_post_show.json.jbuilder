@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # post info
-json.extract! takko, :id, :link, :title, :publish_date, :description, :media_file_url, :video_length, :deleted, :animated_cover_url
+json.extract! takko, :id, :link, :publish_date, :description, :media_file_url, :video_length, :deleted, :animated_cover_url
 
 json.published time_ago_in_words(takko.publish_date)
 

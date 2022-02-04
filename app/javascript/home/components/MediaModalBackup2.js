@@ -371,10 +371,6 @@ export default class MediaModal extends React.Component {
                 </Row>
 
               </div>
-
-              <div className={styles.postTitle}>
-                { post.title }
-              </div>
               
               comments here..
 

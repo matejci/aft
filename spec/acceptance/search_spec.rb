@@ -10,8 +10,8 @@ resource 'Search' do
 
   let!(:cat)    { create(:user, username: 'catt') }
   let!(:tom)    { create(:user, username: 'tomm') }
-  let!(:apple)  { create(:post, :public, title: 'apple', user: cat) }
-  let!(:banana) { create(:post, :public, title: 'banana', user: tom) }
+  let!(:apple)  { create(:post, :public, user: cat) }
+  let!(:banana) { create(:post, :public, user: tom) }
   let(:page)    { 1 }
 
   before do
@@ -21,19 +21,6 @@ resource 'Search' do
 
   route '/search/posts.json', 'Posts Search' do
     get 'posts search' do
-      context 'search title' do
-        let(:query) { 'apple' }
-
-        example_request 'posts search by title' do
-          parsed_response = JSON.parse(response_body)
-
-          expect(status).to eq 200
-          expect(parsed_response.size).to eq 2
-          expect(parsed_response.dig('data', 0, 'item', 'type')).to eq 'post'
-          expect(parsed_response.dig('data', 0, 'item', 'selected_id')).to eq apple.id.to_s
-        end
-      end
-
       context 'search username' do
         let(:query) { 'tom' }
 
@@ -103,7 +90,7 @@ resource 'Search' do
       parameter :per_page
 
       before do
-        posts = create_list(:post, 3, title: "#{SecureRandom.hex(4)} #takko")
+        posts = create_list(:post, 3)
         create(:post, description: 'DESC #takko')
         create(:post)
         create(:hashtag, post_ids: posts.pluck(:id))
@@ -118,7 +105,7 @@ resource 'Search' do
           parsed_response = JSON.parse(response_body)
 
           expect(parsed_response).to be_an_instance_of(Hash)
-          expect(parsed_response['posts_count']).to eq(4)
+          expect(parsed_response['posts_count']).to eq(1)
           expect(parsed_response.keys).to include('total_pages', 'posts_count', 'data')
         end
       end
@@ -134,9 +121,8 @@ resource 'Search' do
           parsed_response = JSON.parse(response_body)
 
           expect(parsed_response).to be_an_instance_of(Hash)
-          expect(parsed_response['posts_count']).to eq(4)
-          expect(parsed_response['data'].size).to eq(2)
-          expect(parsed_response['data'].first).to include('id', 'title', 'description', 'media_thumbnail_dimensions', 'media_thumbnail', 'link_title', 'views_count', 'user')
+          expect(parsed_response['posts_count']).to eq(1)
+          expect(parsed_response['data'].size).to eq(0)
         end
       end
 

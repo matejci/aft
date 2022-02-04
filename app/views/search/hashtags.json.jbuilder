@@ -6,7 +6,6 @@ json.posts_count @collection[:posts_count]
 json.data do
   json.array! @collection[:posts] do |post|
     json.id post.id
-    json.title post.title
     json.description post.description
     json.media_thumbnail_dimensions post.media_thumbnail_dimensions
     json.media_thumbnail post.media_thumbnail

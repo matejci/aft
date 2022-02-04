@@ -36,7 +36,6 @@
             <th class="fit">ID</th>
             <th class="fit">Type</th>
             <th class="fit">Date</th>
-            <th class="fit">Title</th>
             <th class="fit">Username</th>
             <th class="fit">Video thumbnail</th>
             <th class="fit"></th>
@@ -55,9 +54,6 @@
               <td class="fit">
                 <%= item.publish_date.strftime('%Y-%m-%d') %>
               </td>
-              <td class="fit title_text">
-                <%= item.title %>
-              </td>
               <td class="fit">
                 <%= item.user.username %>
               </td>
@@ -74,4 +70,5 @@
     </div>
   </div>
 </div>
+
 <%= render partial: 'admin/shared_partials/loader' %>

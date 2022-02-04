@@ -8,7 +8,7 @@ class Post # rubocop:disable Metrics/ClassLength
   include Post::Search
   include Taggable
 
-  taggable_fields %w[title description]
+  taggable_fields %w[description]
 
   MINIMUM_VIDEO_LENGTH = 3
   MAXIMUM_VIDEO_LENGTH = 60
@@ -54,7 +54,6 @@ class Post # rubocop:disable Metrics/ClassLength
   field :status,       type: Boolean, default: true  # admin flagging post
   field :video_transcoded, type: Boolean, default: false
 
-  field :title, type: String
   field :description, type: String
   field :video_length, type: Float # in seconds
   field :own_takko, type: Boolean
@@ -103,11 +102,6 @@ class Post # rubocop:disable Metrics/ClassLength
   validates :category, :media_file, :video_length, :description, presence: { message: 'is required' }
   validates :video_length, numericality: { greater_than: MINIMUM_VIDEO_LENGTH, less_than_or_equal_to: MAXIMUM_VIDEO_LENGTH }, if: :video_length
   validate :generate_link, on: :create
-
-  with_options if: :title_changed? do
-    validate :process_title
-    validate :process_link_title
-  end
 
   with_options if: :parent_id_changed? do
     before_validation :correct_parent, :inherit_from_parent
@@ -176,17 +170,6 @@ class Post # rubocop:disable Metrics/ClassLength
 
   def original_post_id
     takko? ? parent_id : id
-  end
-
-  def process_title
-    return if title.blank?
-
-    # remove line breaks and extra whitespace
-    self.title = title.squish
-  end
-
-  def process_link_title
-    self.link_title = title.downcase.parameterize if title.present?
   end
 
   def generate_link
@@ -301,6 +284,6 @@ class Post # rubocop:disable Metrics/ClassLength
   end
 
   def visible_fields_changed?
-    (changes.keys & %w[title description user_id]).any?
+    (changes.keys & %w[description user_id]).any?
   end
 end

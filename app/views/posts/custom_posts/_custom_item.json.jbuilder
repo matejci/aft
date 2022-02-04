@@ -9,7 +9,7 @@ json.item do
   json.carousel_muted custom_post.carousel_muted
 
   json.items custom_post.takkos.each do |takko|
-    json.extract! takko.post, :id, :link, :title, :publish_date, :description, :media_file_url, :video_length, :video_transcoded,
+    json.extract! takko.post, :id, :link, :publish_date, :description, :media_file_url, :video_length, :video_transcoded,
                   :media_thumbnail_dimensions, :animated_cover_url, :media_type, :shares_count
 
     json.published time_ago_in_words(takko.post.publish_date)

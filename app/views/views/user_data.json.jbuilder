@@ -8,7 +8,6 @@ json.cache! @views do
                    _id:               '$post_id',
                    parent_id:         {'$first': '$post.parent_id'},
                    publish_date:      {'$first': '$post.publish_date'},
-                   title:             {'$first': '$post.title'},
                    video_length:      {'$first': '$post.video_length'},
                    total_views:       {'$sum': 1},
                    counted_views:     {'$sum': {'$cond': ['$counted', 1, 0]}},
@@ -17,7 +16,7 @@ json.cache! @views do
                   ).aggregate
 
   json.posts @posts do |post|
-    json.extract!              post, :title, :video_length, :total_views, :counted_views
+    json.extract!              post, :video_length, :total_views, :counted_views
     json.id                    post['_id']
     json.post                  post['parent_id'].present? ? 'takko' : 'post'
     json.date_published        post['publish_date'].strftime('%m/%d/%Y')

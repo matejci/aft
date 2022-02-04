@@ -1,5 +1,5 @@
 json.viewed_date @date
-json.(@post, :title, :type)
+json.(@post, :type)
 json.(@viewer, :username, :full_name) if @viewer
 
 json.cache! @views do

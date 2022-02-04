@@ -46,7 +46,7 @@ describe Feeds::DiscoverService do
 
   it 'returns empty array if user watched all curated posts' do
     user = create(:user)
-    create(:user_configuration, user: user, watched_items: Post.where(title: 'CURATED_POST').pluck(:id))
+    create(:user_configuration, user: user, watched_items: Post.where(description: 'CURATED_POST').pluck(:id))
     session = create(:session, user: user)
 
     result = service_call(session)
@@ -60,9 +60,9 @@ describe Feeds::DiscoverService do
   end
 
   def curated_posts
-    curated_posts = create_list(:post, 2, :public, user: @user, title: 'CURATED_POST').pluck(:id)
+    curated_posts = create_list(:post, 2, :public, user: @user, description: 'CURATED_POST').pluck(:id)
     @another_user = create(:user)
-    curated_posts << create_list(:post, 1, :public, user: @another_user, title: 'CURATED_POST').pluck(:id)
+    curated_posts << create_list(:post, 1, :public, user: @another_user, description: 'CURATED_POST').pluck(:id)
 
     conf = @app.create_configuration
     conf.curated_posts << curated_posts

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-json.extract! @post, :id, :link, :title, :publish_date, :description, :media_file_url, :video_length, :deleted, :video_transcoded, :media_thumbnail_dimensions, :animated_cover_url, :media_type
+json.extract! @post, :id, :link, :publish_date, :description, :media_file_url, :video_length, :deleted, :video_transcoded, :media_thumbnail_dimensions, :animated_cover_url, :media_type
 
 json.published time_ago_in_words(@post.publish_date)
 

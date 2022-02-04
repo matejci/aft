@@ -16,7 +16,6 @@
             <th class="fit">Name</th>
             <th class="fit">Active</th>
             <th class="fit">Created at</th>
-            <th class="fit">Original Post title</th>
             <th class="fit">Original Post ID</th>
             <th class="fit">Winner username/email/phone</th>
             <th class="fit"></th>
@@ -33,9 +32,6 @@
               </td>
               <td class="fit">
                 <%= item.created_at %>
-              </td>
-              <td class="fit">
-                <%= item.post.title %>
               </td>
               <td class="fit">
                 <%= item.post.id.to_s %>
@@ -62,7 +58,6 @@
     </div>
   </div>
 </div>
-
 <%= render partial: 'admin/shared_partials/loader' %>
 <%= render partial: 'admin/shared_partials/messages' %>
 <%= render partial: 'admin/contests/modal' %>
