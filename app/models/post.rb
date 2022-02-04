@@ -100,7 +100,7 @@ class Post # rubocop:disable Metrics/ClassLength
   before_validation :set_default_category, if: -> { category_id == 'default' }
   before_validation :set_original_user,    if: :user_id_changed?
 
-  validates :category, :media_file, :title, :video_length, :description, presence: { message: 'is required' }
+  validates :category, :media_file, :video_length, :description, presence: { message: 'is required' }
   validates :video_length, numericality: { greater_than: MINIMUM_VIDEO_LENGTH, less_than_or_equal_to: MAXIMUM_VIDEO_LENGTH }, if: :video_length
   validate :generate_link, on: :create
 
