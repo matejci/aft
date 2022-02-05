@@ -82,7 +82,7 @@ RSpec.describe 'Sessions', type: :request do
 
       body = response.parsed_body
       expect(body).to include('id', 'email', 'phone', 'display_name', 'first_name', 'last_name', 'username', 'bio', 'profile_thumb_url',
-                              'profile_image_version', 'background_image_url', 'background_image_version', 'access_token', 'verified', 'website',
+                              'background_image_url', 'background_image_version', 'access_token', 'verified', 'website',
                               'followers_count', 'followees_count', 'posts_count', 'takkos_count', 'valid_account', 'account_errors',
                               'monetization_status_type', 'creator_program_opted')
     end
