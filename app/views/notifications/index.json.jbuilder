@@ -6,7 +6,7 @@ json.array! @notifications do |notification|
 
   json.actor do
     actor = notification.actor
-    json.extract!  actor, :username, :profile_thumb_url, :profile_image_version, :verified
+    json.extract!  actor, :username, :profile_thumb_url, :verified
     json.following @current_user.follows? actor
   end
 end

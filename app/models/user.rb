@@ -10,7 +10,7 @@ class User # rubocop:disable Metrics/ClassLength
 
   track_history on: %i[monetized_at monetization_status monetization_status_type], modifier_field: nil
 
-  POST_FIELDS = %w[username display_name profile_image profile_image_version verified].freeze
+  POST_FIELDS = %w[username display_name profile_image verified].freeze
   REQUIRED_FIELDS = %i[birthdate username display_name password verified_email verified_phone].freeze
 
   belongs_to :user_group, inverse_of: :users, optional: true
@@ -72,7 +72,6 @@ class User # rubocop:disable Metrics/ClassLength
   mount_uploader :background_image, BackgroundImageUploader
 
   # file upload/version identifier
-  field :profile_image_version, type: String, default: 'default'
   field :background_image_version, type: String
 
   field :verified, type: Boolean, default: false # public figure, celebrity or global brand
@@ -146,8 +145,7 @@ class User # rubocop:disable Metrics/ClassLength
   validate :valid_password
   validate :validate_tos_acceptance, if: :tos_acceptance_changed?
 
-  validate :profile_image_file_versioning,     if: :profile_image_changed?
-  validate :background_image_file_versioning,  if: :background_image_changed?
+  validate :background_image_file_versioning, if: :background_image_changed?
 
   validates :birthdate, presence: { message: 'Please enter your date of birth' }, if: :birthdate, unless: :takko_managed?
 
@@ -203,13 +201,6 @@ class User # rubocop:disable Metrics/ClassLength
 
   def full_name
     [first_name, last_name].compact.map(&:capitalize).join(' ')
-  end
-
-  def profile_image_file_versioning
-    self.profile_image_version = loop do
-      token = SecureRandom.hex(5)
-      break token unless User.where(profile_image_version: token).exists?
-    end
   end
 
   def background_image_file_versioning

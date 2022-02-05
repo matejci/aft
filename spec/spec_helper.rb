@@ -46,7 +46,7 @@ RSpec.configure do |config|
 
   def user_json(user)
     Jbuilder.new do |json|
-      json.extract! user, :id, :username, :display_name, :profile_thumb_url, :profile_image_version, :verified
+      json.extract! user, :id, :username, :display_name, :profile_thumb_url, :verified
     end.attributes!
   end
 end
