@@ -66,7 +66,6 @@ class Post # rubocop:disable Metrics/ClassLength
   field :media_type, type: String
   field :animated_cover_offset, type: Float
   field :link, type: String
-  field :link_title, type: String
   field :allow_comments, type: Boolean, default: true
 
   # count fields

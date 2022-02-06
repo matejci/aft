@@ -4,7 +4,7 @@
 
 json.set! :posts do
   json.array! @posts do |post|
-    json.extract! post, :_id, :description, :publish_date, :link, :link_title, :created_at, :media_file, :media_thumbnail, :media_type
+    json.extract! post, :_id, :description, :publish_date, :link, :created_at, :media_file, :media_thumbnail, :media_type
 
     json.set! :created_at, post.created_at.strftime("%b %e, %Y - %l:%M%P").to_s
     # unless post.email_delivery_date.nil?
@@ -31,7 +31,7 @@ json.set! :posts do
 
     json.set! :items do
       json.array! post.takkos do |item|
-        json.extract! item, :_id, :description, :publish_date, :link, :link_title, :created_at, :media_file, :media_thumbnail, :media_type
+        json.extract! item, :_id, :description, :publish_date, :link, :created_at, :media_file, :media_thumbnail, :media_type
 
         json.set! :created_at, item.created_at.strftime("%b %e, %Y - %l:%M%P").to_s
 

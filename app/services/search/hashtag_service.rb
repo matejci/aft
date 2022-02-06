@@ -37,7 +37,6 @@ module Search
           cp.description = post.description
           cp.media_thumbnail_dimensions = post.media_thumbnail_dimensions
           cp.media_thumbnail = post.media_thumbnail.url
-          cp.link_title = post.link_title
           cp.views_count = post.total_views
           cp.user = prepare_user(post.user)
         end
@@ -64,7 +63,7 @@ module Search
     end
 
     def calculate_total_pages(items_count)
-      (items_count % per_page).zero? ? (items_count / per_page) : (items_count / per_page + 1)
+      (items_count % per_page).zero? ? (items_count / per_page) : (items_count / per_page) + 1
     end
   end
 end
