@@ -4,10 +4,10 @@ require 'acceptance_helper'
 
 resource 'Posts' do
   explanation <<~EXPLANATION
-  - `/posts/:id.json` for showing post + carousel
-  - `can_comment/can_takko/voted` are available only when viewer is present
-  - `/posts/:id/edit.json` for pre-filling edit post form
-  - only owner can access this info
+    - `/posts/:id.json` for showing post + carousel
+    - `can_comment/can_takko/voted` are available only when viewer is present
+    - `/posts/:id/edit.json` for pre-filling edit post form
+    - only owner can access this info
   EXPLANATION
 
   include_context 'authenticated request', user_session: true
@@ -29,15 +29,15 @@ resource 'Posts' do
         end
       end
 
-      context 'guest' do
-        before { header 'HTTP-ACCESS-TOKEN', nil }
+      # context 'guest' do
+      #   before { header 'HTTP-ACCESS-TOKEN', nil }
 
-        example '200: guest' do
-          do_request
+      #   example '200: guest' do
+      #     do_request
 
-          expect(status).to eq 200
-        end
-      end
+      #     expect(status).to eq 200
+      #   end
+      # end
     end
   end
 
@@ -169,8 +169,8 @@ resource 'Posts' do
 
   route '/posts/:id/takkos.json', 'View all takkos' do
     explanation <<~DOCS
-    - API will accept 5 different `order` param values: `comments`, `newest`, `oldest`, `upvotes` and `views`
-    - if `order` param is not used, API will fallback to `Post`'s order setting
+      - API will accept 5 different `order` param values: `comments`, `newest`, `oldest`, `upvotes` and `views`
+      - if `order` param is not used, API will fallback to `Post`'s order setting
     DOCS
 
     before do

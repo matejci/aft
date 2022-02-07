@@ -3,7 +3,7 @@
 require 'acceptance_helper'
 
 resource 'Search' do
-  include_context 'authenticated request'
+  include_context 'authenticated request', user_session: true
 
   parameter :page,  'for pagination (default: 1)', example: 1
   parameter :query, 'search term'

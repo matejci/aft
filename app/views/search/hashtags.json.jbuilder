@@ -9,7 +9,6 @@ json.data do
     json.description post.description
     json.media_thumbnail_dimensions post.media_thumbnail_dimensions
     json.media_thumbnail post.media_thumbnail
-    json.link_title post.link_title
     json.views_count post.views_count
     json.set! :user do
       json.id post.user.id

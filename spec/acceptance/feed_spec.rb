@@ -72,15 +72,15 @@ resource 'Feed' do
               type: :string, required: false
 
     get 'get explore feed' do
-      context 'guest' do
-        include_context 'authenticated request'
+      # context 'guest' do
+      #   include_context 'authenticated request'
 
-        example_request '200' do
-          expect(status).to eq(200)
-          expect(parsed_response['type']).to eq 'explore'
-          expect(parsed_response['data'].size).to eq 2
-        end
-      end
+      #   example_request '200' do
+      #     expect(status).to eq(200)
+      #     expect(parsed_response['type']).to eq 'explore'
+      #     expect(parsed_response['data'].size).to eq 2
+      #   end
+      # end
 
       context 'logged user' do
         include_context 'authenticated request', user_session: true

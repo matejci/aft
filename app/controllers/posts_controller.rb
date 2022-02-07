@@ -54,7 +54,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    render json: { errors: @post.errors } , status: :unprocessable_entity and return unless @post.update(post_params)
+    render json: { errors: @post.errors }, status: :unprocessable_entity and return unless @post.update(post_params)
   end
 
   def destroy
@@ -124,7 +124,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(
       :parent_id, :category_id, :description, :media_file, :media_type,
       :media_thumbnail, :allow_comments, :view_permission, :takko_permission,
-      :takko_order, :video_length, :publish, :link_title, :animated_cover, :animated_cover_offset,
+      :takko_order, :video_length, :publish, :animated_cover, :animated_cover_offset,
       viewer_ids: [], viewer_group_ids: [], takkoer_ids: [], takkoer_group_ids: []
     ).merge(params.permit(:media_file, :media_thumbnail)) # for iOS multipart request
   end
