@@ -8,6 +8,7 @@ json.published time_ago_in_words(takko.publish_date)
 # to avoid ActionView::Template::Error (can't dump anonymous class)
 json.media_thumbnail takko.media_thumbnail.as_json
 json.media_thumbnail_dimensions takko.media_thumbnail_dimensions
+json.master_playlist "#{takko.media_file_url}_playlist.m3u8"
 
 # owner info
 json.user takko.user, partial: 'users/tag', as: :user
