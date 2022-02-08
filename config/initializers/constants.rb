@@ -44,7 +44,7 @@ DEFAULT_PUSH_NOTIFICATIONS_SETTINGS = {
   commented: 'everyone',
   mentioned: 'everyone',
   followed: 'on',
-  payout: 'on',
+  payout: 'off',
   followee_posted: 'off'
 }.freeze
 
