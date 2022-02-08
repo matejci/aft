@@ -20,7 +20,7 @@ class WelcomeController < ApplicationController
       applinks: {
         details: [
           {
-            appIDs: ENV['APPLE_APP_ID'],
+            appIDs: [ENV['APPLE_APP_ID']],
             components: [
               {
                 '/': '/p/*'
