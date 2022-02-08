@@ -6,7 +6,7 @@ module Api
       before_action :confirm_user_logged_in
 
       def notifications_settings
-        render json: { data: @current_user.configuration.push_notifications_settings }, status: :ok
+        render json: { data: @current_user.configuration.push_notifications_settings.except(:payout) }, status: :ok
       end
 
       def update_notifications_settings
