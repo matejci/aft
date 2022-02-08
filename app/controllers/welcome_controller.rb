@@ -21,7 +21,7 @@ class WelcomeController < ApplicationController
         apps: [],
         details: [
           {
-            appID: ENV['APPLE_APP_ID'],
+            appIDs: ENV['APPLE_APP_ID'],
             components: [
               {
                 '/': '/p/*'
