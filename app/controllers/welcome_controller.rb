@@ -18,7 +18,6 @@ class WelcomeController < ApplicationController
   def apple_app_site_association
     @apple_apps = {
       applinks: {
-        apps: [],
         details: [
           {
             appIDs: ENV['APPLE_APP_ID'],
