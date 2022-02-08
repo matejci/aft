@@ -50,7 +50,7 @@ namespace :aft do
     [
       'Mental Health', 'Parent Stories', 'Student Stories',
       'Administration Talk', 'Teaching Resources', 'Aft Community',
-      'New Teachers', 'Opportunities', 'Random', 'Aft Tutorial'
+      'New Teachers', 'Opportunities', 'Random', 'Aft Tutorial', 'Memes'
     ].each do |item|
       Category.find_or_create_by!(name: item)
     end
@@ -66,7 +66,7 @@ namespace :aft do
                               email: 'admin@appforteachers.com',
                               email_verified_at: Time.current,
                               password: '123123!aft',
-                              username: 'aftuser',
+                              username: 'AppForTeachers',
                               verified: true,
                               website: 'http://appforteachers.com')
 
