@@ -35,8 +35,8 @@ PER_PAGE = {
 
 MAX_CURATED_ITEMS = 20
 
-TAKKO_OFFICIAL_ACCOUNTS = %w[takko davidchoi peter VictoriaChoi HaronnChoi abe almas the_kc azzaro chichoni miran
-                             samiam snow nexjustin elsapom business relationships random health].freeze
+TAKKO_OFFICIAL_ACCOUNTS = %w[takko davidchoi peter VictoriaChoi HaronnChoi abe almas the_kc azzaro Samiam snow nexjustin
+                             apple elsapom business relationships random health mbrajsa matejci].freeze
 
 DEFAULT_PUSH_NOTIFICATIONS_SETTINGS = {
   upvoted: 'everyone',
