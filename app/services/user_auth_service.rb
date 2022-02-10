@@ -25,15 +25,15 @@ class UserAuthService
       id.chomp!('00000')
     end
 
-    login_key = if id.starts_with?('+')
-      :phone
+    login_key, login_id = if id.starts_with?('+')
+      [:phone, id]
     elsif id.include?('@')
-      :email
+      [:email, /#{id}/i]
     else
-      :username
+      [:username, /#{id}/i]
     end
 
-    user = User.valid.includes(:paypal_account).find_by(login_key => id)
+    user = User.valid.includes(:paypal_account).find_by(login_key => login_id)
 
     raise ServiceError, I18n.t('errors.not_found_in_database') if user.nil?
     raise InstanceError, user.errors unless valid_password?(user: user, admin_login: admin_login)

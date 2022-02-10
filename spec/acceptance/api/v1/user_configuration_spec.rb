@@ -20,7 +20,7 @@ resource 'API::V1::UserConfiguration::PushNotificationsSettings' do
         example_request '200' do
           expect(status).to eq(200)
           expect(parsed_response).to include('data')
-          expect(parsed_response['data'].keys).to include('upvoted', 'added_takko', 'commented', 'mentioned', 'followed', 'payout', 'followee_posted')
+          expect(parsed_response['data'].keys).to include('upvoted', 'added_takko', 'commented', 'mentioned', 'followed', 'followee_posted')
         end
       end
     end
