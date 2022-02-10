@@ -133,14 +133,8 @@ class User # rubocop:disable Metrics/ClassLength
   validates :ssn_last_4, presence: true, if: :ssn_last_4_changed?
   validates :ssn_last_4, digits: { length: { is: 4 } }
   validates :display_name, presence: true, if: :display_name_changed?
-
-  # check for uniqueness scoped to valid(completed signup) accounts
-
   validates :username, presence: true, username_format: true, if: :username_changed?
-
-  # TODO, refactor this... with_options block doesn't work with unique_validator
-  validates :username, unique: { conditions: -> { valid },
-                                 across: { name: { model: -> { Username.distinct_set } } } }, if: :username_changed?
+  validates :username, uniqueness: { case_sensitive: false }, if: [:username_changed?, Proc.new { User.valid.pluck(:username).map(&:downcase).include?(username.downcase) }]
 
   validate :valid_password
   validate :validate_tos_acceptance, if: :tos_acceptance_changed?
@@ -195,7 +189,7 @@ class User # rubocop:disable Metrics/ClassLength
 
   def self.aft_user
     Rails.cache.fetch('aft-user') do
-      active.find_by(username: 'aft-user')
+      active.find_by(username: 'AppForTeachers')
     end
   end
 

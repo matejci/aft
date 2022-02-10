@@ -6,7 +6,7 @@ resource 'User Configuration' do
   include_context 'authenticated request', user_session: true
 
   explanation <<~EXPLANATION
-  + `/user_configuration.json` will fallback to App's configuration if request is using `guest mode` (invalid `access_token`)
+    + `/user_configuration.json` will fallback to App's configuration if request is using `guest mode` (invalid `access_token`)
   EXPLANATION
 
   before do
