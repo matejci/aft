@@ -15,8 +15,6 @@ class UpdatePlayerIdService
   attr_reader :token, :player_id
 
   def update_player_id
-    raise ActionController::BadRequest, 'Wrong token' if token.blank?
-
     session = Session.active.find_by(token: token)
 
     raise ActionController::BadRequest, 'Wrong token' if session.blank?
