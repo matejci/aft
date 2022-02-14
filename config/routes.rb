@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   if Rails.env.production?
     Sidekiq::Web.use Rack::Auth::Basic do |username, password|
       ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(username), ::Digest::SHA256.hexdigest(ENV['SIDEKIQ_USERNAME'])) &
-      ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(password), ::Digest::SHA256.hexdigest(ENV['SIDEKIQ_PASSWORD']))
+        ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(password), ::Digest::SHA256.hexdigest(ENV['SIDEKIQ_PASSWORD']))
     end
   end
 
@@ -61,6 +61,8 @@ Rails.application.routes.draw do
       resources :rooms, only: [:create, :index, :show] do
         resources :messages, only: [:create, :index]
       end
+
+      patch 'sessions/player-id', to: 'sessions#player_id'
     end
 
     # scope module: 'v2', constraints: ApiConstraints.new(version: 2) do

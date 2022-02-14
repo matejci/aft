@@ -22,8 +22,9 @@ end
 def prepare_user_session(user)
   session = Session.last
   session.update(user: user)
-  access_token = jwt_encode({ access_token: session.access_token }, session)
-  header 'HTTP-ACCESS-TOKEN', access_token
+  token = jwt_encode({ access_token: session.access_token }, session)
+  session.update(token: token)
+  header 'HTTP-ACCESS-TOKEN', token
 
   create_posts(user) if posts
 end
