@@ -19,6 +19,8 @@ resource 'API::V1::Rooms' do
 
   route '/rooms.json', 'Create new room/group chat' do
     post 'Create chat room' do
+      header 'Content-Type', 'application/json'
+
       with_options scope: :room do
         parameter :members, required: true
         parameter :name
@@ -26,6 +28,7 @@ resource 'API::V1::Rooms' do
 
       context '200' do
         let(:members) { User.all.pluck(:id).map(&:to_s) }
+        let(:raw_post) { params.to_json }
 
         example_request '200' do
           expect(status).to eq(200)
@@ -56,6 +59,8 @@ resource 'API::V1::Rooms' do
 
   route '/rooms/:id.json', 'Get room details' do
     get 'Fetch chat room details' do
+      parameter :id, required: true
+
       context '200' do
         let(:id) { Room.first.id.to_s }
 
@@ -69,11 +74,14 @@ resource 'API::V1::Rooms' do
 
   route '/rooms/:id/last-read-message.json', 'Update last read message for a user' do
     patch 'Update last read message' do
+      header 'Content-Type', 'application/json'
+      parameter :id, required: true
       parameter :message_id
 
       context '200' do
         let(:message_id) { Message.last.id.to_s }
         let(:id) { Room.last.id.to_s }
+        let(:raw_post) { params.to_json }
 
         example_request '200' do
           expect(status).to eq(200)
