@@ -51,7 +51,7 @@ module Leaderboard
           group_query = { _id: '$user_id', count: { '$sum': 1 } }
           model = 'Comment'
         when :takkos
-          match_query = takkos_match_query.merge!(user_id: { '$nin' => excluded_users_ids })
+          match_query = takkos_match_query.merge!(original_user_id: { '$nin' => excluded_users_ids })
           match_query[:publish_date] = { '$gte': resolve_period } if period != 'all_time'
           group_query = { _id: '$original_user_id', count: { '$sum': 1 } }
           model = 'Post'
