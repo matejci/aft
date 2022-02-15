@@ -199,3 +199,7 @@ Naming/VariableNumber:
 
 Style/Proc:
   Enabled: false
+
+Rails/Output:
+  Exclude:
+      - 'app/channels/room_channel.rb'
