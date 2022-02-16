@@ -60,6 +60,10 @@ Rails.application.routes.draw do
 
       resources :rooms, only: [:create, :index, :show] do
         resources :messages, only: [:create, :index]
+
+        member do
+          patch 'last-read-message', action: :last_read_message
+        end
       end
 
       patch 'sessions/player-id', to: 'sessions#player_id'

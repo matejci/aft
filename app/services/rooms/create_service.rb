@@ -2,9 +2,9 @@
 
 module Rooms
   class CreateService
-    def initialize(name:, is_public:, members:)
+    def initialize(name:, user:, members:)
       @name = name
-      @is_public = is_public
+      @user = user
       @members = members
     end
 
@@ -14,12 +14,11 @@ module Rooms
 
     private
 
-    attr_reader :name, :is_public, :members
+    attr_reader :name, :user, :members
 
     def create_room
-      room = Room.create!(name: name, is_public: is_public, created_by_id: members.last)
-      room.members = User.active.where(:id.in => members)
-      room
+      members << user.id.to_s
+      user.created_rooms.create!(name: name, members: User.active.where(:id.in => members))
     end
   end
 end

@@ -7,7 +7,11 @@ module Api
       before_action :load_room
 
       def create
-        @message = Messages::CreateService.new(room: @room, content: msg_params[:content], attachment: msg_params[:attachment], user: @current_user).call
+        @message = Messages::CreateService.new(room: @room,
+                                               content: msg_params[:content],
+                                               payload: msg_params[:payload],
+                                               message_type: msg_params[:message_type],
+                                               user: @current_user).call
       end
 
       def index
@@ -23,7 +27,7 @@ module Api
       end
 
       def msg_params
-        params.require(:message).permit(:content, :attachment)
+        params.require(:message).permit(:content, :payload, :message_type)
       end
     end
   end

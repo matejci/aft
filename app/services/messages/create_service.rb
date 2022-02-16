@@ -2,10 +2,11 @@
 
 module Messages
   class CreateService
-    def initialize(room:, content:, attachment:, user:)
+    def initialize(room:, content:, payload:, message_type:, user:)
       @room = room
       @content = content
-      @attachment = attachment
+      @payload = payload
+      @message_type = message_type
       @user = user
     end
 
@@ -15,12 +16,12 @@ module Messages
 
     private
 
-    attr_reader :room, :content, :attachment, :user
+    attr_reader :room, :content, :payload, :message_type, :user
 
     def create_message
-      message = room.messages.create!(content: content, attachment: attachment, sender: user)
+      message = room.messages.create!(content: content, payload: payload, message_type: message_type, sender: user)
 
-      ActionCable.server.broadcast("#{room.name}", content)
+      ActionCable.server.broadcast(room.id.to_s, content)
 
       message
     end
