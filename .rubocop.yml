@@ -39,6 +39,9 @@ Layout/EndAlignment:
 Layout/IndentationWidth:
   Enabled: true
 
+Layout/ElseAlignment:
+  Enabled: false
+
 Style/DefWithParentheses:
   Enabled: true
 
@@ -148,6 +151,9 @@ Style/ColonMethodCall:
 
 Style/TrivialAccessors:
   Enabled: true
+
+Style/InverseMethods:
+  Enabled: false
 
 Performance/BindCall:
   Enabled: true

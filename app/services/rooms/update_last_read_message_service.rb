@@ -6,6 +6,7 @@ module Rooms
       @room_id = room_id
       @user_id = user_id
       @message_id = message_id
+      @room = nil
     end
 
     def call
@@ -20,8 +21,10 @@ module Rooms
       room = Room.find(room_id)
 
       raise ActionController::BadRequest, 'Wrong room_id' unless room
+      raise ActionController::BadRequest, "You're not a member of a room" unless room.member_ids.include?(user_id)
+      raise ActionController::BadRequest, 'message_id does not belong to a room' unless room.message_ids.map(&:to_s).include?(message_id)
 
-      room.last_read_messages[user_id] = message_id.to_s
+      room.last_read_messages[user_id.to_s] = message_id
       room.save!
     end
   end
