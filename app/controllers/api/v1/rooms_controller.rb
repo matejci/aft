@@ -8,7 +8,7 @@ module Api
       def create
         raise ActionController::BadRequest, 'Members param is required' if room_params[:members].blank?
 
-        @room = Rooms::CreateService.new(name: room_params[:name], user: @current_user, members: room_params[:members]).call
+        @room = Rooms::CreateService.new(name: room_params[:name], user: @current_user, member_ids: room_params[:members]).call
       end
 
       def index
@@ -20,14 +20,24 @@ module Api
       end
 
       def last_read_message
-        Rooms::UpdateLastReadMessageService.new(room_id: params[:id], user_id: @current_user.id.to_s, message_id: params[:message_id]).call
+        Rooms::UpdateLastReadMessageService.new(room_id: params[:id], user_id: @current_user.id, message_id: params[:message_id]).call
+        head :ok
+      end
+
+      def add_member
+        @room = Rooms::AddMemberService.new(room_id: params[:id], member_id: params[:member_id]).call
+        render :create
+      end
+
+      def leave_room
+        Rooms::LeaveRoomService.new(room_id: params[:id], user: @current_user).call
         head :ok
       end
 
       private
 
       def room_params
-        params.require(:room).permit(:name, :is_public, members: [])
+        params.require(:room).permit(:name, members: [])
       end
     end
   end

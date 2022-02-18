@@ -2,14 +2,14 @@
 
 json.data do
   json.room do
-    json.extract!(@collection[:room], :id, :name, :created_by_id, :created_at, :updated_at, :last_read_messages)
+    json.extract!(@collection[:room], :id, :name, :generated_name, :created_by_id, :created_at, :updated_at, :last_read_messages, :members_count, :room_thumb)
 
     json.members do
       json.array!(@collection[:members], :id, :username, :display_name)
     end
 
     json.messages do
-      json.array!(@collection[:messages], :id, :content, :sender_id, :message_type, :created_at, :payload)
+      json.array!(@collection[:messages], :id, :content, :sender_id, :message_type, :created_at, :updated_at, :payload)
     end
   end
 end

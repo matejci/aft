@@ -11,9 +11,7 @@ class Message
   field :content, type: String
   enum :message_type, %i[text post contact]
 
-  validates :content, :message_type, presence: true
+  validates :content, :message_type, :sender_id, presence: true
 
   mount_uploader :payload, MsgAttachmentUploader
-
-  validates :content, presence: true
 end

@@ -11,6 +11,7 @@ module Messages
     end
 
     def call
+      validate_user
       create_message
     end
 
@@ -20,10 +21,12 @@ module Messages
 
     def create_message
       message = room.messages.create!(content: content, payload: payload, message_type: message_type, sender: user)
-
       ActionCable.server.broadcast(room.id.to_s, content)
-
       message
+    end
+
+    def validate_user
+      raise ActionController::BadRequest, 'User is not a member of a room' unless room.member_ids.include?(user.id)
     end
   end
 end
