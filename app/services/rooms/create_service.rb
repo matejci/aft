@@ -14,7 +14,7 @@ module Rooms
       create_room
     rescue StandardError => e
       Bugsnag.notify(e)
-      raise ActionController::BadRequest, 'Something went wrong, please contact AFT admin'
+      raise e
     end
 
     private
@@ -22,12 +22,20 @@ module Rooms
     attr_reader :name, :user, :member_ids
 
     def create_room
-      room = user.created_rooms.create!(name: name, generated_name: generate_name, member_ids: @members.pluck(:id))
+      room = user.created_rooms.find_by(member_ids: @members.pluck(:id))
 
-      Rooms::MembersThumbService.new(room: room, members: @members).call
+      if room
+        room.update!(name: name, generated_name: generate_name) if name != room.name
+        room
+      else
+        room = user.created_rooms.create!(name: name, generated_name: generate_name, member_ids: @members.pluck(:id))
+        Rooms::MembersThumbService.new(room: room, members: @members).call
+      end
     end
 
     def validate_members
+      raise ActionController::BadRequest, 'You cannot add yourself as a member' if member_ids.size == 1 && member_ids[0] == user.id.to_s
+
       @members = User.active.where(:id.in => member_ids).to_a
 
       raise ActionController::BadRequest, 'You need to provide at least one member_id' if @members.blank?

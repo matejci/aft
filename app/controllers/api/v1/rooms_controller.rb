@@ -12,7 +12,7 @@ module Api
       end
 
       def index
-        @rooms = Rooms::IndexService.new(page: params[:page], user: @current_user).call
+        @collection = Rooms::IndexService.new(page: params[:page], user: @current_user).call
       end
 
       def show

@@ -21,7 +21,6 @@ module Messages
 
     def create_message
       message = room.messages.create!(content: content, payload: payload, message_type: message_type, sender: user)
-      room.set(last_message_id: message.id)
 
       ActionCable.server.broadcast(room.id.to_s, content)
       message
