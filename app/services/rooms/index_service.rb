@@ -27,14 +27,18 @@ module Rooms
       rooms.each do |room|
         msg = room.messages.last
 
-        room.last_message = {
-          id: msg.id.to_s,
-          content: msg.content,
-          message_type: msg.message_type,
-          sender_id: msg.sender_id.to_s,
-          created_at: msg.created_at,
-          updated_at: msg.updated_at
-        }
+        room.last_message = if msg.present?
+          {
+            id: msg.id.to_s,
+            content: msg.content,
+            message_type: msg.message_type,
+            sender_id: msg.sender_id.to_s,
+            created_at: msg.created_at,
+            updated_at: msg.updated_at
+          }
+        else
+          {}
+        end
       end
     end
 
