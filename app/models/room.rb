@@ -14,6 +14,7 @@ class Room
   field :last_read_messages, type: Hash, default: {}
   field :room_thumb, type: String
   field :members_count, type: Integer, default: 0
+  field :last_message_id, type: String
 
   validates :created_by_id, presence: true
 end

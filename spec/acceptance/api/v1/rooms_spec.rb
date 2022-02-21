@@ -70,7 +70,7 @@ resource 'API::V1::Rooms' do
       context '200' do
         example_request '200' do
           expect(status).to eq(200)
-          expect(parsed_response['data'].first).to include('id', 'name', 'generated_name', 'created_by_id', 'members_count', 'room_thumb')
+          expect(parsed_response['data'].first).to include('id', 'name', 'generated_name', 'created_by_id', 'members_count', 'room_thumb', 'last_message_id')
         end
       end
     end
@@ -86,7 +86,7 @@ resource 'API::V1::Rooms' do
         example_request '200' do
           expect(status).to eq(200)
           expect(parsed_response.dig('data', 'room')).to include('id', 'name', 'generated_name', 'created_by_id', 'created_at', 'updated_at',
-                                                                 'last_read_messages', 'members', 'members_count', 'room_thumb', 'messages')
+                                                                 'last_read_messages', 'members', 'members_count', 'room_thumb', 'messages', 'last_message_id')
         end
       end
     end

@@ -2,7 +2,7 @@
 
 json.data do
   json.room do
-    json.extract!(@collection[:room], :id, :name, :generated_name, :created_by_id, :created_at, :updated_at, :last_read_messages, :members_count, :room_thumb)
+    json.extract!(@collection[:room], :id, :name, :generated_name, :created_by_id, :created_at, :updated_at, :last_read_messages, :members_count, :room_thumb, :last_message_id)
 
     json.members do
       json.array!(@collection[:members], :id, :username, :display_name)
