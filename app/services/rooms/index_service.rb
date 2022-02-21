@@ -25,20 +25,16 @@ module Rooms
       # if this become slow in the future, we're going to cache it or find a better solution
 
       rooms.each do |room|
-        msg = room.messages.last
+        next unless (msg = room.messages.last)
 
-        room.last_message = if msg.present?
-          {
-            id: msg.id.to_s,
-            content: msg.content,
-            message_type: msg.message_type,
-            sender_id: msg.sender_id.to_s,
-            created_at: msg.created_at,
-            updated_at: msg.updated_at
-          }
-        else
-          {}
-        end
+        room.last_message = {
+          id: msg.id.to_s,
+          content: msg.content,
+          message_type: msg.message_type,
+          sender_id: msg.sender_id.to_s,
+          created_at: msg.created_at,
+          updated_at: msg.updated_at
+        }
       end
     end
 
