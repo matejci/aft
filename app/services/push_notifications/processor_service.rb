@@ -12,6 +12,7 @@ module PushNotifications
     end
 
     def call
+      return send_dm_notification if notifiable.is_a?(Room)
       return unless should_send_notification?
 
       send_notification(create_notification)
@@ -101,11 +102,11 @@ module PushNotifications
       return '' if action == :payout
 
       img = case action
-      when :followed
-        actor.profile_image
-      else
-        obj = notifiable.is_a?(Post) ? notifiable : notifiable.post
-        obj.media_thumbnail
+            when :followed
+              actor.profile_image
+            else
+              obj = notifiable.is_a?(Post) ? notifiable : notifiable.post
+              obj.media_thumbnail
       end
 
       img.thumb.url || ''
@@ -126,7 +127,7 @@ module PushNotifications
       description = notifiable.description.truncate(30)
       notifiable.takko? ? "a response: #{description}" : "a post: #{description}"
 
-      notifiable.takko? ? "a response" : "a post"
+      notifiable.takko? ? 'a response' : 'a post'
     end
 
     def followee_posted_description
@@ -141,6 +142,20 @@ module PushNotifications
 
     def send_notification(notification)
       PushNotifications::PnSenderJob.perform_later(notification_id: notification.id.to_s)
+    end
+
+    def send_dm_notification
+      OneSignalNotificationService.new(
+        user: recipient,
+        ios_sound: 'takko.wav',
+        headings: { en: actor.username },
+        contents: { en: "just sent a direct message to: #{notifiable.name || notifiable.generated_name}" },
+        ios_attachments: { image_url: actor.profile_image.url },
+        data: { room_id: notifiable.id.to_s, message_id: body },
+        collapse_id: nil,
+        ios_badgeCount: recipient.unread_notifications_count,
+        ios_badgeType: 'SetTo'
+      ).call
     end
   end
 end
