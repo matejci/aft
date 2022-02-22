@@ -22,7 +22,7 @@ module PushNotifications
     attr_reader :room, :sender, :message_id
 
     def notify
-      room.members.each do |member|
+      room.members.where.not(:id.in => [sender.id]).each do |member|
         PushNotifications::ProcessorService.new(action: :new_dm, notifiable: room, actor: sender, recipient: member, body: message_id).call
       end
     end

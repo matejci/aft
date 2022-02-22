@@ -144,7 +144,7 @@ resource 'API::V1::Rooms' do
   end
 
   route '/rooms/:id/add-member.json', 'Add member to a chat room' do
-    post 'Create chat room' do
+    post 'Add new member' do
       header 'Content-Type', 'application/json'
 
       parameter :id, required: true

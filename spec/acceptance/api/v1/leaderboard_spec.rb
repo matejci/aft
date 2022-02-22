@@ -227,8 +227,8 @@ resource 'API::V1::Leaderboard::Posts' do
           expect(parsed_response.keys).to include('users')
           expect(parsed_response['users']).to be_an_instance_of(Array)
           expect(parsed_response['users'].size).to eq(3)
-          expect(parsed_response['users'].dig(0, 'counted_watchtime')).to be > parsed_response['users'].dig(1, 'counted_watchtime')
-          expect(parsed_response['users'].dig(1, 'counted_watchtime')).to be > parsed_response['users'].dig(2, 'counted_watchtime')
+          expect(parsed_response['users'].dig(0, 'counted_watchtime')).to be >= parsed_response['users'].dig(1, 'counted_watchtime')
+          expect(parsed_response['users'].dig(1, 'counted_watchtime')).to be >= parsed_response['users'].dig(2, 'counted_watchtime')
         end
       end
 
@@ -256,8 +256,8 @@ resource 'API::V1::Leaderboard::Posts' do
           expect(parsed_response.keys).to include('users')
           expect(parsed_response['users']).to be_an_instance_of(Array)
           expect(parsed_response['users'].size).to eq(11)
-          expect(parsed_response['users'].dig(0, 'comments_count')).to be > parsed_response['users'].dig(1, 'comments_count')
-          expect(parsed_response['users'].dig(4, 'comments_count')).to be > parsed_response['users'].dig(8, 'comments_count')
+          expect(parsed_response['users'].dig(0, 'comments_count')).to be >= parsed_response['users'].dig(1, 'comments_count')
+          expect(parsed_response['users'].dig(4, 'comments_count')).to be >= parsed_response['users'].dig(8, 'comments_count')
         end
       end
 

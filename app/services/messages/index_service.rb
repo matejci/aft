@@ -2,8 +2,6 @@
 
 module Messages
   class IndexService
-    PER_PAGE = 20
-
     def initialize(room:, page:, user:)
       @room = room
       @page = page.presence || 1
@@ -19,11 +17,12 @@ module Messages
     attr_reader :room, :page, :user
 
     def messages
-      room.messages.order(created_at: -1).skip(calculate_offset).limit(PER_PAGE)
+      messages = room.messages.order(created_at: -1).skip(calculate_offset).limit(PER_PAGE[:messages])
+      messages.reverse!
     end
 
     def calculate_offset
-      (page.to_i - 1) * PER_PAGE
+      (page.to_i - 1) * PER_PAGE[:messages]
     end
   end
 end

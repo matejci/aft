@@ -19,7 +19,12 @@ module Rooms
 
       raise ActionController::BadRequest, 'Wrong room id' unless room
 
-      { room: room, messages: room.messages.order(created_at: -1).offset(0).limit(20), members: room.members }
+      { room: room, messages: prepare_messages(room.messages), members: room.members }
+    end
+
+    def prepare_messages(messages)
+      messages = messages.order(created_at: -1).offset(0).limit(PER_PAGE[:messages])
+      messages.reverse!
     end
   end
 end

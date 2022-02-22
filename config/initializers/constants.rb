@@ -30,7 +30,8 @@ PER_PAGE = {
   search_index_users: 8,
   search_index_posts: 12,
   bookmarks: 15,
-  follows: 36
+  follows: 36,
+  messages: 20
 }.freeze
 
 MAX_CURATED_ITEMS = 20
