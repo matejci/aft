@@ -22,6 +22,8 @@ module Messages
     def create_message
       message = room.messages.create!(content: content, payload: payload, message_type: message_type, sender: user)
 
+      Rooms::UpdateLastReadMessageService.new(room_id: nil, user_id: user.id, message_id: message.id.to_s, room: room).call
+
       msg = {
         id: message.id.to_s,
         content: message.content,

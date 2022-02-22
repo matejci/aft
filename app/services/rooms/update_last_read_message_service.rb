@@ -2,11 +2,11 @@
 
 module Rooms
   class UpdateLastReadMessageService
-    def initialize(room_id:, user_id:, message_id:)
+    def initialize(room_id:, user_id:, message_id:, room: nil)
       @room_id = room_id
       @user_id = user_id
       @message_id = message_id
-      @room = nil
+      @room = room
     end
 
     def call
@@ -15,17 +15,17 @@ module Rooms
 
     private
 
-    attr_reader :room_id, :user_id, :message_id
+    attr_reader :room_id, :user_id, :message_id, :room
 
     def update_read_message
-      room = Room.find(room_id)
+      chat_room = room.presence || Room.find(room_id)
 
-      raise ActionController::BadRequest, 'Wrong room_id' unless room
-      raise ActionController::BadRequest, "You're not a member of a room" unless room.member_ids.include?(user_id)
-      raise ActionController::BadRequest, 'message_id does not belong to a room' unless room.message_ids.map(&:to_s).include?(message_id)
+      raise ActionController::BadRequest, 'Wrong room_id' unless chat_room
+      raise ActionController::BadRequest, "You're not a member of a room" unless chat_room.member_ids.include?(user_id)
+      raise ActionController::BadRequest, 'message_id does not belong to a room' unless chat_room.message_ids.map(&:to_s).include?(message_id)
 
-      room.last_read_messages[user_id.to_s] = message_id
-      room.save!
+      chat_room.last_read_messages[user_id.to_s] = message_id
+      chat_room.save!
     end
   end
 end
