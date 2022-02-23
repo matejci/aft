@@ -65,6 +65,7 @@ Rails.application.routes.draw do
           patch 'last-read-message', action: :last_read_message
           post 'add-member', action: :add_member
           delete 'leave-room', action: :leave_room
+          get 'suggested-colleagues', action: :suggested_colleagues
         end
       end
 

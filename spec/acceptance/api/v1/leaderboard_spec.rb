@@ -196,7 +196,7 @@ resource 'API::V1::Leaderboard::Posts' do
           expect(parsed_response).to include('total_pages' => 1)
           expect(parsed_response['data']).to be_an_instance_of(Array)
           expect(parsed_response['data'].size).to eq(2)
-          expect(parsed_response.dig('data', 0, 'item', 'items', 0, 'counted_watchtime')).to be > parsed_response.dig('data', 1, 'item', 'items', 0, 'counted_watchtime')
+          expect(parsed_response.dig('data', 0, 'item', 'items', 0, 'counted_watchtime')).to be >= parsed_response.dig('data', 1, 'item', 'items', 0, 'counted_watchtime')
         end
       end
     end

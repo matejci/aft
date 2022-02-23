@@ -210,4 +210,19 @@ resource 'API::V1::Rooms' do
       end
     end
   end
+
+  route '/rooms/:id/suggested-colleagues.json', 'Fetch chat suggestions' do
+    get 'Fetch suggested colleagues' do
+      parameter :id, required: true
+
+      context '200' do
+        let(:id) { Room.first.id.to_s }
+
+        example_request '200' do
+          expect(status).to eq(200)
+          expect(parsed_response['data'].first).to include('id', 'first_name', 'last_name', 'username', 'display_name', 'verified', 'email', 'phone', 'profile_thumb_url')
+        end
+      end
+    end
+  end
 end

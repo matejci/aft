@@ -34,6 +34,10 @@ module Api
         head :ok
       end
 
+      def suggested_colleagues
+        @collection = Rooms::SuggestedColleaguesService.new(user: @current_user).call
+      end
+
       private
 
       def room_params
