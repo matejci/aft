@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   draw(:legacy_routes)
 
   mount Sidekiq::Web, at: '/sidekiq'
+  mount ActionCable.server => '/chatroom'
 
   if Rails.env.production?
     Sidekiq::Web.use Rack::Auth::Basic do |username, password|
