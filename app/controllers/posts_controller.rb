@@ -16,16 +16,18 @@ class PostsController < ApplicationController
   end
 
   def show
-    redirect_to 'http://apple.co/34sxOB3' and return if web_request?
-
     identifier = params[:id].presence || params[:link].presence
 
-    post = Posts::ShowPostService.new(identifier: identifier, viewer: @current_user).call
+    @post = Posts::ShowPostService.new(identifier: identifier, viewer: @current_user).call
 
-    if post.nil?
-      render json: { base: 'Post is not available' }, status: :forbidden
-    else
-      render partial: 'posts/custom_posts/custom_item', locals: { custom_post: post }
+    respond_to do |format|
+      if @post.nil?
+        format.json { render json: { base: 'Post is not available' }, status: :forbidden }
+        format.html { render text: 'Post not available' }
+      else
+        format.json { render partial: 'posts/custom_posts/custom_item', locals: { custom_post: @post } }
+        format.html
+      end
     end
   end
 

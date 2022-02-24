@@ -1,0 +1,25 @@
+
+<!-- TODO, check if this is needed on FE and delete if not -->
+<% meta_tags_content = meta_tags %>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "<%= meta_tags_content[:title]  %>",
+    "description": "<%= meta_tags_content[:desc] %>",
+    "thumbnailUrl": "<%= meta_tags_content[:og_image] %>",
+    "contentUrl": "<%= meta_tags_content[:og_url] %>",
+    "embedUrl": "<%= @post.nil? ? '' : "#{root_url}embed/#{@post.post.link}" %>"
+  }
+</script>
+
+<%= javascript_tag do %>
+  var link = "<%= params[:link] %>";
+<% end %>
+
+<div class="content" id="content">
+
+  <%= javascript_pack_tag 'post' %>
+
+</div> <!-- content -->
