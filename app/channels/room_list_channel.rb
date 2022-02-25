@@ -19,14 +19,14 @@ class RoomListChannel < ApplicationCable::Channel
   def room_list(_data)
     puts 'room_list'
 
-    ActionCable.server.broadcast(current_user.id.to_s, prepare_rooms)
+    ActionCable.server.broadcast("room_list_for_#{current_user.id}", prepare_rooms)
   end
 
   private
 
   def prepare_rooms
     current_user.rooms.each_with_object([]) do |room, arr|
-      arr << {
+      room_obj = {
         id: room.id.to_s,
         name: room.name,
         generated_name: room.generated_name,
@@ -35,8 +35,11 @@ class RoomListChannel < ApplicationCable::Channel
         updated_at: room.updated_at,
         last_read_messages: room.last_read_messages,
         members_count: room.members_count,
-        room_thumb: room.room_thumb,
-        last_message: {
+        room_thumb: room.room_thumb
+      }
+
+      if room.messages.any?
+        room_obj[:last_message] = {
           id: room.messages.last.id.to_s,
           content: room.messages.last.content,
           message_type: room.messages.last.message_type,
@@ -44,7 +47,9 @@ class RoomListChannel < ApplicationCable::Channel
           created_at: room.messages.last.created_at,
           updated_at: room.messages.last.updated_at
         }
-      }
+      end
+
+      arr << room_obj
     end
   end
 end
