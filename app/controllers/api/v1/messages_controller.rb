@@ -15,7 +15,7 @@ module Api
       end
 
       def index
-        @messages = Messages::IndexService.new(room: @room, page: params[:page], user: @current_user).call
+        @messages = Messages::IndexService.new(room: @room, page: params[:page], per_page: params[:per_page], user: @current_user).call
       end
 
       private

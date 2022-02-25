@@ -2,9 +2,10 @@
 
 module Messages
   class IndexService
-    def initialize(room:, page:, user:)
+    def initialize(room:, page:, per_page:, user:)
       @room = room
       @page = page.presence || 1
+      @per_page = per_page.presence || PER_PAGE[:messages]
       @user = user
     end
 
@@ -14,15 +15,17 @@ module Messages
 
     private
 
-    attr_reader :room, :page, :user
+    attr_reader :room, :page, :per_page, :user
 
     def messages
-      messages = room.messages.order(created_at: -1).skip(calculate_offset).limit(PER_PAGE[:messages])
+      num_of_recs = per_page.to_i > 40 ? 40 : per_page.to_i
+
+      messages = room.messages.order(created_at: -1).skip(calculate_offset(num_of_recs)).limit(num_of_recs)
       messages.reverse!
     end
 
-    def calculate_offset
-      (page.to_i - 1) * PER_PAGE[:messages]
+    def calculate_offset(num_of_recs)
+      (page.to_i - 1) * num_of_recs
     end
   end
 end
