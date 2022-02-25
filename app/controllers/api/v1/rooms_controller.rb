@@ -8,7 +8,8 @@ module Api
       def create
         raise ActionController::BadRequest, 'Members param is required' if room_params[:members].blank?
 
-        @room = Rooms::CreateService.new(name: room_params[:name], user: @current_user, member_ids: room_params[:members]).call
+        @collection = Rooms::CreateService.new(name: room_params[:name], user: @current_user, member_ids: room_params[:members]).call
+        render :show
       end
 
       def index
@@ -26,7 +27,6 @@ module Api
 
       def add_member
         @room = Rooms::AddMemberService.new(room_id: params[:id], member_id: params[:member_id]).call
-        render :create
       end
 
       def leave_room

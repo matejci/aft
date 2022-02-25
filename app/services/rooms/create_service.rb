@@ -22,15 +22,17 @@ module Rooms
     attr_reader :name, :user, :member_ids
 
     def create_room
-      room = user.created_rooms.find_by(member_ids: @members.pluck(:id))
+      room = user.rooms.find_by(:member_ids.in => @members.pluck(:id))
 
-      if room
+      room = if room
         room.update!(name: name, generated_name: generate_name) if name != room.name
         room
       else
         room = user.created_rooms.create!(name: name, generated_name: generate_name, member_ids: @members.pluck(:id))
         Rooms::MembersThumbService.new(room: room, members: @members).call
       end
+
+      { room: room, messages: Messages::IndexService.new(room: room, page: 1, per_page: nil, user: user).call, members: @members }
     end
 
     def validate_members

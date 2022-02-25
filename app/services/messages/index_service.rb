@@ -10,12 +10,17 @@ module Messages
     end
 
     def call
+      validate_user
       messages
     end
 
     private
 
     attr_reader :room, :page, :per_page, :user
+
+    def validate_user
+      raise ActionController::BadRequest, "You're not a member of the group" unless room.members.include?(user)
+    end
 
     def messages
       num_of_recs = per_page.to_i > 40 ? 40 : per_page.to_i

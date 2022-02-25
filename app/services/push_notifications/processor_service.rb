@@ -151,7 +151,7 @@ module PushNotifications
         headings: { en: actor.username },
         contents: { en: "just sent a direct message to: #{notifiable.name || notifiable.generated_name}" },
         ios_attachments: { image_url: actor.profile_image.url },
-        data: { room_id: notifiable.id.to_s, message_id: body },
+        data: { notifiable_url: "#{Rails.application.routes.url_helpers.root_url}rooms/#{notifiable.id}/messages/#{body}" },
         collapse_id: nil,
         ios_badgeCount: recipient.unread_notifications_count,
         ios_badgeType: 'SetTo'
