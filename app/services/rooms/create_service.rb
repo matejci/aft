@@ -22,7 +22,12 @@ module Rooms
     attr_reader :name, :user, :member_ids
 
     def create_room
-      room = user.rooms.find_by(:member_ids.in => @members.pluck(:id))
+      room_members_hash = {}
+
+      user.rooms.each { |room| room_members_hash[room.id.to_s] = room.member_ids }
+      room_hash = room_members_hash.find { |_key, val| val == @members.pluck(:id) }
+
+      room = Room.find(room_hash[0]) if room_hash
 
       room = if room
         room.update!(name: name, generated_name: generate_name) if name != room.name
