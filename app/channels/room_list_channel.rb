@@ -19,12 +19,12 @@ class RoomListChannel < ApplicationCable::Channel
   def room_list(_data)
     puts 'room_list'
 
-    ActionCable.server.broadcast("room_list_for_#{current_user.id}", prepare_rooms)
+    WsBroadcastService.new(broadcaster: "room_list_for_#{current_user.id}", data: prepare_data, type: 'RoomList').call
   end
 
   private
 
-  def prepare_rooms
+  def prepare_data
     current_user.rooms.each_with_object([]) do |room, arr|
       room_obj = {
         id: room.id.to_s,

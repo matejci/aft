@@ -33,7 +33,7 @@ module Messages
         created_at: message.created_at
       }
 
-      ActionCable.server.broadcast(room.id.to_s, msg)
+      WsBroadcastService.new(broadcaster: room.id.to_s, data: msg, type: 'NewMessage').call
       send_notifications(room.id.to_s, msg[:sender_id], msg[:id])
 
       message
