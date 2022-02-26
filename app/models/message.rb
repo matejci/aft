@@ -9,7 +9,7 @@ class Message
   belongs_to :sender, class_name: 'User'
 
   field :content, type: String
-  enum :message_type, %i[text post contact]
+  field :message_type, type: String
 
   validates :content, :message_type, :sender_id, presence: true
 
