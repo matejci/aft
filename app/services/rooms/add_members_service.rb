@@ -20,7 +20,7 @@ module Rooms
     def validate_members
       @members = User.active.where(:id.in => member_ids).to_a
 
-      raise ActionController::BadRequest, 'specified members not found' if @members.blank?
+      raise ActionController::BadRequest, 'specified member(s) not found' if @members.blank?
     end
 
     def add_members

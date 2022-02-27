@@ -37,9 +37,11 @@ resource 'API::V1::Rooms' do
 
         example_request '200' do
           expect(status).to eq(200)
-          expect(parsed_response['data']).to include('id', 'name', 'generated_name', 'created_by_id', 'members_count', 'room_thumb')
-          expect(parsed_response.dig('data', 'generated_name')).to eq(User.all.pluck(:username).join(', '))
-          expect(parsed_response.dig('data', 'name')).to be_nil
+          expect(parsed_response.dig('data', 'room')).to include('id', 'name', 'generated_name', 'created_by_id', 'created_at', 'updated_at',
+                                                                 'last_read_messages', 'members_count', 'room_thumb', 'members', 'ex_members', 'messages')
+
+          expect(parsed_response.dig('data', 'room', 'generated_name')).to eq(User.all.pluck(:username).join(', '))
+          expect(parsed_response.dig('data', 'room', 'name')).to be_nil
         end
       end
 
@@ -50,9 +52,10 @@ resource 'API::V1::Rooms' do
 
         example_request '200' do
           expect(status).to eq(200)
-          expect(parsed_response['data']).to include('id', 'name', 'generated_name', 'created_by_id', 'members_count', 'room_thumb')
-          expect(parsed_response.dig('data', 'generated_name')).to be_nil
-          expect(parsed_response.dig('data', 'name')).to eq('test')
+          expect(parsed_response.dig('data', 'room')).to include('id', 'name', 'generated_name', 'created_by_id', 'created_at', 'updated_at',
+                                                                 'last_read_messages', 'members_count', 'room_thumb', 'members', 'ex_members', 'messages')
+          expect(parsed_response.dig('data', 'room', 'generated_name')).to be_nil
+          expect(parsed_response.dig('data', 'room', 'name')).to eq('test')
         end
       end
 
@@ -143,16 +146,16 @@ resource 'API::V1::Rooms' do
     end
   end
 
-  route '/rooms/:id/add-member.json', 'Add member to a chat room' do
-    post 'Add new member' do
+  route '/rooms/:id/add-members.json', 'Add member(s) to a chat room' do
+    post 'Add new member(s)' do
       header 'Content-Type', 'application/json'
 
       parameter :id, required: true
-      parameter :member_id, required: true
+      parameter :member_ids, required: true
 
       context '200 - without name' do
         let(:id) { Room.first.id.to_s }
-        let(:member_id) { User.last.id.to_s }
+        let(:member_ids) { [User.last.id.to_s] }
         let(:raw_post) { params.to_json }
 
         example_request '200' do
@@ -163,12 +166,12 @@ resource 'API::V1::Rooms' do
 
       context '400' do
         let(:id) { Room.first.id.to_s }
-        let(:member_id) { 'whatever' }
+        let(:member_ids) { ['whatever'] }
         let(:raw_post) { params.to_json }
 
         example_request '400' do
           expect(status).to eq(400)
-          expect(parsed_response['error']).to include('Wrong member_id')
+          expect(parsed_response['error']).to include('specified member(s) not found')
         end
       end
     end
