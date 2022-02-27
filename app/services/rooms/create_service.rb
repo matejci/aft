@@ -24,8 +24,11 @@ module Rooms
     def create_room
       room_members_hash = {}
 
-      user.rooms.each { |room| room_members_hash[room.id.to_s] = room.member_ids }
-      room_hash = room_members_hash.find { |_key, val| val == @members.pluck(:id) }
+      user.rooms.each { |room| room_members_hash[room.id.to_s] = room.member_ids.sort }
+
+      member_sorted_ids = @members.pluck(:id).sort
+
+      room_hash = room_members_hash.find { |_key, val| val == member_sorted_ids }
 
       room = Room.find(room_hash[0]) if room_hash
 
@@ -33,7 +36,7 @@ module Rooms
         room.update!(name: name, generated_name: generate_name) if name != room.name
         room
       else
-        room = user.created_rooms.create!(name: name, generated_name: generate_name, member_ids: @members.pluck(:id))
+        room = user.created_rooms.create!(name: name, generated_name: generate_name, member_ids: member_sorted_ids)
         Rooms::MembersThumbService.new(room: room, members: @members).call
       end
 
