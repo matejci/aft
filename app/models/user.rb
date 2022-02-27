@@ -47,7 +47,8 @@ class User # rubocop:disable Metrics/ClassLength
 
   has_and_belongs_to_many :pools
   has_and_belongs_to_many :pool_intervals
-  has_and_belongs_to_many :rooms
+  has_and_belongs_to_many :rooms, inverse_of: :members
+  has_and_belongs_to_many :ex_rooms, class_name: 'Room', inverse_of: :ex_members
   has_many :created_rooms, class_name: 'Room', foreign_key: :created_by_id, dependent: :nullify, inverse_of: :created_by
 
   field :ip_address, type: String

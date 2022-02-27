@@ -25,8 +25,9 @@ module Rooms
     end
 
     def leave_room
-      room.member_ids.delete(user.id)
-      room.save
+      room.members.delete(user)
+      room.ex_members << user
+      room.save!
 
       members = room.members.to_a
 
@@ -40,7 +41,7 @@ module Rooms
       return if room.name.present?
 
       room.generated_name = members.pluck(:username).uniq.join(', ')
-      room.save
+      room.save!
     end
 
     # This will delete room and all related messages

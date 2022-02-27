@@ -37,7 +37,7 @@ module Rooms
         Rooms::MembersThumbService.new(room: room, members: @members).call
       end
 
-      { room: room, messages: Messages::IndexService.new(room: room, page: 1, per_page: nil, user: user).call, members: @members }
+      { room: room, messages: Messages::IndexService.new(room: room, page: 1, per_page: nil, user: user).call, members: @members, ex_members: room.ex_members }
     end
 
     def validate_members

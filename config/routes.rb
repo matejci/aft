@@ -64,7 +64,7 @@ Rails.application.routes.draw do
 
         member do
           patch 'last-read-message', action: :last_read_message
-          post 'add-member', action: :add_member
+          post 'add-members', action: :add_members
           delete 'leave-room', action: :leave_room
         end
 

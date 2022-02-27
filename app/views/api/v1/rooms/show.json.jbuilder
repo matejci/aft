@@ -8,6 +8,10 @@ json.data do
       json.array!(@collection[:members], :id, :username, :display_name, :email, :phone, :verified, :profile_thumb_url, :first_name, :last_name)
     end
 
+    json.ex_members do
+      json.array!(@collection[:ex_members], :id, :username, :display_name, :email, :phone, :verified, :profile_thumb_url, :first_name, :last_name)
+    end
+
     json.messages do
       json.array!(@collection[:messages], :id, :content, :sender_id, :message_type, :created_at, :updated_at, :payload)
     end

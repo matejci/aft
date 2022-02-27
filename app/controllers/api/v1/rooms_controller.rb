@@ -25,8 +25,10 @@ module Api
         head :ok
       end
 
-      def add_member
-        @room = Rooms::AddMemberService.new(room_id: params[:id], member_id: params[:member_id]).call
+      def add_members
+        raise ActionController::BadRequest, 'member_ids param needs to be an array' unless params[:member_ids].is_a?(Array)
+
+        @room = Rooms::AddMembersService.new(room_id: params[:id], member_ids: params[:member_ids]).call
       end
 
       def leave_room

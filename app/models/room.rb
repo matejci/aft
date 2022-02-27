@@ -4,7 +4,8 @@ class Room
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  has_and_belongs_to_many :members, class_name: 'User'
+  has_and_belongs_to_many :members, class_name: 'User', inverse_of: :rooms
+  has_and_belongs_to_many :ex_members, class_name: 'User', inverse_of: :ex_rooms
   has_many :messages, dependent: :destroy
   belongs_to :created_by, class_name: 'User', dependent: :nullify
 

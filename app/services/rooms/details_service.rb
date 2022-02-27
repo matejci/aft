@@ -15,11 +15,11 @@ module Rooms
     attr_reader :room_id
 
     def room_details
-      room = Room.includes(:members, :messages).find(room_id)
+      room = Room.includes(:members, :ex_members, :messages).find(room_id)
 
       raise ActionController::BadRequest, 'Wrong room id' unless room
 
-      { room: room, messages: prepare_messages(room.messages), members: room.members }
+      { room: room, messages: prepare_messages(room.messages), members: room.members, ex_members: room.ex_members }
     end
 
     def prepare_messages(messages)
