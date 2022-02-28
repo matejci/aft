@@ -28,9 +28,9 @@ class UserAuthService
     login_key, login_id = if id.starts_with?('+')
       [:phone, id]
     elsif id.include?('@')
-      [:email, /#{id}/i]
+      [:email, /^#{id}$/i]
     else
-      [:username, /#{id}/i]
+      [:username, /^#{id}$/i]
     end
 
     user = User.valid.includes(:paypal_account).find_by(login_key => login_id)
