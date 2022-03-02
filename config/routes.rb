@@ -74,6 +74,9 @@ Rails.application.routes.draw do
       end
 
       patch 'sessions/player-id', to: 'sessions#player_id'
+
+      # TODO: this is a temp controller/endpoint that should be removed, once 'Auto-join' feature starts syncing room members via WebSockets
+      resources :users, only: :show
     end
 
     # scope module: 'v2', constraints: ApiConstraints.new(version: 2) do
