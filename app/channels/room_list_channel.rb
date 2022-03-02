@@ -7,25 +7,25 @@ class RoomListChannel < ApplicationCable::Channel
       return
     end
 
-    puts "#{current_user.username} subscribed."
+    # puts "#{current_user.username} subscribed."
 
     stream_from("room_list_for_#{current_user.id}")
   end
 
   def unsubscribed
-    puts "#{current_user.username} unsubscribed!"
+    # puts "#{current_user.username} unsubscribed!"
   end
 
   def room_list(_data)
-    puts 'room_list'
-
     WsBroadcastService.new(broadcaster: "room_list_for_#{current_user.id}", data: prepare_data, type: 'RoomList').call
   end
 
   private
 
   def prepare_data
-    current_user.rooms.each_with_object([]) do |room, arr|
+    rooms = Room.where(:member_ids.in => [current_user.id])
+
+    rooms.each_with_object([]) do |room, arr|
       room_obj = {
         id: room.id.to_s,
         name: room.name,
