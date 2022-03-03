@@ -20,6 +20,11 @@ module Api
         @collection = Rooms::DetailsService.new(room_id: params[:id]).call
       end
 
+      def update
+        @room = Rooms::UpdateService.new(room_id: params[:id], name: room_params[:name], user: @current_user).call
+        render :add_members
+      end
+
       def last_read_message
         Rooms::UpdateLastReadMessageService.new(room_id: params[:id], user_id: @current_user.id, message_id: params[:message_id]).call
         head :ok

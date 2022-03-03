@@ -59,7 +59,7 @@ Rails.application.routes.draw do
         post 'phonebook-sync', on: :collection
       end
 
-      resources :rooms, only: [:create, :index, :show] do
+      resources :rooms, only: [:create, :index, :show, :update] do
         resources :messages, only: [:create, :index]
 
         member do

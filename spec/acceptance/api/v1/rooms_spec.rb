@@ -224,4 +224,50 @@ resource 'API::V1::Rooms' do
       end
     end
   end
+
+  route '/rooms/:id.json', 'Update chat room' do
+    patch 'Update room name' do
+      header 'Content-Type', 'application/json'
+
+      parameter :id, required: true
+
+      with_options scope: :room do
+        parameter :name
+      end
+
+      context '200' do
+        let(:id) { Room.first.id.to_s }
+        let(:name) { 'my room' }
+        let(:raw_post) { params.to_json }
+
+        example_request '200' do
+          expect(status).to eq(200)
+          expect(parsed_response['data']).to include('id', 'name', 'generated_name', 'created_by_id', 'members_count', 'room_thumb')
+          expect(parsed_response.dig('data', 'name')).to eq('my room')
+        end
+      end
+
+      context '400' do
+        let(:id) { 'whatever' }
+        let(:name) { '-' }
+        let(:raw_post) { params.to_json }
+
+        example_request '400' do
+          expect(status).to eq(400)
+          expect(parsed_response['error']).to include('Wrong room_id')
+        end
+      end
+
+      context '400' do
+        let(:id) { Room.last.id.to_s }
+        let(:name) { '-' }
+        let(:raw_post) { params.to_json }
+
+        example_request '400' do
+          expect(status).to eq(400)
+          expect(parsed_response['error']).to include("You're not a member of a room")
+        end
+      end
+    end
+  end
 end
