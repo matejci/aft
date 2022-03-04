@@ -60,7 +60,7 @@ Rails.application.routes.draw do
       end
 
       resources :rooms, only: [:create, :index, :show, :update] do
-        resources :messages, only: [:create, :index, :show]
+        resources :messages, only: [:create, :index]
 
         member do
           patch 'last-read-message', action: :last_read_message
@@ -82,6 +82,11 @@ Rails.application.routes.draw do
     # scope module: 'v2', constraints: ApiConstraints.new(version: 2) do
     #   resources :sessions
     # end
+  end
+
+  namespace :pn_links, path: '' do
+    get '/rooms/:room_id', action: :room_details
+    get '/rooms/:room_id/messages/:message_id', action: :message_details
   end
 
   # namespace :campaigns do
