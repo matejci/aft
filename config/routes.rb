@@ -60,7 +60,7 @@ Rails.application.routes.draw do
       end
 
       resources :rooms, only: [:create, :index, :show, :update] do
-        resources :messages, only: [:create, :index]
+        resources :messages, only: [:create, :index, :show]
 
         member do
           patch 'last-read-message', action: :last_read_message

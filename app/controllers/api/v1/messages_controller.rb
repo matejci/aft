@@ -18,6 +18,13 @@ module Api
         @messages = Messages::IndexService.new(room: @room, page: params[:page], per_page: params[:per_page], user: @current_user).call
       end
 
+      def show
+        head :ok
+        # msg = Messages::DetailsService.new(room: @room, message_id: params[:id], user: @current_user).call
+
+        # render json: { data: msg }, status: :ok
+      end
+
       private
 
       def load_room
