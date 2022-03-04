@@ -8,7 +8,7 @@ resource 'API::V1::Messages' do
   header 'X-API-VERSION', 'api.appforteachers.v1'
 
   before do
-    create_list(:user, 2)
+    create_list(:user, 3)
     create(:room, created_by: user, member_ids: User.all.pluck(:id))
     create(:message, room_id: Room.last.id.to_s, sender_id: user.id.to_s)
   end
@@ -27,7 +27,7 @@ resource 'API::V1::Messages' do
       context '200' do
         let(:content) { 'How do you do?' }
         let(:message_type) { 'text' }
-        let(:room_id) { Room.last.id.to_s }
+        let(:room_id) { Room.first.id.to_s }
         let(:raw_post) { params.to_json }
 
         example_request '200' do
@@ -43,7 +43,7 @@ resource 'API::V1::Messages' do
       parameter :room_id, required: true
 
       context '200' do
-        let(:room_id) { Room.last.id.to_s }
+        let(:room_id) { Room.first.id.to_s }
 
         example_request '200' do
           expect(status).to eq(200)

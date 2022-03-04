@@ -29,6 +29,9 @@ class WelcomeController < ApplicationController
                 '/': '/profiles/*'
               },
               {
+                '/': '/rooms/*'
+              },
+              {
                 '/': '//profiles/*'
               },
               {
@@ -43,6 +46,7 @@ class WelcomeController < ApplicationController
             paths: [
               '/p/*',
               '/profiles/*',
+              '/rooms/*',
               '//profiles/*',
               'NOT /terms',
               'NOT /privacy'

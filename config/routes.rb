@@ -84,6 +84,11 @@ Rails.application.routes.draw do
     # end
   end
 
+  namespace :pn_links, path: '' do
+    get '/rooms/:room_id', action: :room_details
+    get '/rooms/:room_id/messages/:message_id', action: :message_details
+  end
+
   # namespace :campaigns do
   #   get :recipetube, action: :recipetube
   #   get :cryptotube, action: :cryptotube
