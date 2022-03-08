@@ -25,5 +25,9 @@ module CronJobs
     def generate_badges!
       Cron::BadgesJob.perform_later
     end
+
+    def send_sms_announcement!
+      Cron::SmsAnnouncementJob.perform_later
+    end
   end
 end
