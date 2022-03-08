@@ -41,3 +41,9 @@ task generate_badges: :environment do
   CronJobs.generate_badges!
   puts 'Finished.'
 end
+
+desc 'Send DM announcement via SMS'
+task sms_announcement: :environment do
+  puts 'Sending DM announcement via SMS...'
+  CronJobs.send_sms_announcement!
+end
